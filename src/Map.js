@@ -560,7 +560,7 @@
 		var logo = L.control({position: 'bottomright'});
 		logo.onAdd = function(map){
 			var div = L.DomUtil.create('div', 'myclass');
-			div.innerHTML= "<img src='/takatakatembo.svg' height=70 />";
+			div.innerHTML= "<img src='/src/icon/garbagemap2_feaux-amharic.png' height=70 />";
 			return div;
 		}
 		logo.addTo(map);
