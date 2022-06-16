@@ -560,7 +560,7 @@
 		var logo = L.control({position: 'bottomright'});
 		logo.onAdd = function(map){
 			var div = L.DomUtil.create('div', 'myclass');
-			div.innerHTML= "<img src='/src/icon/garbagemap2_feaux-amharic.png' height=70 />";
+			div.innerHTML= "<img src='/garbagemap_logo_june_16_2022.png' height=80 />";
 			return div;
 		}
 		logo.addTo(map);
@@ -882,7 +882,8 @@
 		for(layer of polyLayers) {
 			drawnItems.addLayer(layer);
 		}
-
+	//	map.addFeature(drawnItems);
+		
 		console.log("ehlloow2");
 		localStorage.setItem("user", JSON.stringify(drawnItems.toGeoJSON(), null, 2) );
 
