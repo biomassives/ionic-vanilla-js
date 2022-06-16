@@ -5,24 +5,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IONIC Vanilla JavaScript</title>
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+  crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@0.4.1/dist/leaflet.draw.css" />		
+  <script src="/src/lib/leaflet.draw.0.4.0.js"></script>
+  <!--		<script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/0.0.124/turf.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.js"></script>
+  <!--  https://cdnjs.cloudflare.com/ajax/libs/Turf.js/0.0.124/turf.min.js   -->
+  <script src="https://cdn.skypack.dev/pin/turf-bbox@v3.0.12-0eIDJYygosL76xF63aX3/mode=imports/optimized/turf-bbox.js"></script>
+  <!---	<script src="src/components/MapPolylineIntersections.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/src/L.Control.Locate.js"></script>
+  <style> .leaflet-control-locate a{cursor:pointer}.leaflet-control-locate a .leaflet-control-locate-location-arrow{display:inline-block;width:16px;height:16px;margin:7px;background-color:#000;-webkit-mask-image:url("/src/icons/location-arrow-solid.svg");mask-image:url("../icons/location-arrow-solid.svg");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}.leaflet-control-locate a .leaflet-control-locate-spinner{display:inline-block;width:16px;height:16px;margin:7px;background-color:#000;-webkit-mask-image:url("../icons/spinner-solid.svg");mask-image:url("../icons/spinner-solid.svg");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;animation:leaflet-control-locate-spin 2s linear infinite}.leaflet-control-locate.active a .leaflet-control-locate-location-arrow{background-color:#2074b6}.leaflet-control-locate.following a .leaflet-control-locate-location-arrow{background-color:#fc8428}.leaflet-touch .leaflet-bar .leaflet-locate-text-active{width:100%;max-width:200px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;padding:0 10px}.leaflet-touch .leaflet-bar .leaflet-locate-text-active .leaflet-locate-icon{padding:0 5px 0 0}.leaflet-control-locate-location circle{animation:leaflet-control-locate-throb 4s ease infinite}@keyframes leaflet-control-locate-throb{0%{stroke-width:1}50%{stroke-width:3;transform:scale(0.8, 0.8)}100%{stroke-width:1}}@keyframes leaflet-control-locate-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}/*# sourceMappingURL=L.Control.Locate.min.css.map */
+  </style>
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>	
+  <script src="/src/convexhull.js"></script>
+
+
 </head>
 <body>
   <ion-app>
     <ion-menu content-id="main-content">
       <ion-header>
         <ion-toolbar color="primary">
-          <ion-title>Menu</ion-title>
+          <ion-title>Open Garbage Map</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <ion-content>
         <ion-list>
-          <ion-list-header> Navigate </ion-list-header>
+<!--          <ion-list-header> Options </ion-list-header>-->
           <ion-menu-toggle auto-hide="false">
             <ion-item button>
-              <ion-icon slot="start" data-src="home.svg"></ion-icon>
+              <ion-route url="/about" component="page-about">
+                <ion-icon slot="1" data-src="home.svg"></ion-icon>
+                about
+                <ion-label> About </ion-label>
+              </ion-route>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="1" data-src="home.svg"></ion-icon>
               <ion-label> Home </ion-label>
             </ion-item>
+            <ion-item button>
+              <ion-icon slot="1" data-src="home.svg"></ion-icon>
+              <ion-label> Nairobi </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="2" data-src="home.svg"></ion-icon>
+              <ion-label> Machakos </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="3" data-src="home.svg"></ion-icon>
+              <ion-label> How to use this </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="4" data-src="home.svg"></ion-icon>
+              <ion-label> Current efforts </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="4" data-src="home.svg"></ion-icon>
+              <ion-label> Notable mappers </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="4" data-src="home.svg"></ion-icon>
+              <ion-label> Waste management info </ion-label>
+            </ion-item>
+            <ion-item button>
+              <ion-icon slot="4" data-src="home.svg"></ion-icon>
+              <ion-label> Donate </ion-label>
+            </ion-item>
+
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
@@ -38,12 +98,19 @@
               </ion-button>
             </ion-menu-toggle>
           </ion-buttons>
-          <ion-title>Header</ion-title>
+          <ion-title>Open Garbage Map</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
         <h1>Main Content</h1>
         <p>Click the icon in the top left to toggle the menu.</p>
+
+	<div id="map" style="width: 100%; height: 600px; border: 1px solid #ccc"></div>
+		<button id="saveleafletdata">Save</button>
+		<button id="loadData">Load polygon</button>
+		<button id="loadData2">Load polygons</button>
+		<button id="newbutton">New Button</button>
+
       </ion-content>
     </ion-page>
   </ion-app>
@@ -51,5 +118,170 @@
   <ion-menu-controller></ion-menu-controller>
 </body>
 <script type="module" src="/src/main.js"></script>
+<script type="module" src="/src/Map.js"></script>
+<script>
+	
+	
+	function furbur() { 
+		var density_element = document.getElementById('density');
+//		console.log("density"); 
+//		console.log(density_element.value); 
+		var rating_element = document.getElementById('rating');
+//		console.log("rating"); 
+//		console.log(rating_element.value); 
+		var descrip_element = document.getElementById('descrip');
+//		console.log("descrip"); 
+//		console.log(descrip_element.value); 
+		var datalayer_element = document.getElementById('datalayerid');
+//		console.log("datalayerid");
+//		console.log(datalayer_element.value);
+		var featuretype_element = document.getElementById('featuretype');
+//		console.log("featuretype");
+//		console.log(featuretype_element.value);
+		var latlong_element = document.getElementById('latlong');
+//		console.log("latlong element");
+//		console.log(latlong_element.value);
+		
+		var latlong_element = latlong_element.value.replaceAll("LatLng("," [");
+		latlong_element = latlong_element.replaceAll(")","]");
+//		console.log("["+latlong_element+" ]");
+
+
+//  attempt register value for selected circle radius
+//		var radius_element = document.getElementById('radius');
+
+	/*	if ( radius_element) {		
+			console.log("radius_element");
+			console.log(radius_element);
+		}*/
+		// generate specific polyline output
+		// generate specific circle and marker one point output
+
+
+		// save data string to localstorage
+		localStorage.setItem(featuretype_element.value+datalayer_element.value, "{ \"data\": ["+ latlong_element +"] , \"density\":[\""+density_element.value+"\"],\"rating\":[\""+rating_element.value+"\"],\"description\":[\""+descrip_element.value+"\"],\"featureid\":[\""+datalayer_element.value+"\"],\"featuretype\":[\""+featuretype_element.value+"\"] }");
+
+		var tempindex = localStorage.getItem("leafletFeatureIndex");
+		console.log('tempindex' + tempindex);
+		if (tempindex !== null ) {
+		         localStorage.setItem("leafletFeatureIndex", tempindex +","+featuretype_element.value+datalayer_element.value);
+		} else { localStorage.setItem("leafletFeatureIndex", featuretype_element.value+datalayer_element.value);
+				 tempindex = featuretype_element.value+datalayer_element.value;
+		}  
+
+	// show data from popup form
+	//
+	//
+	// TODO add edit and delete ( polygon and marker) buttons here
+	//var tempindex = localStorage.getItem("leafletFeatureIndex");
+		const indexedPolygons = tempindex.split(',');
+		console.log('indexedPolygons');
+		console.log(indexedPolygons);
+
+
+	// popup response 
+	//
+	//
+	// respond to popup marker data changes after submit popup form
+	//
+    // TODO: 6-1-2022 gw update the label for this object in the map object here
+	//     so that new clicks dont give you a form any longer
+
+			document.getElementById("markerform").innerHTML = "<b>"+ featuretype_element.value + datalayer_element.value+"</b><BR>Density:"+
+			density_element.value+"<BR>Description:"+descrip_element.value+
+			"<BR>Tags:"+
+			rating_element.value;
+
+	// draw new polygon derived from polyline 
+
+				// list all polygons
+				//
+				// 1. make list of all first and last elements last lines
+				//
+				// 2. check to see if any points are very close together, 
+				//				getDistance(from, to);				
+				//				function getDistance(from, to)
+				//				{
+				//					var container = document.getElementById('distance');
+				//					container.innerHTML = ("New Delhi to Mumbai - " + (from.distanceTo(to)).toFixed(0)/1000) + ' km';
+				//				}
+
+				if (featuretype_element.value === "polyline") {
+
+					// get index
+					var tempindex = localStorage.getItem("leafletFeatureIndex");
+					const newArr = tempindex.split(',');
+					var n = 0;
+					var newPolygon = "";
+					newArr.forEach(element => {
+
+						if (element.includes("polyline")) {
+							// list only data from polylines
+							const loopi = localStorage.getItem(element);
+							console.log("loop")
+							console.log(n)
+							console.log(loopi)
+							const obj = JSON.parse(loopi)
+							console.log("obj.data")
+							console.log(obj.data)
+							console.log(obj.data[0])
+							console.log(obj.data[2])
+							if ( n === 0)
+								newPolygon = "[" + obj.data[0] + "," + obj.data[2]
+							else 
+								newPolygon = newPolygon + "," + obj.data[2]
+							n = n+1
+						}
+					})
+					newPolygon = newPolygon + "]"
+					console.log("newPolygon")
+					console.log(newPolygon)
+				}
+				if (newPolygon){
+					var polygon0 =	 L.polygon(newPolygon).bindPopup("<h4>New Polygon");
+					var drawnItems = new L.FeatureGroup();
+					drawnItems.addLayer(polygon0);
+				}
+
+	}; 
+
+
+
+</script>
+
+
+
+<script>
+
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.id== 'shownum'){
+          //do something
+ 
+		let currentNumber = 0;
+		let isIncreasing = true;
+		const shownum = document.querySelector('.shownum');
+
+		//showNumberP.textContent = currentNumber;
+		shownum.onclick = () => {
+			
+			if (isIncreasing) {
+				currentNumber++;
+				if (currentNumber == 5) isIncreasing = false;
+			} else {
+				currentNumber--;
+				if (currentNumber == 0) isIncreasing = true;
+			}
+			
+		shownum.src = "/icons/density"+currentNumber+".svg";
+
+		}
+
+	}
+});
+
+
+</script>
+
 
 </html>

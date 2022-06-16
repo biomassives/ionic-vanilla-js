@@ -9,6 +9,7 @@
     "@ionic/core": "^6.0.16"
   },
   "devDependencies": {
+    "@ionic/cli": "^6.19.1",
     "vite": "^2.9.1"
   }
 }
