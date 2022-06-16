@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="160pt"
+   height="160pt"
+   viewBox="0 0 56.444446 56.444445"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="densitynull.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     height="160pt"
+     units="pt"
+     inkscape:zoom="0.50689534"
+     inkscape:cx="396.53156"
+     inkscape:cy="344.25252"
+     inkscape:window-width="1332"
+     inkscape:window-height="768"
+     inkscape:window-x="409"
+     inkscape:window-y="18"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#808000;stroke-width:0.264583"
+       id="path846"
+       cx="28.53433"
+       cy="28.81036"
+       rx="25.300062"
+       ry="26.302408" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.05;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="27.83272"
+       y="19.449144"
+       id="text3764"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="27.83272"
+         y="19.449144"
+         id="tspan3768">Select</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="27.83272"
+         y="30.701805"
+         id="tspan33067">Waste</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="27.83272"
+         y="41.954464"
+         id="tspan3774">Density</tspan></text>
+  </g>
+</svg>
