@@ -298,7 +298,7 @@
 			'<input type="hidden" name="featuretype" id="featuretype" value="' + type + '">'+				
 			'</div>'+
 	
-			'<div id="imagedest"><img src="/icons/densitynull.svg" class="shownum" id="shownum" width=183 height=183></div>'+
+			'<div id="imagedest" style="height:183px;width:183px;"><img src="/icons/densitynull.svg" class="shownum" id="shownum" width="183" height="183" ></div>'+
 				'<div class="form-group">'+
 		//		'<label class="control-label col-sm-5"><strong>Density: </strong></label>'+
 				'<select class="form-control" onchange=\'check_value()\' id="density" name="density">'+
