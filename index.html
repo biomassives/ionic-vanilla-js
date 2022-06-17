@@ -103,17 +103,41 @@
 </body>
 <script type="module" src="/src/main.js"></script>
 <script type="module" src="/src/Map.js"></script>
-<script type="module">
+<script>		
 	function furbur() { 
 		var density_element = document.getElementById('density');
+//		console.log("density"); 
+//		console.log(density_element.value); 
 		var rating_element = document.getElementById('rating');
+//		console.log("rating"); 
+//		console.log(rating_element.value); 
 		var descrip_element = document.getElementById('descrip');
+//		console.log("descrip"); 
+//		console.log(descrip_element.value); 
 		var datalayer_element = document.getElementById('datalayerid');
+//		console.log("datalayerid");
+//		console.log(datalayer_element.value);
 		var featuretype_element = document.getElementById('featuretype');
+//		console.log("featuretype");
+//		console.log(featuretype_element.value);
 		var latlong_element = document.getElementById('latlong');
+//		console.log("latlong element");
+//		console.log(latlong_element.value);
 		
 		var latlong_element = latlong_element.value.replaceAll("LatLng("," [");
 		latlong_element = latlong_element.replaceAll(")","]");
+//		console.log("["+latlong_element+" ]");
+
+
+//  attempt register value for selected circle radius
+//		var radius_element = document.getElementById('radius');
+
+	/*	if ( radius_element) {		
+			console.log("radius_element");
+			console.log(radius_element);
+		}*/
+		// generate specific polyline output
+		// generate specific circle and marker one point output
 
 
 		// save data string to localstorage
@@ -127,30 +151,30 @@
 				 tempindex = featuretype_element.value+datalayer_element.value;
 		}  
 
-		// show data from popup form
-		//
-		//
-		// TODO add edit and delete ( polygon and marker) buttons here
-		//var tempindex = localStorage.getItem("leafletFeatureIndex");
+	// show data from popup form
+	//
+	//
+	// TODO add edit and delete ( polygon and marker) buttons here
+	//var tempindex = localStorage.getItem("leafletFeatureIndex");
 		const indexedPolygons = tempindex.split(',');
 		console.log('indexedPolygons');
 		console.log(indexedPolygons);
 
 
-		// popup response 
-		//
-		//
-		// respond to popup marker data changes after submit popup form
-		//
-    		// TODO: 6-1-2022 gw update the label for this object in the map object here
-		//     so that new clicks dont give you a form any longer
+	// popup response 
+	//
+	//
+	// respond to popup marker data changes after submit popup form
+	//
+    // TODO: 6-1-2022 gw update the label for this object in the map object here
+	//     so that new clicks dont give you a form any longer
 
 			document.getElementById("markerform").innerHTML = "<b>"+ featuretype_element.value + datalayer_element.value+"</b><BR>Density:"+
 			density_element.value+"<BR>Description:"+descrip_element.value+
 			"<BR>Tags:"+
 			rating_element.value;
 
-		// draw new polygon derived from polyline 
+	// draw new polygon derived from polyline 
 
 				// list all polygons
 				//
@@ -205,6 +229,47 @@
 
 
 
+</script>
+
+
+
+<script>
+
+
+document.addEventListener('click',function(e){
+    if(e.target && e.target.id== 'shownum'){
+          //do something
+ 
+		let currentNumber = 0;
+		let isIncreasing = true;
+		const shownum = document.querySelector('.shownum');
+
+		//showNumberP.textContent = currentNumber;
+		shownum.onclick = () => {
+			
+			if (isIncreasing) {
+				currentNumber++;
+				if (currentNumber == 5) isIncreasing = false;
+			} else {
+				currentNumber--;
+				if (currentNumber == 0) isIncreasing = true;
+			}
+			
+		shownum.src = "/icons/density"+currentNumber+".svg";
+
+		}
+
+	}
+});
+
+
+/*let btn = document.querySelector('#click-me');
+
+btn.addEventListener('click', function (event) {
+	console.log(event); // The event details
+	console.log(event.target); // The clicked element
+});
+*/
 
 		function check_value()
 		{
@@ -246,7 +311,6 @@
 					break;
 	
 				}
-		}
-	
-</script>
+		}	
+</script>	
 </html>
