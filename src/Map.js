@@ -560,7 +560,7 @@
 		var logo = L.control({position: 'bottomright'});
 		logo.onAdd = function(map){
 			var div = L.DomUtil.create('div', 'myclass');
-			div.innerHTML= "<img src='/garbagemap_logo_80px_h_june_16_2022.png' height=80 />";
+			div.innerHTML= "<img src='/icons/gcm_logo_april30_2022.svg' height=80 />";
 			return div;
 		}
 		logo.addTo(map);
