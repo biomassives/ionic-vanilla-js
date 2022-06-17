@@ -249,41 +249,49 @@
 
 
 
-</script>
 
-
-
-<script>
-
-
-document.addEventListener('click',function(e){
-    if(e.target && e.target.id== 'shownum'){
-          //do something
- 
-		let currentNumber = 0;
-		let isIncreasing = true;
-		const shownum = document.querySelector('.shownum');
-
-		//showNumberP.textContent = currentNumber;
-		shownum.onclick = () => {
-			
-			if (isIncreasing) {
-				currentNumber++;
-				if (currentNumber == 5) isIncreasing = false;
-			} else {
-				currentNumber--;
-				if (currentNumber == 0) isIncreasing = true;
-			}
-			
-		shownum.src = "/icons/density"+currentNumber+".svg";
-
+		function check_value()
+		{
+			switch(document.test.density.value)
+			{
+				case "zero":
+				 
+					document.getElementById("").innerHTML = "<img src='icons/density0.svg' width=183>";
+					break;
+	
+				case "one":
+				 
+					document.getElementById("imagedest").innerHTML = "<img src='icons/density1.svg' width=183>";
+					break;
+	
+				case "two":
+	
+					document.getElementById("imagedest").innerHTML = "<img src='icons/density2.svg' width=183>"; 
+					break;
+	
+				case "three":
+	
+					document.getElementById("imagedest").innerHTML = "<img src='icons/density3.svg' width=183>"; 
+					break;
+	
+				case "three":
+	
+					document.getElementById("imagedest").innerHTML = "<img src='icons/density3.svg' width=183>"; 
+					break;				
+	
+				case "four":
+	
+					document.getElementById("imagedest").innerHTML = "<img src='icons/density4.svg' width=183>"; 
+					break;
+	
+				case "five":
+	
+					document.getElementById("imagedest").innerHTML = "<img src='icons/density5.svg' width=183>"; 
+					break;
+	
+				}
 		}
-
-	}
-});
-
-
-</script>
+	
 
 
 </html>
