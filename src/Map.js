@@ -300,6 +300,10 @@
 	
 			'<div id="imagedest"><img src="/icons/densitynull.svg" class="shownum" id="shownum" width=183 height=183></div>'+
 				'<div class="form-group">'+
+			    
+				'<label class="control-label col-sm-5"><strong>Tags: </strong></label>'+
+				'<input type="text" size="20" class="form-control" id="rating" name="rating">'+ 
+			    
 		//		'<label class="control-label col-sm-5"><strong>Density: </strong></label>'+
 				'<select class="form-control" onchange=\'check_value()\' id="density" name="density">'+
 				'<option value="five">High</option>'+
@@ -318,8 +322,6 @@
 			'</td><td valign=top><div class="form-group">'+
 				'<label class="control-label col-sm-5"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Description: </strong></label>'+
 				'<textarea class="form-control" rows="6" id="descrip" name="descrip"></textarea>'+
-				'<label class="control-label col-sm-5"><strong>Tags: </strong></label>'+
-				'<input type="text" size="20" class="form-control" id="rating" name="rating">'+ 
 			'</div>'+
 			'</form></td></tr></table>';
 
