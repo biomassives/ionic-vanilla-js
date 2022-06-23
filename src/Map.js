@@ -576,7 +576,9 @@
 		//
 		document.getElementById("checkin").addEventListener("click", function () {
 			alert("checkin")
-			console.log(drawnGrid)
+			e.layers.eachLayer(function(layer) {
+				alert("checkin")
+			}
 			
 		});
 
