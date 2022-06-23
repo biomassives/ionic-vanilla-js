@@ -576,10 +576,21 @@
 		//
 		document.getElementById("checkin").addEventListener("click", function () {
 			alert("checkin")
-			e.layers.eachLayer(function(layer) {
-				alert("checkin")
+
+			let nodata = '{"type":"FeatureCollection","features":[]}';
+			let jsonData = (JSON.stringify(drawnItems.toGeoJSON()));
+			let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(jsonData);
+			let datenow = new Date();
+			let datenowstr = datenow.toLocaleDateString('en-GB');
+			let exportFileDefaultName = 'export_draw_'+ datenowstr + '.geojson';
+			let linkElement = document.createElement('a');
+			linkElement.setAttribute('href', dataUri);
+			linkElement.setAttribute('download', exportFileDefaultName);
+			if (jsonData == nodata) {
+			alert('No features are drawn');
+			} else {
+			linkElement.click();
 			}
-			
 		});
 
 
