@@ -569,6 +569,19 @@
 
 
 
+		// save button actions
+		//
+		//
+		//
+		//
+		document.getElementById("checkin").addEventListener("click", function () {
+			alert("checkin")
+			
+			
+		});
+
+
+
 
 		// save button actions
 		//
