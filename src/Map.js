@@ -149,7 +149,7 @@
 			console.log(newArr);
 		}
 		
-
+/*
 		function showConvexHull(newPolygonLatlngArray) {  
 						
 
@@ -200,6 +200,7 @@
 		for(layer of polyLayers) {
 			drawnItems.addLayer(layer);
 		}
+*/
 
 		// Add the layers to the drawnItems feature group 
 		for(layer of markerLayers) {
