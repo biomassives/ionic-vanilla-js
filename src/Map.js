@@ -767,6 +767,32 @@
 */
 			console.log("coordsloop6");
 
+			var valuechainDbTables = "
+			Name		Data Type		Format
+			id		bigint			int8
+			created_at	timestamp with time     zonetimestamptz	
+			user		character varying	varchar	
+			description	text			text	
+			action		character varying	varchar	
+			quantity	numeric			numeric	
+			sessionvar	character varying	varchar	
+			date		date			date	
+			time		time without time zone	time	
+			sharetoteam	boolean			bool	
+			latlong		character varying	varchar	
+			units		character varying	varchar	
+			newsitem	boolean			bool	
+			nft		character varying	varchar	
+			dao		character varying	varchar	
+			wallet_id	character varying	varchar	
+			transaction_hashcharacter varying	varchar	
+			signed_by	character varying	varchar	
+			signers_address	character varying	varchar	
+			recieved_by	character varying	varchar	
+			recievers_addresscharacter varying	varchar	
+			reviewer	character varying	varchar	
+			reviewew_addresscharacter varying	varchar";
+			
 
 		var datatemp = {
 				"type": "FeatureCollection",
