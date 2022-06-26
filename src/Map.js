@@ -851,7 +851,7 @@
 */
 			console.log("coordsloop6");
 
-			var valuechainDbTables = "
+/*			var valuechainDbTables =
 			Name		Data Type		Format
 			id		bigint			int8
 			created_at	timestamp with time     zonetimestamptz	
@@ -876,7 +876,7 @@
 			recievers_addresscharacter varying	varchar	
 			reviewer	character varying	varchar	
 			reviewew_addresscharacter varying	varchar";
-			
+*/			
 
 		var datatemp = {
 				"type": "FeatureCollection",
