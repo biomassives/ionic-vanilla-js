@@ -593,7 +593,90 @@
 			linkElement.click();
 			}
 		});
+		function clearItems() {
+                        document.getElementById("map").style.visibility = "hide";
+                        document.getElementById("greeting").style.visibility = "hide";
+                        document.getElementById("maleaf").style.visibility = "hide";
+                        document.getElementById("salecta").style.visibility = "hide";
+                        document.getElementById("kusafisha").style.visibility = "hide";
+                        document.getElementById("kwachk").style.visibility = "hide";
+                        document.getElementById("arega").style.visibility = "hide";
+                        document.getElementById("mabroker").style.visibility = "hide";
+                        document.getElementById("boiler").style.visibility = "hide";
+                        document.getElementById("footsoldiers").style.visibility = "hide";
+                        document.getElementById("pusha").style.visibility = "hide";
+		}
 
+                document.getElementById("checkin").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("checkin").style.visibility = "visible";
+                });
+                document.getElementById("maleaf").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("map").style.visibility = "visible";
+                        document.getElementById("greeting").style.visibility = "visible";
+                });
+                document.getElementById("selecta").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("selecta").style.visibility = "visible";
+                });
+                document.getElementById("kusafisha").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("kusafisha").style.visibility = "visible";
+                });
+                document.getElementById("kwachk").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("kwachk").style.visibility = "visible";
+			
+                });
+                document.getElementById("arega").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("arega").style.visibility = "visible";
+                });
+                document.getElementById("mabroker").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("mabroker").style.visibility = "visible";
+                });
+                document.getElementById("boiler").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("boiler").style.visibility = "visible";
+                });
+                document.getElementById("footsoliders").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("footsoldiers").style.visibility = "visible";
+                });
+                document.getElementById("pusha").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("pusha").style.visibility = "visible";
+                });
+                document.getElementById("presha").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("presha").style.visibility = "visible";
+                });
+                document.getElementById("dizo").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("dizo").style.visibility = "visible";
+                });
+                document.getElementById("gascooker").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("gascooker").style.visibility = "visible";
+                });
+                document.getElementById("gastangi").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("gastangi").style.visibility = "visible";
+                });
+                document.getElementById("kumaintain").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("kumaintain").style.visibility = "visible";
+                });
+                document.getElementById("stingozandifu").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("stingozandifu").style.visibility = "visible";
+                });
+                document.getElementById("maxchange").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("maxchange").style.visibility = "visible";
+                });
 
 
 
