@@ -597,7 +597,7 @@
                         document.getElementById("map").style.visibility = "hide";
                         document.getElementById("greeting").style.visibility = "hide";
                         document.getElementById("maleaf").style.visibility = "hide";
-                        document.getElementById("salecta").style.visibility = "hide";
+                        document.getElementById("selecta").style.visibility = "hide";
                         document.getElementById("kusafisha").style.visibility = "hide";
                         document.getElementById("kwachk").style.visibility = "hide";
                         document.getElementById("arega").style.visibility = "hide";
@@ -605,6 +605,15 @@
                         document.getElementById("boiler").style.visibility = "hide";
                         document.getElementById("footsoldiers").style.visibility = "hide";
                         document.getElementById("pusha").style.visibility = "hide";
+                        document.getElementById("presha").style.visibility = "hide";
+                        document.getElementById("dizo").style.visibility = "hide";
+                        document.getElementById("gascooker").style.visibility = "hide";
+                        document.getElementById("gastangi").style.visibility = "hide";
+                        document.getElementById("kumaintain").style.visibility = "hide";
+                        document.getElementById("stingozandifu").style.visibility = "hide";
+                        document.getElementById("maxchange").style.visibility = "hide";
+			
+			
 		}
 
                 document.getElementById("checkin").addEventListener("click", function () {
