@@ -595,7 +595,6 @@
 		function clearItems() {
                         document.getElementById("map").style.display = "none";
                         document.getElementById("greeting").style.display = "none";
-                        document.getElementById("maleaf").style.display = "none";
                         document.getElementById("selecta").style.display = "none";
                         document.getElementById("kusafisha").style.display = "none";
                         document.getElementById("kwachk").style.display = "none";
