@@ -575,8 +575,7 @@
 		//
 		//
 		//
-		document.getElementById("checkin").addEventListener("click", function () {
-			alert("checkin")
+		document.getElementById("0checkin").addEventListener("click", function () {
 
 			let nodata = '{"type":"FeatureCollection","features":[]}';
 			let jsonData = (JSON.stringify(drawnItems.toGeoJSON()));
@@ -611,16 +610,15 @@
                         document.getElementById("gastangi").style.display = "none";
                         document.getElementById("kumaintain").style.display = "none";
                         document.getElementById("stingozandifu").style.display = "none";
-                        document.getElementById("maxchange").style.display = "none";
-			
-			
+                        document.getElementById("maxchange").style.display = "none";	
 		}
 
-                document.getElementById("0checkin").addEventListener("click", function () {
+            /*    document.getElementById("0checkin").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("checkin").style.display = "block";
                 });
-                document.getElementById("0maleaf").addEventListener("click", function () {
+		*/
+		document.getElementById("0maleaf").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("map").style.display = "block";
                         document.getElementById("greeting").style.display = "block";
