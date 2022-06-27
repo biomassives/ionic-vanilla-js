@@ -647,14 +647,15 @@
 			clearItems()
                         document.getElementById("boiler").style.display = "block";
                 });
-                document.getElementById("0footsoliders").addEventListener("click", function () {
+                document.getElementById("0footsoldiers").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
                 });
-                document.getElementById("0pusha").addEventListener("click", function () {
+/*                document.getElementById("0pusha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("pusha").style.display = "block";
                 });
+*/		
                 document.getElementById("0presha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("presha").style.display = "block";
