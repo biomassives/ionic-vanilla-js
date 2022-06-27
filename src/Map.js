@@ -594,6 +594,7 @@
 		});
 		function clearItems() {
                         document.getElementById("map").style.display = "none";
+                        document.getElementById("mapbuttons").style.display = "none";
                         document.getElementById("greeting").style.display = "none";
                         document.getElementById("selecta").style.display = "none";
                         document.getElementById("kusafisha").style.display = "none";
@@ -621,6 +622,8 @@
 			clearItems()
                         document.getElementById("map").style.display = "block";
                         document.getElementById("greeting").style.display = "block";
+			document.getElementById("mapbuttons").style.display = "block";
+
                 });
                 document.getElementById("0selecta").addEventListener("click", function () {
 			clearItems()
