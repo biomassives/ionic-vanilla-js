@@ -632,7 +632,7 @@
                 });
                 document.getElementById("0kwachk").addEventListener("click", function () {			
 			clearItems()         
-			document.getElementById("kwachk").display = "block";			
+			document.getElementById("kwachk").style.display = "block";			
                 });
                 document.getElementById("0arega").addEventListener("click", function () {
 			clearItems()
