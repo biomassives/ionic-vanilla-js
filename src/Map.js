@@ -616,72 +616,72 @@
 			
 		}
 
-                document.getElementById("checkin").addEventListener("click", function () {
+                document.getElementById("0checkin").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("checkin").style.display = "block";
                 });
-                document.getElementById("maleaf").addEventListener("click", function () {
+                document.getElementById("0maleaf").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("map").style.display = "block";
                         document.getElementById("greeting").style.display = "block";
                 });
-                document.getElementById("selecta").addEventListener("click", function () {
+                document.getElementById("0selecta").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("selecta").style.display = "block";
                 });
-                document.getElementById("kusafisha").addEventListener("click", function () {
+                document.getElementById("0kusafisha").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("kusafisha").style.display = "block";
                 });
-                document.getElementById("kwachk").addEventListener("click", function () {			
+                document.getElementById("0kwachk").addEventListener("click", function () {			
 			clearItems()         
 			document.getElementById("kwachk").display = "block";			
                 });
-                document.getElementById("arega").addEventListener("click", function () {
+                document.getElementById("0arega").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("arega").style.display = "block";
                 });
-                document.getElementById("mabroker").addEventListener("click", function () {
+                document.getElementById("0mabroker").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("mabroker").style.display = "block";
                 });
-                document.getElementById("boiler").addEventListener("click", function () {
+                document.getElementById("0boiler").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("boiler").style.display = "block";
                 });
-                document.getElementById("footsoliders").addEventListener("click", function () {
+                document.getElementById("0footsoliders").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
                 });
-                document.getElementById("pusha").addEventListener("click", function () {
+                document.getElementById("0pusha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("pusha").style.display = "block";
                 });
-                document.getElementById("presha").addEventListener("click", function () {
+                document.getElementById("0presha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("presha").style.display = "block";
                 });
-                document.getElementById("dizo").addEventListener("click", function () {
+                document.getElementById("0dizo").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("dizo").style.display = "block";
                 });
-                document.getElementById("gascooker").addEventListener("click", function () {
+                document.getElementById("0gascooker").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gascooker").style.display = "block";
                 });
-                document.getElementById("gastangi").addEventListener("click", function () {
+                document.getElementById("0gastangi").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gastangi").style.display = "block";
                 });
-                document.getElementById("kumaintain").addEventListener("click", function () {
+                document.getElementById("0kumaintain").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("kumaintain").style.display = "block";
                 });
-                document.getElementById("stingozandifu").addEventListener("click", function () {
+                document.getElementById("0stingozandifu").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("stingozandifu").style.display = "block";
                 });
-                document.getElementById("maxchange").addEventListener("click", function () {
+                document.getElementById("0maxchange").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("maxchange").style.display = "block";
                 });
