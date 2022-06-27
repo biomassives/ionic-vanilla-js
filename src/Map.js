@@ -44,7 +44,7 @@
 		}
 		var userhash = localStorage.getItem("userhash");
 
-		var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 			osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 			osm = L.tileLayer(osmUrl, {maxZoom: 29, attribution: osmAttrib}),
 			map = new L.Map('map', {layers: [osm], center: new L.LatLng( -1.5365, 37.1357 ), zoom: 10 });
