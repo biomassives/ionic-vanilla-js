@@ -1020,6 +1020,10 @@
 				]
 				};
 
+			
+				L.geoJson(datatemp).addTo(map);
+				layer.addTo(map);
+			
 
 //		var polygon3 =	 L.polygon(datatemp);
 //		var polygon3 =	 L.polygon(data.value.json);
