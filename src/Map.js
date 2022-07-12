@@ -594,6 +594,7 @@
 		});
 		function clearItems() {
                         document.getElementById("map").style.display = "none";
+                        document.getElementById("orodha").style.display = "none";
                         document.getElementById("mapbuttons").style.display = "none";
                         document.getElementById("greeting").style.display = "none";
                         document.getElementById("selecta").style.display = "none";
