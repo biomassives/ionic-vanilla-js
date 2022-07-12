@@ -629,6 +629,10 @@
 			clearItems()
 			document.getElementById("selecta").style.display = "block";
                 });
+                document.getElementById("0orodha").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("orodha").style.display = "block";
+                });
                 document.getElementById("0kusafisha").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("kusafisha").style.display = "block";
