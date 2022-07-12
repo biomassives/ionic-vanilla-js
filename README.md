@@ -1,4 +1,7 @@
-# ionic-vanilla-js-with-leaflet
+
+![Eco Ops App Image](repository-open-graph-template.png)
+
+# eco ops app
 
 This repository contains an Ionic 6 Vanilla Javascript starter with no framework (no Angular, no React, no Vue...)
 
