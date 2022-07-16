@@ -50,7 +50,7 @@
             </ion-item>	
 	    <ion-item button>
               <ion-icon slot="1" data-src="Download your data"></ion-icon>
-              <ion-label id="0checkin"> Download your Data </ion-label>
+              <ion-label id="0checkin"> Pakua data yako </ion-label>
             </ion-item>
             <ion-item button>
               <ion-icon slot="1" data-src="Orodha ya ma orodha"></ion-icon>
@@ -112,7 +112,6 @@
               <ion-icon slot="4" data-src="ma Xchange"></ion-icon>
               <ion-label id="0maxchange"> -- ma Xchange </ion-label>
             </ion-item>
-
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
@@ -303,8 +302,71 @@
 <script type="module" src="/src/main.js"></script>
 <script type="module" src="/src/Map.js"></script>
 <script>
+function sheng(){
+ document.getElementById("0maxchange").innerHTML="Transfer";
+ document.getElementById("0stingozandifu").innerHTML="Engineering";
+ document.getElementById("0kumaintain").innerHTML="Maintenance";
+ document.getElementById("0gastangi").innerHTML="Gas Tank";
+ document.getElementById("0gascooker").innerHTML="Stove fuel";
+ document.getElementById("0dizo").innerHTML="Diesel";
+ document.getElementById("0presha").innerHTML="Mold ya Presha";
+ document.getElementById("0boiler").innerHTML="Boiler Pusha";
+ document.getElementById("0footsoliders").innerHTML="Ma Foot Soliders";
+ document.getElementById("0mabroker").innerHTML="Ma Broker";
+ document.getElementById("0arega").innerHTML="Arega / Kusaga";
+ document.getElementById("0kwachk").innerHTML="Kwachk";
+ document.getElementById("0kusafisha").innerHTML="Cleaning";
+ document.getElementById("0selecta").innerHTML="Sort Approval";
+ document.getElementById("0orodha").innerHTML="Checkin product";
+ document.getElementById("0checkin").innerHTML="Orodha ya ma orodha";
+ document.getElementById("0maleaf").innerHTML="Locations";
+}
+function eng(){
+ document.getElementById("0maxchange").innerHTML="Transfer";
+ document.getElementById("0stingozandifu").innerHTML="Engineering";
+ document.getElementById("0kumaintain").innerHTML="Maintenance";
+ document.getElementById("0gastangi").innerHTML="Compressed Gas";
+ document.getElementById("0gascooker").innerHTML="Stove Fuel";
+ document.getElementById("0dizo").innerHTML="Diesel";
+ document.getElementById("0presha").innerHTML="Pressure Molding";
+ document.getElementById("0boiler").innerHTML="Extruding";
+ document.getElementById("0footsoliders").innerHTML="Marketing";
+ document.getElementById("0mabroker").innerHTML="Brokering";
+ document.getElementById("0arega").innerHTML="Chipping";
+ document.getElementById("0kwachk").innerHTML="Transport";
+ document.getElementById("0kusafisha").innerHTML="Cleaning";
+ document.getElementById("0selecta").innerHTML="Sort approval";
+ document.getElementById("0orodha").innerHTML="Checkin product";
+ document.getElementById("0checkin").innerHTML="Download your data";
+ document.getElementById("0maleaf").innerHTML="Map";
+}
+function arabic(){
+ document.getElementById("0maxchange").innerHTML="نقل";
+ document.getElementById("0stingozandifu").innerHTML="هندسة";
+ document.getElementById("0kumaintain").innerHTML="اعمال صيانة";
+ document.getElementById("0gastangi").innerHTML="غاز مضغوط";
+ document.getElementById("0gascooker").innerHTML="وقود الموقد";
+ document.getElementById("0dizo").innerHTML="ديزل";
+ document.getElementById("0presha").innerHTML="صب الضغط";
+ document.getElementById("0boiler").innerHTML="البثق";
+ document.getElementById("0footsoliders").innerHTML="تسويق";
+ document.getElementById("0mabroker").innerHTML="السمسرة";
+ document.getElementById("0arega").innerHTML="التقطيع";
+ document.getElementById("0kwachk").innerHTML="المواصلات";
+ document.getElementById("0kusafisha").innerHTML="تنظيف";
+ document.getElementById("0selecta").innerHTML="نوع الموافقة";
+ document.getElementById("0orodha").innerHTML="منتج تسجيل الوصول";
+ document.getElementById("0checkin").innerHTML="قم بتنزيل بياناتك";
+ document.getElementById("0maleaf").innerHTML="خريطة";
+}	
+</script>
+
+<button onclick="eng()">En</button>
+<button onclick="sheng()">Sh</button>
+<button onclick="arabic()">عربي</button>
+
 	
-	
+<script>
 	function furbur() { 
 		var density_element = document.getElementById('density');
 		var rating_element = document.getElementById('rating');
