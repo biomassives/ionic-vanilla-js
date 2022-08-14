@@ -283,6 +283,11 @@
 
 	</div>
 	    
+	      
+<button onclick="eng()">En</button>
+<button onclick="sheng()">Sh</button>
+<button onclick="arabic()">عربي</button>
+	      
 	    	    
       </ion-content>
       <ion-footer collapse="fade">
@@ -361,9 +366,6 @@ function arabic(){
 }	
 </script>
 
-<button onclick="eng()">En</button>
-<button onclick="sheng()">Sh</button>
-<button onclick="arabic()">عربي</button>
 
 	
 <script>
@@ -483,12 +485,24 @@ function arabic(){
 
 </script>
 
+	
 
 
 <script>
 
 
 document.addEventListener('click',function(e){
+
+    if(e.target && e.target.id== 'english'){	
+	eng();
+    }
+    if(e.target && e.target.id== 'sheng'){	
+	sheng();
+    }  
+    if(e.target && e.target.id== 'arabic'){	
+	arabic();
+    }
+
     if(e.target && e.target.id== 'shownum'){
           //do something
  
