@@ -227,6 +227,32 @@
 		      
 		      
 		      
+		      <form method="POST">
+  <b>Lot Name:</b>
+  <br>
+  <textarea id="e-name" rows="1" cols="35"></textarea>
+  <br><br>
+  <b>Description:</b>
+  <br>
+  <textarea id="e-description" rows="15" cols="35"></textarea>
+  <br><br>
+  <input type="submit" value="Record Checkin">
+</form>
+
+<script>
+  document.querySelector('form').onsubmit = function(e) {
+    e.preventDefault();
+    var name = document.querySelector('#e-name').value;
+    var description = document.querySelector('#e-description').value;
+    localStorage["namedesc"] = name+ " " +description;
+    console.log(localStorage);
+  }
+</script>
+
+		      
+		      
+		      
+		      
 		       <form action=# id="checkin">
 				
 			<div>
