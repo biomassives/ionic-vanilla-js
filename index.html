@@ -147,9 +147,9 @@
 				</div>
 			<div>	
 			Weighed by:
-				<input type=text name=checkinitem id=checkinitem>	   
+				<input type=text name=weighedby id=weighedby>	   
 				</div>
-			<input type=submit value=submit name=submit>
+			<input type=submit value=submit id=checkin name=submit>
 		      </form>
 				<br>
 				
@@ -325,6 +325,20 @@
 <script type="module" src="/src/main.js"></script>
 <script type="module" src="/src/Map.js"></script>
 <script>
+	
+// form processing
+	
+var userhash = localStorage.getItem("userhash");
+	
+  let btn = document.querySelector('#checkin');
+  btn.addEventListener('click', function (event) {
+	console.log(event); // The event details
+	console.log(event.target); // The clicked element
+  });
+	
+	
+	
+// menu layers	
 function sheng(){
  document.getElementById("0maxchange").innerHTML="Transfer";
  document.getElementById("0stingozandifu").innerHTML="Engineering";
