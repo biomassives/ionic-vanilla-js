@@ -448,14 +448,17 @@
 	
 var userhash = localStorage.getItem("userhash");
 	
-  let btn = document.querySelector('#checkin');
-  btn.addEventListener('click', function (event) {
-	      event.preventDefault();
-	console.log("hello"); // The event details
-	console.log(event); // The event details
-	console.log(event.target); // The clicked element
-	  
-	  					localStorage.setItem("CheckinItem", "{ \"data\": [ ["+
+//  let btn = document.querySelector('#checkin');
+//  btn.addEventListener('click', 
+	
+	
+	function (checkin) {
+
+		event.preventDefault();
+		console.log("hello"); // The event details
+		console.log(event); // The event details
+		console.log(event.target); // The clicked element
+	  				 localStorage.setItem("CheckinItem", "{ \"data\": [ ["+
 					 temp +"] ], \"weight\":[\""+
 					 popupSplits[4]+"\"],\"material\":[\""+
 					 popupSplits[5]+"\"],\"checkinperson\":[\""+
@@ -478,10 +481,8 @@ var userhash = localStorage.getItem("userhash");
 					 featureid+"\"],\"photo\":[\""+
 					 featureid+"\"],\"assetreward\":[\""+
 					 featureid+"\"],\"featuretype\":[\"rectangle\"] }");
-	  
-	  
-  });
-	
+	                                 });
+	}
 	
 	
 // menu layers	
