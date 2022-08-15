@@ -25,10 +25,93 @@
   <!---	<script src="src/components/MapPolylineIntersections.js"></script>-->
   <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/src/L.Control.Locate.js"></script>
   <style> .leaflet-control-locate a{cursor:pointer}.leaflet-control-locate a .leaflet-control-locate-location-arrow{display:inline-block;width:16px;height:16px;margin:7px;background-color:#000;-webkit-mask-image:url("/src/icons/location-arrow-solid.svg");mask-image:url("../icons/location-arrow-solid.svg");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}.leaflet-control-locate a .leaflet-control-locate-spinner{display:inline-block;width:16px;height:16px;margin:7px;background-color:#000;-webkit-mask-image:url("../icons/spinner-solid.svg");mask-image:url("../icons/spinner-solid.svg");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;animation:leaflet-control-locate-spin 2s linear infinite}.leaflet-control-locate.active a .leaflet-control-locate-location-arrow{background-color:#2074b6}.leaflet-control-locate.following a .leaflet-control-locate-location-arrow{background-color:#fc8428}.leaflet-touch .leaflet-bar .leaflet-locate-text-active{width:100%;max-width:200px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;padding:0 10px}.leaflet-touch .leaflet-bar .leaflet-locate-text-active .leaflet-locate-icon{padding:0 5px 0 0}.leaflet-control-locate-location circle{animation:leaflet-control-locate-throb 4s ease infinite}@keyframes leaflet-control-locate-throb{0%{stroke-width:1}50%{stroke-width:3;transform:scale(0.8, 0.8)}100%{stroke-width:1}}@keyframes leaflet-control-locate-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}/*# sourceMappingURL=L.Control.Locate.min.css.map */
-  </style>
+
+		#activity {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		#activity:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 20vh;
+			background: rgba(0,173,239,0.5);
+		}
+		#activity:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100vw;
+			height: 20vh;
+			background: rgba(235,0,138, 0.5);
+		}
+
+		#result {
+			text-transform: uppercase;
+		}
+
+		.tryagain {
+		background-attachment: scroll;
+		background-clip: border-box;
+		background-color: rgb(127, 206, 119);
+		background-image: none;
+		background-origin: padding-box;
+		background-size: auto;
+		border-bottom-left-radius: 16px;
+		border-bottom-right-radius: 16px;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		box-sizing: border-box;
+		color: rgb(255, 255, 255);
+		cursor: pointer;
+		display: inline-block;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 32px;
+		font-stretch: normal;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		height: 93px;
+		line-height: normal;
+		margin-bottom: 8px;
+		margin-left: 9.28px;
+		margin-right: 9.28px;
+		margin-top: 8px;
+		min-height: 0px;
+		min-width: 208px;
+		outline-width: 0px;
+		padding-bottom: 24px;
+		padding-left: 24px;
+		padding-right: 24px;
+		padding-top: 24px;
+		position: relative;
+		text-align: center;
+		text-transform: none;
+		transition-delay: 0s;
+		transition-duration: 0.28s;
+		transition-property: box-shadow;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		width: 351.594px;
+		z-index: 0;
+		-webkit-user-select: none;
+		}
+
+		a:link, a:hover, a:visited, a:active {
+			text-decoration: none;
+		}
+.hits {
+  font-size: 2em;
+  font-weight: bolder;
+}
+	</style>
   <script src="https://unpkg.com/@supabase/supabase-js"></script>	
   <script src="/convexhull.js"></script>
-
+   
 
 </head>
 <body>
@@ -135,6 +218,15 @@
 	      <div id=greeting><h1>Ngive ya Gabo -  Mazingwasa App</h1>
 		      Add research comments at <a href="http://mylunch.link:4567">mylunch forum</a></div>
 	      <div id=orodha style="display:none;"><h1>Orodoha Ya Ma Orodoha</h1>
+		      
+		      
+		           <div id="activity">
+  <h1 id="counter">You have hit the spacebar <span class="hits">0</span> times.</h1>
+  <a href="#" onclick="resetHits()" class="tryagain">RESTART</a>
+		</div>
+		      
+		      
+		      
 		       <form action=# id="checkin">
 				
 			<div>
@@ -325,6 +417,32 @@
 <script type="module" src="/src/main.js"></script>
 <script type="module" src="/src/Map.js"></script>
 <script>
+	// clicker
+	
+	var hits = 0;
+	var hitElement = document.querySelector( '.hits' );
+	document.body.onkeyup = function(e) {
+ 	 if( e.keyCode == 32 ) {
+	    addHit();
+  		}
+	}
+
+	var addHit = function() {
+	  hits++;
+	  renderHits();
+	}
+
+	var renderHits = function() {
+	  hitElement.innerHTML = hits;
+	}
+
+	var resetHits = function() {
+	  hits = 0;
+	  renderHits();
+	}
+	
+	
+	
 	
 // form processing
 	
@@ -332,9 +450,36 @@ var userhash = localStorage.getItem("userhash");
 	
   let btn = document.querySelector('#checkin');
   btn.addEventListener('click', function (event) {
+	      event.preventDefault();
 	console.log("hello"); // The event details
 	console.log(event); // The event details
 	console.log(event.target); // The clicked element
+	  
+	  					localStorage.setItem(CheckinItem, "{ \"data\": [ ["+
+					 temp +"] ], \"weight\":[\""+
+					 popupSplits[4]+"\"],\"material\":[\""+
+					 popupSplits[5]+"\"],\"checkinperson\":[\""+
+					 popupSplits[6]+"\"],\"provider\":[\""+
+					 featureid+"\"],\"datetime\":[\""+
+					 featureid+"\"],\"wallet\":[\""+
+					 featureid+"\"],\"walle2\":[\""+
+					 featureid+"\"],\"walle3\":[\""+
+					 featureid+"\"],\"walle4\":[\""+
+					 featureid+"\"],\"walle5\":[\""+
+					 featureid+"\"],\"walle6\":[\""+
+					 featureid+"\"],\"walle7\":[\""+
+					 featureid+"\"],\"walle8\":[\""+
+					 featureid+"\"],\"walle9\":[\""+
+					 featureid+"\"],\"walle10\":[\""+
+								     
+					 featureid+"\"],\"tweet\":[\""+
+					 featureid+"\"],\"walle10\":[\""+
+								     
+					 featureid+"\"],\"photo\":[\""+
+					 featureid+"\"],\"assetreward\":[\""+
+					 featureid+"\"],\"featuretype\":[\"rectangle\"] }");
+	  
+	  
   });
 	
 	
