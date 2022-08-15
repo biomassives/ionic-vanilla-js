@@ -221,13 +221,45 @@
 		      
 		      
 		           <div id="activity">
-  <h1 id="counter">You have hit the spacebar <span class="hits">0</span> times.</h1>
-  <a href="#" onclick="resetHits()" class="tryagain">RESTART</a>
-		</div>
 		      
 		      
 		      <div>
 		      <form id="lotdrop" method="POST">
+			  <b>Plastic type:</b>
+  			  <br>
+			      <select id="plastictype">
+				  <option value=PET>PETE</option>
+				  <option value=HDPE>HDPE</option>
+				  <option value=PVC>PVC</option>
+				  <option value=LDPE>LDPE</option>
+				  <option value=PP>PP</option>
+				  <option value=PS>PS</option>
+				  <option value=mixed_plastics>Mixed</option>
+				  <option value=compostable>Compostable</option>
+				  <option value=compost_product>Compost Product</option>
+				  <option value=compost_hoofhorn>Compost amendment</option>
+				  <option value=compost_greens>Compost Product</option>
+				  <option value=compost_browns>Compost Product</option>
+				  <option value=compost_mycelia>Mycelia</option>
+				  <option value=worm_castings>Worm castings</option>
+			      </select>
+			      
+  			  <br>
+			  <b>Weight:</b>
+			      <BR>
+				      	<input type=text name=weight size=5> kg
+  			  <br>
+			  <b>Provider:</b>
+			      <BR>
+				      	<input type=text name=provider>
+  			      <br>
+				      
+			  <b>Witness:</b>
+			      <BR>
+				      	<input type=text name=witness>
+
+			      
+  			  <textarea id="e-name" rows="1" cols="35"></textarea>
 			  <b>Lot Name:</b>
   			  <br>
   			  <textarea id="e-name" rows="1" cols="35"></textarea>
@@ -239,6 +271,9 @@
   				<input type="submit" value="Record Checkin">
 			</form>
 		      </div>
+
+		      
+		      	  </div>
 			      
 			      
 <script>
