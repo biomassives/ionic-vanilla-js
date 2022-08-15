@@ -135,7 +135,7 @@
 	      <div id=greeting><h1>Ngive ya Gabo -  Mazingwasa App</h1>
 		      Add research comments at <a href="http://mylunch.link:4567">mylunch forum</a></div>
 	      <div id=orodha style="display:none;"><h1>Orodoha Ya Ma Orodoha</h1>
-		       <form action=#>
+		       <form action=# id="checkin">
 				
 			<div>
 			Checkin Weight:
@@ -149,7 +149,7 @@
 			Weighed by:
 				<input type=text name=weighedby id=weighedby>	   
 				</div>
-			<input type=submit value=submit id=checkin name=submit>
+			<input type=submit value=submit id=checkin onclick="checkin();" name=submit>
 		      </form>
 				<br>
 				
@@ -332,6 +332,7 @@ var userhash = localStorage.getItem("userhash");
 	
   let btn = document.querySelector('#checkin');
   btn.addEventListener('click', function (event) {
+	console.log("hello"); // The event details
 	console.log(event); // The event details
 	console.log(event.target); // The clicked element
   });
