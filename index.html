@@ -126,8 +126,6 @@
       <ion-content>
         <ion-list>
          <ion-list-header style="background:url(/icons/header.png);"> </ion-list-header>
-          <ion-menu-toggle auto-hide="false">
-	    <ion-item>
 		    		
 		<button onclick="amharic()">አማርኛ</button>
 		<button onclick="arabic()">عربي</button>
@@ -138,7 +136,7 @@
 		<button onclick="spanish()">Sp</button>
 		<button onclick="sheng()">Sw</button>
 
-	    </ion-item>	  
+          <ion-menu-toggle auto-hide="false"> 	  
             <ion-item button>
               <ion-icon slot="1" data-src="Orodha ya ma orodha"></ion-icon>
               <ion-label id="0maleaf"> Ma leaf </ion-label>
@@ -740,16 +738,9 @@ function furbur() {
 
 	}; 
 
-
-
-</script>
-
-	
-
-
-<script>
 /*  if(e.target && e.target.id== 'english'){	
 	eng();
+	alery("hi there");
     }
     if(e.target && e.target.id== 'sheng'){	
 	sheng();
@@ -758,6 +749,7 @@ function furbur() {
 	arabic();
     }*/
 
+	
 document.addEventListener('click',function(e){
 
   
