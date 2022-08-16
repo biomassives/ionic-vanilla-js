@@ -128,14 +128,16 @@
          <ion-list-header style="background:url(/icons/header.png);"> </ion-list-header>
           <ion-menu-toggle auto-hide="false">
 	    <ion-item>
-		<button onclick="amharic()">中文</button>
-		<button onclick="eng()">En</button>
-		<button onclick="sheng()">Sh</button>
-		<button onclick="arabic()">عربي</button>		
+		    		
 		<button onclick="amharic()">አማርኛ</button>
+		<button onclick="arabic()">عربي</button>
 		<button onclick="chinese()">中文</button>
+		<button onclick="eng()">En</button>
 		<button onclick="french()">Fr</button>
 		<button onclick="russian()">Ru</button>
+		<button onclick="spanish()">Sp</button>
+		<button onclick="sheng()">Sw</button>
+
 	    </ion-item>	  
             <ion-item button>
               <ion-icon slot="1" data-src="Orodha ya ma orodha"></ion-icon>
@@ -504,6 +506,7 @@ function checkin(){
 		
 // menu layers	
 function sheng(){
+ event.preventDefault();
  document.getElementById("0maxchange").innerHTML="Ma Xchange";
  document.getElementById("0stingozandifu").innerHTML="Stingozandifu";
  document.getElementById("0kumaintain").innerHTML="Kumaintain";
@@ -523,6 +526,7 @@ function sheng(){
  document.getElementById("0maleaf").innerHTML="Ma leaf";
 }
 function eng(){
+ event.preventDefault();	
  document.getElementById("0maxchange").innerHTML="Transfer";
  document.getElementById("0stingozandifu").innerHTML="Engineering";
  document.getElementById("0kumaintain").innerHTML="Maintenance";
@@ -542,6 +546,7 @@ function eng(){
  document.getElementById("0maleaf").innerHTML="Map";
 }
 function arabic(){
+ event.preventDefault();	
  document.getElementById("0maxchange").innerHTML="نقل";
  document.getElementById("0stingozandifu").innerHTML="هندسة";
  document.getElementById("0kumaintain").innerHTML="اعمال صيانة";
@@ -561,6 +566,7 @@ function arabic(){
  document.getElementById("0maleaf").innerHTML="خريطة";
 }	
 function russian(){
+ event.preventDefault();	
  document.getElementById("0maxchange").innerHTML="Передача";
  document.getElementById("0stingozandifu").innerHTML="инженерия";
  document.getElementById("0kumaintain").innerHTML="техобслуживание";
@@ -580,6 +586,7 @@ function russian(){
  document.getElementById("0maleaf").innerHTML="карта";
 }	
 function french(){
+ event.preventDefault();	
  document.getElementById("0maxchange").innerHTML="Transférer";
  document.getElementById("0stingozandifu").innerHTML="ingénierie";
  document.getElementById("0kumaintain").innerHTML="Réparation";
@@ -599,6 +606,7 @@ function french(){
  document.getElementById("0maleaf").innerHTML="une carte";
 }	
 function chinese(){
+ event.preventDefault();	
  document.getElementById("0maxchange").innerHTML="转移";
  document.getElementById("0stingozandifu").innerHTML="工程";
  document.getElementById("0kumaintain").innerHTML="维修工作";
