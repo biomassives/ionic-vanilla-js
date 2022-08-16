@@ -277,16 +277,15 @@
 				      	<input type=text name="witness" id="witness">
 
 			      
-  			  <textarea id="e-name" rows="1" cols="35"></textarea>
 			  <b>Lot Name:</b>
   			  <br/>
-  			  <textarea id="e-name" rows="1" cols="35"></textarea>
+				      	<input type=text name="e-name" id="e-name">
   			  <br/><br/>
   			  <b>Description:</b>
   			  <br/>
   			  <textarea id="e-description" rows="15" cols="35"></textarea>
   				<br/><br/>
-  				<input type="submit" value="Record Checkin">
+  				<input type="submit" name="submit" value="Record Checkin">
 			</form>
 		      </div>
 			      
@@ -294,6 +293,7 @@
 <script>
   document.querySelectorId('lotdrop').onsubmit = function(e) {
     e.preventDefault();
+	  alert("saved")
     var name = document.querySelector('#e-name').value;
     var description = document.querySelector('#e-description').value;
     localStorage["namedesc"] = name+ " " +description;
