@@ -1,10 +1,6 @@
- 
- 		const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmdHpqbHpyb3RlanBxcWRvdnliIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTUzMjY1NDksImV4cCI6MTk3MDkwMjU0OX0.edZGvym_mX4Kz5VGfg4f6UZhV6_MUseugokWE5UCbyQ"
-		 const supabaseUrl = "https://yftzjlzrotejpqqdovyb.supabase.co"
-	 
-		const _supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
-
-
+   		 const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmdHpqbHpyb3RlanBxcWRvdnliIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTUzMjY1NDksImV4cCI6MTk3MDkwMjU0OX0.edZGvym_mX4Kz5VGfg4f6UZhV6_MUseugokWE5UCbyQ"
+		 const supabaseUrl = "https://yftzjlzrotejpqqdovyb.supabase.co"	 
+		 const _supabase = supabase.createClient(supabaseUrl, supabaseAnonKey);
 
 
 		if (!('bluetooth' in navigator)) {
@@ -378,19 +374,10 @@
 				if (localStorage.getItem("leafletFeatureIndex") !== null) {
 					var featureindex = localStorage.getItem("leafletFeatureIndex");
 					var newArr = featureindex.split(',');
-				//	alert("array of items to be deleted")
-				//	alert(temp)
-				//	alert("woof")
-				//	alert(newArr)
 				}
 
 				// iterate through array of entries and
-			/*	a = a.filter(function (item) {
-					return b.indexOf(item) === -1;
-				});
-			*/
 
-				//alert("reerrrrroooo")
 				temp.forEach(function(val){
 				//	console.log("log")
 				//	console.log(val)
@@ -401,31 +388,9 @@
 					}
 				});
 
-/*				function myFunction(a, b) {
-					return a.filter(item => b.indexOf(item) < 0)
-				}
-				
-				console.log(myFunction([1, 2, 3], [1, 2]))
-*/
-				//const array_diff = (newArr, temp) => newArr.filter(v => !temp.includes(v) === -1)
-				//newArr = newArr.filter(x => temp.indexOf(x) == -1);
-				//console.log("newArr: ")
-				//console.log
-				//alert(newArr)
-				localStorage.setItem("leafletFeatureIndex",newArr);
+ 				localStorage.setItem("leafletFeatureIndex",newArr);
 
 		})
-
-
-/*		map.on(onDrawDeleted(e: any) {
-			e.layers.eachLayer(layer => {
-			  this.zones.removeLayer(layer);
-			});
-			alert("woof")
-			console.log("Draw Deleted Event!", e);
-			console.log(this.zones.getLayers());
-		  })
-*/
 
 
 		map.on('draw:edited', function (e) {
@@ -456,21 +421,7 @@
 				popupSplits[6] = popupSplits[3].replace("Tags:","");
 				console.log("after popupsplits6: "+popupSplits[6])
 
-
-				// check first 6 letters is it marker?
-/*				if (popupSplit.slice(0, 6) === "marker") { 
-					
-					console.log("marker")
-					var featureid = popupSplit.slice(6, 10)
-					localStorage.setItem(popupSplit, "{ \"data\": [ ["+
-					 layer._latlng.lat +","+ layer._latlng.lng +"] ], \"density\":[\""+
-					 popupSplits[4]+"\"],\"rating\":[\""+
-					 popupSplits[5]+"\"],\"description\":[\""+
-					 popupSplits[6]+"\"],\"featureid\":[\""+
-					 featureid+"\"],\"featuretype\":[\"marker\"] }");
 			
-			}
-*/			
 				if (popupSplit.slice(0, 9) === "rectangle") { 
 					
 					console.log(layer._latlngs)
@@ -811,24 +762,7 @@
 			var obj = JSON.parse(JSON.stringify( data ));
 
 			var features0 = JSON.parse(obj.value.json);
-//			var obj2 = obj.features;
-	//		console.log(JSON.stringify(features0));
-			console.log("floopio 111");
-//			var features = JSON.parse(JSON.stringify(features0));
-
-			// .geometry.coordinates[0][0][0]);
-//			var obj = JSON.parse(JSON.stringify( data ));
-//			var obj2 = obj[0][json];
-//			console.log(obj2);
-//			var coords = JSON.parse( JSON.stringify( obj2 ) );
-//			var coords = obj2.features;
-//			var coords = features.geometry;
-//			console.log(coords['json']);
-//			console.log("coords");
-//			var coords = coords.features 
-// });
-//
-
+ 
 			var coordinates = [];
 			console.log("coordsloop6");
 
@@ -864,6 +798,10 @@
 */
 			console.log("coordsloop6");
 
+			
+			
+//		 	NFT Token Data Object - ecocommunitydao
+			
 /*			var valuechainDbTables =
 			Name		Data Type		Format
 			id		bigint			int8
