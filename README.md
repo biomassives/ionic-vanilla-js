@@ -12,11 +12,12 @@ Features:
   Circular economy supporting nodes 
   ( each node to be shown by use of map icons to emphasize circular economy options )
 
-  * Composting
-  * Plastics collection facilities ( amounts paid, trade, or requirements met)
-  * Pyrolysis locations
+  :sunrise_over_mountains: * Composting
+  :busstop: * Plastics collection facilities ( amounts paid, trade, or requirements met)
+  :factory: * Pyrolysis locations
   * Upcycled products - plastics extruding & moulding
-  * Storage, cleaning, sorting & transfer locations
+  * :fuelpump: plastics to fuel system
+  * Eco Ops: Storage, cleaning, sorting & transfer
   * Ocean collection/ beach/ waterway cleanup
   * Activated charcoal from pyrolysis
   * Buyers of compost
