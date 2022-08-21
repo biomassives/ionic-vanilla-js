@@ -253,14 +253,13 @@
 		      
 		      <div id="orod_cont" style="display:flex;">
 			      
-			   <ion-grid style="margin:10px;">
+			  <ion-grid style="margin:10px;">
 				  <ion-row>
                 			<img src="/theme/mupy1/plastics_weigh_station_witness_and_scale_operator800.JPG" width="200" height="200" align="right">
 					
 					<span id="plastic_checkins"></span>	
 				  </ion-row>
-			   </ion-grid>
-			      
+				  <ion-row>			      
 
 		      <form id="plastics_checkin" action="">
 
@@ -306,23 +305,11 @@
   				<input type="submit" name="submit" value="Record Checkin">
 			</form>		        	      
 
-		      	<script>	  
-		 	var my_func = function(event) {
-    			alert("swarm for peace, reproductive rights , human rights, public domain, and environment");
-    			event.preventDefault();				
-			var item = document.querySelector('#ld-plastictype').value;
-                        var name = document.querySelector('#ld-name').value;
-                        var witness = document.querySelector('#ld-witness').value;
-                        var description = document.querySelector('#ld-description').value;
-                        localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
-                        console.log(localStorage);									
-			};  
-				
-			var form1 = document.getElementById("plastics_checkin");	  
-			// attach event listener
-			form1.addEventListener("submit", my_func, true);				  				  			           
-			</script>
-			      
+					  </ion-row>
+			</ion-grid>
+
+					  
+
 		      
 		      
 	      </div>
@@ -488,7 +475,22 @@
 </body>
 <script type="module" src="/src/main.js"></script>
 <script type="module" src="/src/Map.js"></script>
-<script>
+<script>	  
+	var my_func = function(event) {
+	alert("swarm for peace, reproductive rights , human rights, public domain, and environment");
+	event.preventDefault();				
+	var item = document.querySelector('#ld-plastictype').value;
+	var name = document.querySelector('#ld-name').value;
+	var witness = document.querySelector('#ld-witness').value;
+	var description = document.querySelector('#ld-description').value;
+	localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
+	console.log(localStorage);									
+	};  
+
+	var form1 = document.getElementById("plastics_checkin");	  
+	// attach event listener
+	form1.addEventListener("submit", my_func, true);				  				  			           
+						      
 	// clicker
 	
 	var hits = 0;
