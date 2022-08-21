@@ -408,21 +408,20 @@
 		      
 		      
 		          <textarea id="myTextarea" rows="10" cols="80"></textarea>
-    <p></p>
-    <button onclick="mySave()">Save</button>
-    <button onclick="myLoad()">Load</button>
-    <script>
-      function mySave() {
-        var myContent = document.getElementById("myTextarea").value;
-        localStorage.setItem("myContent", myContent);
-      }
-      function myLoad() {
-        var myContent = localStorage.getItem("myContent");
-        document.getElementById("myTextarea").value = myContent;
-      }
-    </script>
-  </body>
-</html>
+			    <p></p>
+			    <button onclick="mySave()">Save</button>
+			    <button onclick="myLoad()">Load</button>
+			    <script>
+			      function mySave() {
+				var myContent = document.getElementById("myTextarea").value;
+				localStorage.setItem("myContent", myContent);
+			      }
+			      function myLoad() {
+				var myContent = localStorage.getItem("myContent");
+				document.getElementById("myTextarea").value = myContent;
+			      }
+			    </script>
+ 
 		      
 		      
 		      
