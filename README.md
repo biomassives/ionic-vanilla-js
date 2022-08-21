@@ -1,5 +1,5 @@
 
-![Eco Ops App Image](repository-open-graph-template.png)
+![Eco Ops App Image](repository-open-graph-template0.png)
 
 # Eco Ops App
 
