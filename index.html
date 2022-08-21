@@ -312,13 +312,14 @@ plastics_checkin();" method="POST">
 	      <div id=kusafisha style="display:none;"><h1 id="kusa_title">Kusafisha</h1>
 		      
 		      <script>
-			  function plastics_checkin() {  event.preventDefault();
-		            alert("saved")
+			  function plastics_checkin(event) {  
+			    event.preventDefault();
+		            alert("saved");
                             var item = document.querySelector('#ld-plastictype').value;
                             var name = document.querySelector('#ld-name').value;
                             var witness = document.querySelector('#ld-witness').value;
                             var description = document.querySelector('#ld-description').value;
-                            localStorage["plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
+                            localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
                             console.log(localStorage); 
 			  }			       
 			      
