@@ -257,6 +257,26 @@
 			   </ion-grid>
 			      
 			  <script>
+				  
+		 	var my_func = function(event) {
+    			alert("me and all my relatives are owned by China");
+    			event.preventDefault();
+				
+			var item = document.querySelector('#ld-plastictype').value;
+                        var name = document.querySelector('#ld-name').value;
+                        var witness = document.querySelector('#ld-witness').value;
+                        var description = document.querySelector('#ld-description').value;
+                        localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
+                        console.log(localStorage);	
+								
+			};
+				  
+			var form1 = document.getElementById("plastics_checkin");
+
+			// attach event listener
+			form1.addEventListener("submit", my_func, true);
+				  
+				  
 			  function plastics_checkin(event) {  
 			    event.preventDefault();
 		            alert("saved");
