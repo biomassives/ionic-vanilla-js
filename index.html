@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="es" data-ng-app="app">
+<html lang="sw" data-ng-app="app">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eco Ops App</title>
 
+  <!-- Eco Ops App  operates with local storage, using the browser as a key value- store -->
+  <!-- data is stored in json data strings in the localstorage, and exchanged with other users --> 
+  <!-- supabase.io is used as the cloud data storage system (using graphql) and for authentication -->
+
+  <!-- Designed for economic community development through cooperation and representation, education, -->
+  <!--  and representation for the pooest sector  -->
+	
   <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
   rel="stylesheet"
@@ -244,15 +251,18 @@
 			   <ion-grid style="margin:10px;">
 				  <ion-row>
                 			<img src="/theme/mupy1/plastics_weigh_station_witness_and_scale_operator800.JPG" width=200 height=200 align=right>
+					<BR>
+					<!-- this area displays tally of entries from the plastics-checkin form -->	
+					<span id=plastic_checkins></span>	
 				  </ion-row>
 			   </ion-grid>
 			      
 			      
-		      <form id="lotdrop" method="POST">
+		      <form id="plastics-checkin" method="POST">
 
 			  <b>Plastic type:</b>
   			  <br>
-			      <select id="plastictype">
+			      <select id="ld-plastictype">
 				  <option value=PET>PETE</option>
 				  <option value=HDPE>HDPE</option>
 				  <option value=PVC>PVC</option>
@@ -272,22 +282,22 @@
   			  <br>
 			  <b>Weight:</b>
 			      <br>
-				      	<input type=text name="weight" id="weight" size="5"> kg
+				      	<input type=text name="ld-weight" id="ld-weight" size="5"> kg
   			      <br>
 			      
 			  <b>Provider:</b>
 			      <br>
-				      	<input type=text name="provider" id="provider">
+				      	<input type=text name="ld-provider" id="ld-provider">
   			      <br>
 				      
 			  <b>Witness:</b>
 			      <br>
-				      	<input type=text name="witness" id="witness">
+				      	<input type=text name="ld-witness" id="ld-witness">
 			      <br>	      
 			      
   			  <b>Description:</b>
   			  <br>
-  			  <textarea id="e-description" rows="4" cols="30"></textarea>
+  			  <textarea id="ld-description" rows="4" cols="30"></textarea>
   				<br><br>
   				<input type="submit" name="submit" value="Record Checkin">
 			</form>		        	      
@@ -298,16 +308,18 @@
 	      <div id=selecta style="display:none;"><h1 id="sele_title">selecta</h1>
 		      
 		      
-		      Add research comments at <a href="http://mylunch.link:4567">mylunch forum</a>.</div>
+	      Add research comments at <a href="http://mylunch.link:4567">mylunch forum</a>.</div>
 	      <div id=kusafisha style="display:none;"><h1 id="kusa_title">Kusafisha</h1>
 		      
 		      <script>
-			  document.querySelectorId('lotdrop').onsubmit = function(e) {
+			  document.querySelectorId('plastics-checkin').onsubmit = function(e) {
 			    e.preventDefault();
 		            alert("saved")
-                            var name = document.querySelector('#e-name').value;
-                            var description = document.querySelector('#e-description').value;
-                            localStorage["namedesc"] = name+ " " +description;
+                            var item = document.querySelector('#ld-plastictype').value;
+                            var name = document.querySelector('#ld-name').value;
+                            var witness = document.querySelector('#ld-witness').value;
+                            var description = document.querySelector('#ld-description').value;
+                            localStorage["plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
                             console.log(localStorage);
                           }
 			</script>
