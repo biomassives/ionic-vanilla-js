@@ -383,6 +383,25 @@
 	      <div id=kwachk style="display:none;"><h1 id="kwac_title">Kwachk/ Uchukuzi</h1>
 		      
 		      
+		      <form name="myform" action="handle-data.php">
+Search: <input type='text' name='query' />
+<a href="javascript: submitform()">
+<img src="go.gif" width="33" height="19" border="0" />
+</a>
+</form>
+<script type="text/javascript">
+function submitform()
+{
+    if(document.myform.onsubmit &&
+    !document.myform.onsubmit())
+    {
+        return;
+    }
+ document.myform.submit();
+}
+</script>
+		      
+		      
 		       </div>
 	      <div id=arega style="display:none;"><h1 id="areg_title">Arega/ Kusaga</h1>
 		      
