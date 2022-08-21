@@ -261,25 +261,7 @@
 				  </ion-row>
 			   </ion-grid>
 			      
-			<script>
-				  
-		 	var my_func = function(event) {
-    			alert("swarm for peace, reproductive rights , human rights, public domain, and environment");
-    			event.preventDefault();				
-			var item = document.querySelector('#ld-plastictype').value;
-                        var name = document.querySelector('#ld-name').value;
-                        var witness = document.querySelector('#ld-witness').value;
-                        var description = document.querySelector('#ld-description').value;
-                        localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
-                        console.log(localStorage);									
-			};
-				  
-			var form1 = document.getElementById("plastics_checkin");
-				  
-			// attach event listener
-			form1.addEventListener("submit", my_func, true);				  				  			           
-			</script>
-			      
+
 		      <form id="plastics_checkin" action="">
 
 			  <b>Plastic type:</b>
@@ -323,8 +305,25 @@
   				<br><br>
   				<input type="submit" name="submit" value="Record Checkin">
 			</form>		        	      
-		        </div>			      			      			
-			<br>
+
+		      	<script>	  
+		 	var my_func = function(event) {
+    			alert("swarm for peace, reproductive rights , human rights, public domain, and environment");
+    			event.preventDefault();				
+			var item = document.querySelector('#ld-plastictype').value;
+                        var name = document.querySelector('#ld-name').value;
+                        var witness = document.querySelector('#ld-witness').value;
+                        var description = document.querySelector('#ld-description').value;
+                        localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
+                        console.log(localStorage);									
+			};  
+				
+			var form1 = document.getElementById("plastics_checkin");	  
+			// attach event listener
+			form1.addEventListener("submit", my_func, true);				  				  			           
+			</script>
+			      
+		      
 		      
 	      </div>
 	      <div id=selecta style="display:none;"><h1 id="sele_title">selecta</h1>
