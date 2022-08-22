@@ -358,7 +358,7 @@
 		        </script>			      			      			      			      			      			      			      
 		      </div>			      			    
 		      
-		      
+		      <br><br>
 		      		      <table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
 		<thead>
 			<tr>
@@ -372,9 +372,15 @@
 		<tbody>
 			<script>
 				
+			console.log("hello0");
+				
+			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
+			const checkinArr = checkinIndex.split(',');	
 			checkinArr.forEach(element => {
 				console.log(element);
+				console.log("hello1");
 			}		
+			console.log("hello2");
 				
 			</script>
 			
