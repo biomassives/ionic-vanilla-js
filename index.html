@@ -327,7 +327,7 @@
 				
 				
 				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
-				const idx = localStorage.getItem("plasticsCheckinIndex", "{plastics_checkin"+currentTimeInSecondsitness+"}");									
+				const idx = localStorage.getItem("plasticsCheckinIndex");									
 				idx = idx.replaceAll("{","").replaceAll("}","")+",";
 				localStorage.setItem("plasticsCheckinIndex", "{"+idx+ "plastics_checkin"+currentTimeInSecondsitness+"}");									
 			};
