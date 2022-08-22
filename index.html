@@ -322,7 +322,14 @@
 				var weightkg = document.querySelector('#ldweightkg').value;
 				var witness = document.querySelector('#ldwitness').value;
 				var description = document.querySelector('#lddescription').value;
-				localStorage.setItem("plastics_checkin", "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
+				
+				const currentTimeInSeconds=Math.floor(Date.now()/1000);
+				
+				
+				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
+				const idx = localStorage.getItem("plasticsCheckinIndex", "{plastics_checkin"+currentTimeInSecondsitness+"}");									
+				idx = idx.replaceAll("{","").replaceAll("}","")+",";
+				localStorage.setItem("plasticsCheckinIndex", "{"+idx+ "plastics_checkin"+currentTimeInSecondsitness+"}");									
 			};
 				
 			var checkinlist = document.querySelector('#plastic_checkins').value;								
