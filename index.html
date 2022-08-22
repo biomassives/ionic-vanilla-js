@@ -351,6 +351,8 @@
 			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
 			const checkinArr = checkinIndex.split(',');
 				checkinArr.forEach(element => {
+					checkinList = checkinList.replace("}","");
+					checkinList = checkinList.replace("{","");
 					checkinList = element+"<BR>"+checkinList;	
 				});	      	  
 			     
