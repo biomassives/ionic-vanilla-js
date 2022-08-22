@@ -596,6 +596,10 @@
 			clearItems()
 			document.getElementById("orodha").style.display = "block";
                 });
+		document.getElementById("switch_to_orod").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("orodoha").style.display = "block";
+                });
                 document.getElementById("0kusafisha").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("kusafisha").style.display = "block";
