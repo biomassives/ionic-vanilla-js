@@ -337,10 +337,8 @@
 					if (typeof idx === 'undefined' || idx === null) {
 						localStorage.setItem("plasticsCheckinIndex", "{ plastics_checkin"+currentTimeInSeconds+"}");									
 					} else {
-						idx = idx.replaceAll("{","");
-						idx = idx.replaceAll("}","");
 						idx = idx+",";
-						localStorage.setItem("plasticsCheckinIndex", "{"+idx+ "plastics_checkin"+currentTimeInSeconds+"}");									
+						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
 					}	
 				};
 				
@@ -351,7 +349,6 @@
 			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
 			const checkinArr = checkinIndex.split(',');
 				checkinArr.forEach(element => {
-					checkinList = checkinList.replace("{","").replace("}","");
 					checkinList = element+"<BR>"+checkinList;	
 				});	      	  
 			     
