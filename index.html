@@ -318,10 +318,15 @@
 			function checkin0(){	  
 				event.preventDefault();				
 				var item = document.querySelector('#ldplastictype').value;
+				document.querySelector('#ldplastictype').value = "";
 				var name = document.querySelector('#ldprovider').value;
+				document.querySelector('#ldprovider').value = "";
 				var weightkg = document.querySelector('#ldweightkg').value;
+				document.querySelector('#ldweightkg').value = "";
 				var witness = document.querySelector('#ldwitness').value;
+				document.querySelector('#ldwitness').value = "";
 				var description = document.querySelector('#lddescription').value;
+				document.querySelector('#lddescription').value = "";
 				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
 				const currentTimeInSeconds=Math.floor(Date.now()/1000);
 				
