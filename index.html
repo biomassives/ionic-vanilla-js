@@ -219,11 +219,8 @@
               <ion-label id="0maxchange"> -- ma Xchange </ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-	      
-	      
-	      
-	      
+	  <ion-item>For peace, a just justice system, reproductive rights, human rights, ecosystem rights, and the power of free software.</ion-item>
+        </ion-list>	      	      	   	      
       </ion-content>
     </ion-menu>
 
@@ -294,7 +291,7 @@
   			  <br>
 			  <b>Weight:</b>
 			      <br>
-				      	<input type=text name="ld-weight" id="ldweight" size="5"> kg
+				      	<input type=text name="ld-weight" id="ldweightkg" size="5"> kg
   			      <br>
 			      
 			  <b>Provider:</b>
@@ -319,14 +316,13 @@
 			      
 		        <script>
 			function checkin0(){	  
-				alert("For peace, a just justice system, reproductive rights, human rights, ecosystem rights, and the power of free software."); 
 				event.preventDefault();				
 				var item = document.querySelector('#ldplastictype').value;
 				var name = document.querySelector('#ldprovider').value;
+				var weightkg = document.querySelector('#ldweightkg').value;
 				var witness = document.querySelector('#ldwitness').value;
 				var description = document.querySelector('#lddescription').value;
-				localStorage.setItem(plastics_checkin, "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}" );
-				console.log(localStorage);									
+				localStorage.setItem("plastics_checkin", "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
 			};		  				  			           
 		        </script>
 			      
