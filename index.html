@@ -262,7 +262,7 @@
 				  </ion-row>
 			   </ion-grid>
 			      
-			<script>
+		      <script>
 				  
 		 	var my_func = function(event) {
     			alert("swarm for peace, reproductive rights , human rights, public domain, and environment");
@@ -274,14 +274,10 @@
                         localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
                         console.log(localStorage);									
 			};
-				  
-			var form1 = document.getElementById("plastics_checkin");
-				  
-			// attach event listener
-			form1.addEventListener("submit", my_func, true);				  				  			           
-			</script>
+				  			  				  			           
+		      </script>
 			      
-		      <form id="plastics_checkin" action="#" method="POST">
+		      <form id="plastics_checkin" action="" onsubmit="my_func()" method="POST">
 
 			  <b>Plastic type:</b>
   			  <br>
