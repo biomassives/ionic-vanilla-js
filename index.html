@@ -335,7 +335,7 @@
 				var idx = localStorage.getItem("plasticsCheckinIndex");									
 	
 					if (typeof idx === 'undefined' || idx === null) {
-						localStorage.setItem("plasticsCheckinIndex", "{ plastics_checkin"+currentTimeInSeconds+"}");									
+						localStorage.setItem("plasticsCheckinIndex", "plastics_checkin"+currentTimeInSeconds);									
 					} else {
 						idx = idx+",";
 						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
