@@ -235,7 +235,7 @@
               </ion-button>
             </ion-menu-toggle>
           </ion-buttons>
-          <ion-icon slot="end" data-src="profile.svg">22</ion-icon>
+          <ion-icon slot="end" data-src="menu.svg">22</ion-icon>
           <ion-title id="page_title_header" slot="start">Usawa Mazingira</ion-title>
         </ion-toolbar>
       </ion-header>
@@ -248,17 +248,25 @@
 	      
 	      
 	      </div>
-	      <div id=orodha style="display:none;"><img src="/theme/mupy1/plastics_weigh_station_witness_and_scale_operator800.JPG" width="85%" align="right"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_map"> <span id="orod_title">Orodoha Ya Ma Orodoha</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_selecta"></h1>		      
+	      <div id=orodha style="display:none;"><img src="/theme/mupy1/plastics_weigh_station_witness_and_scale_operator800.JPG" width="200" height="200" align="right"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_map"> <span id="orod_title">Orodoha Ya Ma Orodoha</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_selecta"></h1>		      
 		      		      
-		     		      
+
+		      
+		      
 		      <div id="orod_cont" style="display:flex;">
 			      
-			 <ion-grid style="margin:10px;">
-			  <ion-row>       					
-			    <span id="plastic_checkins"></span>	
-			  </ion-row>
- 		      	  <ion-row>       						      			      
-			      			      
+			   <ion-grid style="margin:10px;">
+				  <ion-row>
+       					
+					<span id="plastic_checkins"></span>	
+				  </ion-row>
+			   </ion-grid>
+			      
+			      
+
+			      
+			      
+			      
 		      <form id="plastics_checkin" onsubmit="checkin0()">
 
 			  <b>Plastic type:</b>
@@ -303,44 +311,22 @@
   			  <br><br>
 			      
   			  <input type="submit" name="submit" value="Record Checkin" onsubmit="checkin0()">
-			  </form>		        	      
-			</ion-row>
-			</ion-grid>
-			      
-			      
+			</form>		        	      
+
 			      
 		        <script>
-			function checkin0(event){	  
+			function checkin0(){	  
 				event.preventDefault();				
 				var item = document.querySelector('#ldplastictype').value;
 				var name = document.querySelector('#ldprovider').value;
 				var weightkg = document.querySelector('#ldweightkg').value;
 				var witness = document.querySelector('#ldwitness').value;
 				var description = document.querySelector('#lddescription').value;
-				let currentDate = new Date();
-				let cDay = currentDate.getDate();
-				let cMonth = currentDate.getMonth() + 1;
-				let cYear = currentDate.getFullYear();					
-				let currentDate = new Date();
-				let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-				console.log(time);
-				const utcStr = new Date().toUTCString();
-				var time = moment.utc(utcStr,"YYYY-MM-DD HH:mm:ss");
-				var Y = time.year();
-				var M = time.month() + 1;
-				var D = moment.duration(time.format('HH:mm:ss')).asDays();
-				var JDnow =  time/86400000 + 2440587.5;
-												
-				localStorage.setItem("plastics_checkin_"+JDnow, "{item: "+item+",datetime: " currentDate + "/" + cDay + "/" + cMonth + "/" + cYear + ",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
-				localStorage.setItem("plastics_checkin_index", "{ entry: plastics_checkin_"+ JDnow  +", type: "+ item +", weight: "+ weightkg +" }" );									
+				localStorage.setItem("plastics_checkin", "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
 			};
-								
+				
 			var checkinlist = document.querySelector('#plastic_checkins').value;								
 			document.getElementById("plastic_checkins").innerHTML="<b>List of current checkins:</b>";
-				
-
-				
-				
 		        </script>
 			      
 			      
