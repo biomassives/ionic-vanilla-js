@@ -328,13 +328,14 @@
 				
 				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
 				var idx = localStorage.getItem("plasticsCheckinIndex");									
+
 				if (typeof idx !== 'undefined') {
-					idx = idx.replaceAll("{","")
-					idx = idx.replaceAll("}","")
+					idx = idx.replaceAll("{","");
+					idx = idx.replaceAll("}","");
 					idx = idx+",";
  					localStorage.setItem("plasticsCheckinIndex", "{"+idx+ "plastics_checkin"+currentTimeInSecondsitness+"}");									
 				} else {
- 					localStorage.setItem("plasticsCheckinIndex", "{"plastics_checkin"+currentTimeInSecondsitness+"}");									
+ 					localStorage.setItem("plasticsCheckinIndex", "{ plastics_checkin"+currentTimeInSecondsitness+"}");									
 				}	
 				};
 				
