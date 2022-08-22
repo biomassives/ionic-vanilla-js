@@ -261,22 +261,8 @@
 					<span id="plastic_checkins"></span>	
 				  </ion-row>
 			   </ion-grid>
-			      
-		      <script>
-			
-			function checkin() {
-			event.preventDefault()
-  			localStorage.clear()
-			var item = document.querySelector('#ld-plastictype').value;
-                        var name = document.querySelector('#ld-name').value;
-                        var witness = document.querySelector('#ld-witness').value;
-                        var description = document.querySelector('#ld-description').value;
-                        localStorage["__ecoops__plastics_checkin"] = "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}";
-			}			      
-			   				  			  				  			           
-		      </script>
-			      
-		      <form id="plastics_checkin" action="" onsubmit="checkin()" method="POST">
+			      			      
+		      <form id="plastics_checkin" action="" onsubmit="checkin()">
 
 			  <b>Plastic type:</b>
   			  <br>
@@ -315,15 +301,18 @@
 			      
   			  <b>Description:</b>
   			  <br>
+			      
   			  <textarea id="ld_description" rows="4" cols="30"></textarea>
-  				<br><br>
-  				<input type="submit" name="submit" value="Record Checkin">
+  			  <br><br>
+			      
+  			  <input type="submit" name="submit" value="Record Checkin">
 			</form>		        	      
-		        </div>			      			      			
-			<br>
+
+		      </div>			      			    
 		      
+	      <br>		      
 	      </div>
-	      <div id=selecta style="display:none;"><h1 id="sele_title">selecta</h1>
+	      <div id=selecta style="display:none;"><h1 id="sele_title"><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orod"> <span id="sele_title">Selecta</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_kusafisha"></h1>
 		      
 		      
 		      
