@@ -345,14 +345,16 @@
 				};
 				
 			var checkinlist = document.querySelector('#plastic_checkins').value;								
-			document.getElementById("plastic_checkins").innerHTML="<b>List of current checkins:</b>";
-
+			
+			var checkinList = "<b>Current checkins:</b><BR>";
+ 				
 			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
 			const checkinArr = checkinIndex.split(',');
 				checkinArr.forEach(element => {
-					document.getElementById("plastic_checkins").innerHTML+=element;
+					checkinList = element+"<BR>"+checkinList;	
 				});	      	  
-			      
+			     
+			checkinList = document.getElementById("plastic_checkins").innerHTML+checkinList;	
 		        </script>			      			      			      			      			      			      			      
 		      </div>			      			    
 		      
