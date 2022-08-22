@@ -349,8 +349,8 @@
 			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
 			const checkinArr = checkinIndex.split(',');
 				checkinArr.forEach(element => {
-					checkinList = element+"<BR>"+checkinList+"<div style=\"background:#efefef\">"+
-						localStorage.getItem(element)+"</div>";
+					checkinList = element+"<BR><div style=\"background:#efefef\">"+
+						localStorage.getItem(element)+"</div>"+checkinList;
 				});	      	  
 			     
 			document.getElementById("plastic_checkins").innerHTML=checkinList;	
