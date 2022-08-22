@@ -328,15 +328,15 @@
 				
 				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
 				var idx = localStorage.getItem("plasticsCheckinIndex");									
-
-				if (typeof idx !== 'undefined') {
-					idx = idx.replaceAll("{","");
-					idx = idx.replaceAll("}","");
-					idx = idx+",";
- 					localStorage.setItem("plasticsCheckinIndex", "{"+idx+ "plastics_checkin"+currentTimeInSecondsitness+"}");									
-				} else {
- 					localStorage.setItem("plasticsCheckinIndex", "{ plastics_checkin"+currentTimeInSecondsitness+"}");									
-				}	
+	
+					if (typeof idx === 'undefined' || idx === null) {
+						localStorage.setItem("plasticsCheckinIndex", "{ plastics_checkin"+currentTimeInSecondsitness+"}");									
+					} else {
+						idx = idx.replaceAll("{","");
+						idx = idx.replaceAll("}","");
+						idx = idx+",";
+						localStorage.setItem("plasticsCheckinIndex", "{"+idx+ "plastics_checkin"+currentTimeInSecondsitness+"}");									
+					}	
 				};
 				
 			var checkinlist = document.querySelector('#plastic_checkins').value;								
