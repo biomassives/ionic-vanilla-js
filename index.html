@@ -323,7 +323,10 @@
 				var witness = document.querySelector('#ldwitness').value;
 				var description = document.querySelector('#lddescription').value;
 				localStorage.setItem("plastics_checkin", "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
-			};		  				  			           
+			};
+				
+			var checkinlist = document.querySelector('#plastic_checkins').value;								
+			document.getElementById("plastic_checkins").innerHTML="<b>List of current checkins:</b>";
 		        </script>
 			      
 			      
