@@ -408,6 +408,61 @@
 			<input type=submit value=submit id=checkin onclick="checkin();" name=submit>
 		      </form>
 		      
+		      
+		      
+		      <table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
+		<thead>
+			<tr>
+				<th data-sort="string">String</th>
+				<th data-sort="string">String (UA)</th>
+				<th data-sort="int">Int</th>
+				<th data-sort="float">Float</th>
+				<th data-sort="date">Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>A</td>
+				<td>Авто</td>
+				<td>5</td>
+				<td>2.3</td>
+				<td>2021-06-22</td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td>крок</td>
+				<td>3</td>
+				<td>3.2</td>
+				<td>2021-06-21</td>
+			</tr>
+			<tr>
+				<td>E</td>
+				<td>Європа</td>
+				<td>4</td>
+				<td>6.4</td>
+				<td>2021-06-23</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>Індія</td>
+				<td>1</td>
+				<td>7.5</td>
+				<td>2021-06-20</td>
+			</tr>
+			<tr>
+				<td>C</td>
+				<td>Шепіт</td>
+				<td>2</td>
+				<td>2.411</td>
+				<td>2021-06-24</td>
+			</tr>
+		</tbody>
+	</table>
+		 
+<script src="/tablesort.min.js"></script>
+<script>document.querySelector('.table-sortable').tsortable()</script>     
+		      
+		      
 		      </div>      
 		       </div>
 	      <div id=kwachk style="display:none;"><h1 id="kwac_title">Kwachk/ Uchukuzi</h1>
