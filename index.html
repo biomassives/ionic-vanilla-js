@@ -331,7 +331,7 @@
 				const currentTimeInSeconds=Math.floor(Date.now()/1000);
 				
 				
-				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, "{item: "+item+",weight: "+weightkg+",name: "+name+",witness: "+witness+",description: "+description+"}" );									
+				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, item+" , "+weightkg+", "+name+", "+witness+", "+description );									
 				var idx = localStorage.getItem("plasticsCheckinIndex");									
 	
 					if (typeof idx === 'undefined' || idx === null) {
@@ -362,10 +362,10 @@
 		      		      <table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
 		<thead>
 			<tr>
-				<th data-sort="string">String</th>
-				<th data-sort="string">String (UA)</th>
-				<th data-sort="int">Int</th>
-				<th data-sort="float">Float</th>
+				<th data-sort="string">Item Type</th>
+				<th data-sort="string">Provider</th>
+				<th data-sort="int">Weight</th>
+				<th data-sort="float">Witness</th>
 				<th data-sort="date">Date</th>
 			</tr>
 		</thead>
