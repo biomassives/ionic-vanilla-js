@@ -261,7 +261,23 @@
 					<span id="plastic_checkins"></span>	
 				  </ion-row>
 			   </ion-grid>
-			      			      
+			      
+			      
+		      <script>
+			function checkin(){	  
+    			alert("swarm for peace, reproductive rights , human rights, public domain, and environment");
+    			event.preventDefault();				
+			var item = document.querySelector('#ld-plastictype').value;
+                        var name = document.querySelector('#ld-name').value;
+                        var witness = document.querySelector('#ld-witness').value;
+                        var description = document.querySelector('#ld-description').value;
+                        localStorage.setItem("plastics_checkin", "{item: "+item+",name: "+name+",witness: "+witness+",description: "+description+"}" );
+                        console.log(localStorage);									
+			};		  				  			           
+		      </script>
+			      
+			      
+			      
 		      <form id="plastics_checkin" action="" onsubmit="checkin()">
 
 			  <b>Plastic type:</b>
