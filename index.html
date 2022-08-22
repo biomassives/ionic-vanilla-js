@@ -344,7 +344,6 @@
 				
 			var checkinlist = document.querySelector('#plastic_checkins').value;								
 			
-			var checkinList = "<b>Current checkins:</b><BR>";
  				
 			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
 			const checkinArr = checkinIndex.split(',');
@@ -353,6 +352,8 @@
 						localStorage.getItem(element)+"</div>"+checkinList;
 				});	      	  
 			     
+			var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
+
 			document.getElementById("plastic_checkins").innerHTML=checkinList;	
 		        </script>			      			      			      			      			      			      			      
 		      </div>			      			    
