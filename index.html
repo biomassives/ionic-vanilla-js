@@ -110,10 +110,14 @@
 		a:link, a:hover, a:visited, a:active {
 			text-decoration: none;
 		}
-.hits {
-  font-size: 2em;
-  font-weight: bolder;
-}
+		.hits {
+ 		 font-size: 2em;
+ 		 font-weight: bolder;
+		}
+	        #switch_to_map {
+		  -webkit-transform: scaleX(-1);
+                  transform: scaleX(-1);	  
+	        }
 	</style>
   <script src="https://unpkg.com/@supabase/supabase-js"></script>	
   <script src="/convexhull.js"></script>
@@ -243,9 +247,9 @@
 	      
 	      
 	      </div>
-	      <div id=orodha style="display:none;"><h1 id="orod_title">Orodoha Ya Ma Orodoha</h1>		      
+	      <div id=orodha style="display:none;"><h1 id="orod_title"><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_map"> Orodoha Ya Ma Orodoha <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_selecta"></h1>		      
 		      		      
-		      <img src="/theme/mupy1/pleasepointing.svg" width=100 height=100 id="switch_to_map">
+
 		      
 		      
 		      <div id="orod_cont" style="display:flex;">
