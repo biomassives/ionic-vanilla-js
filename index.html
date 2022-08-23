@@ -356,19 +356,12 @@
 
 			document.getElementById("plastic_checkins").innerHTML=checkinList;
 				
-							console.log("hello0");
+			console.log("hello0");
 				                                 
 			var checkinTableContentLoop = "";
 			checkinArr.forEach(element => {
 				const splitArr = element.split(',');
-				checkinTableContentLoop = "
-			<tr>
-				<td>"+splitArr[0]+"</td>
-				<td>"+splitArr[1]+"</td>
-				<td>"+splitArr[2]+"</td>
-				<td>"+splitArr[3]+"</td>
-				<td>"+splitArr[4]+"</td>
-			</tr>" + checkinTableContentLoop;
+				checkinTableContentLoop = "<tr><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 				
 			});		
 				
