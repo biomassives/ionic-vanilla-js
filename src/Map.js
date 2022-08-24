@@ -582,14 +582,10 @@
                         document.getElementById("map").style.display = "block";
                         document.getElementById("greeting").style.display = "block";
 			document.getElementById("mapbuttons").style.display = "block";
-
                 });
 		document.getElementById("switch_to_selecta").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("selecta").style.display = "block";
-		document.getElementById("switch_to_orodha").addEventListener("click", function () {
-			clearItems()
-                        document.getElementById("orodha").style.display = "block";
 		});
                 document.getElementById("0selecta").addEventListener("click", function () {
 			clearItems()
@@ -603,6 +599,7 @@
 			clearItems()
                         document.getElementById("orodoha").style.display = "block";
                 });
+
                 document.getElementById("0kusafisha").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("kusafisha").style.display = "block";
