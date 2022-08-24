@@ -324,11 +324,12 @@
 		<table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
 		<thead>
 			<tr>
+				<th data-sort="date">Date</th>
 				<th data-sort="string">Item Type</th>
 				<th data-sort="string">Provider</th>
-				<th data-sort="int">Weight</th>
-				<th data-sort="float">Witness</th>
-				<th data-sort="date">Notes</th>
+				<th data-sort="float">Weight</th>
+				<th data-sort="int">Witness</th>
+				<th data-sort="string">Notes</th>
 			</tr>
 		</thead>
 		<tbody id="checkinTableContent"> 
@@ -382,7 +383,8 @@
 						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
 							element0 = localStorage.getItem(element);
 							const splitArr = element0.split(',');
-							checkinTableContentLoop = "<tr><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
+  							const dateof = element.split('plastics_checkin');
+							checkinTableContentLoop = "<tr><td>"+dateof[0]+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 					});	      	  
 
 				//var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
@@ -395,6 +397,19 @@
 				console.log("hello2");
 			}				
 
+				
+				function dateToJulianNumber(d) {
+				    // convert a Gregorian Date to a Julian number. 
+				    //    S.Boisseau / BubblingApp.com / 2014
+				    var x = Math.floor((14 - d.getMonth())/12);
+				    var y = d.getFullYear() + 4800 - x;
+				    var z = d.getMonth() - 3 + 12 * x;
+				    var n = d.getDate() + Math.floor(((153 * z) + 2)/5) + (365 * y) + Math.floor(y/4) + Math.floor(y/400) - Math.floor(y/100) - 32045;
+				    return n;
+				}   
+
+				
+				
 		        </script>			      			      			      			      			      			      			      
 		      
 		     
