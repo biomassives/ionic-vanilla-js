@@ -599,7 +599,7 @@
 			clearItems()
                         document.getElementById("orodoha").style.display = "block";
                 });
-		document.getElementById("switch_to_orodoha").addEventListener("click", function () {
+		document.getElementById("switch_to_orodha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("orodoha").style.display = "block";
                 });
