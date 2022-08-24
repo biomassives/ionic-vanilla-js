@@ -315,11 +315,11 @@
   			  <input type="submit" name="submit" value="Record Checkin" onsubmit="checkin0()">
 			</form>		        	      
 
-			       <br><br>
+			        
 			      
 		</div>			      			    
 
-		      
+		      <br><br><br>
 		      
 		<table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
 		<thead>
@@ -373,8 +373,8 @@
 			const checkinArr = checkinIndex.split(',');
 				checkinArr.forEach(element => {
 					//checkinList = element+"<BR><div style=\"background:#efefef\">"+
-						//localStorage.getItem(element)+"</div>"+checkinList;
-						const splitArr = element.split(',');
+						element0 = localStorage.getItem(element);
+						const splitArr = element0.split(',');
 						checkinTableContentLoop = "<tr><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 				});	      	  
 			     
