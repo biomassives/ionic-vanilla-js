@@ -384,7 +384,8 @@
 							element0 = localStorage.getItem(element);
 							const splitArr = element0.split(',');
   							const dateof = element.split('plastics_checkin');
-							checkinTableContentLoop = "<tr><td>"+dateToJulianNumber(dateof[1])+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
+							dateof = dateToJulianNumber(dateof[1])
+							checkinTableContentLoop = "<tr><td>"+dateof+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 					});	      	  
 
 				//var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
