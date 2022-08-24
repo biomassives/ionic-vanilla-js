@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eco Ops App via scdhub.org 501c3 non profit sustainable community development tool - beta testing</title>
+  <title>Eco Ops App plastics cleanup, compost, plant nursery, farming, and food forest carbon token validation system</title>
 
   <!-- Eco Ops App  operates with local storage, using the browser as a key value- store -->
   <!-- data is stored in json data strings in the localstorage, and exchanged with other users --> 
@@ -235,7 +235,9 @@
               </ion-button>
             </ion-menu-toggle>
           </ion-buttons>
-          <ion-icon slot="end" data-src="/African-Mask-Chokwe-Angola-Zaire.svg"></ion-icon>
+	  <ion-button>
+            <ion-icon slot="end" data-src="/African-Mask-Chokwe-Angola-Zaire.svg"></ion-icon>
+	  <ion-button>		  
           <ion-title id="page_title_header" slot="start">Usawa Mazingira</ion-title>
         </ion-toolbar>
       </ion-header>
@@ -366,23 +368,22 @@
 				
 			var checkinlist = document.querySelector('#plastic_checkins').value;								
 			
- 				
-			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
+			var checkinTableContentLoop = "";
+ 			var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
 			const checkinArr = checkinIndex.split(',');
 				checkinArr.forEach(element => {
-					checkinList = element+"<BR><div style=\"background:#efefef\">"+
-						localStorage.getItem(element)+"</div>"+checkinList;
+					//checkinList = element+"<BR><div style=\"background:#efefef\">"+
+						//localStorage.getItem(element)+"</div>"+checkinList;
+						const splitArr = element.split(',');
+						checkinTableContentLoop = "<tr><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 				});	      	  
 			     
-			var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
-
-			document.getElementById("plastic_checkins").innerHTML=checkinList;
+			//var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
+			//document.getElementById("plastic_checkins").innerHTML=checkinList;
 				
 			console.log("hello0");
 				                                 
-			var checkinTableContentLoop = "";
 			checkinArr.forEach(element => {
-				const splitArr = element.split(',');
 				checkinTableContentLoop = "<tr><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 				
 			});		
