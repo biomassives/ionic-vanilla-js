@@ -509,26 +509,29 @@
 	   
 		      
 		      
-		          <textarea id="myTextarea" rows="10" cols="80"></textarea>
-			    <p></p>
-			    <button onclick="mySave()">Save</button>
-			    <button onclick="myLoad()">Load</button>
-			    <script>
-			      function mySave() {
-				var myContent = document.getElementById("myTextarea").value;
-				localStorage.setItem("myContent", myContent);
-			      }
-			      function myLoad() {
-				var myContent = localStorage.getItem("myContent");
-				document.getElementById("myTextarea").value = myContent;
-			      }
-			    </script>
+
  
 		      
 		      
 		      
 		       </div>
 	      <div id=presha style="display:none;"><h1 id="mold_title">Mold ya presha</h1>
+		      
+		      
+		    <textarea id="myTextarea" rows="10" cols="80"></textarea>
+		    <p></p>
+		    <button onclick="mySave()">Save</button>
+		    <button onclick="myLoad()">Load</button>
+		    <script>
+		      function mySave() {
+			var myContent = document.getElementById("myTextarea").value;
+			localStorage.setItem("myContent", myContent);
+		      }
+		      function myLoad() {
+			var myContent = localStorage.getItem("myContent");
+			document.getElementById("myTextarea").value = myContent;
+		      }
+		    </script>
 		      
 		      
 		      </div>
