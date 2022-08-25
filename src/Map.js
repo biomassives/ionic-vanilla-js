@@ -591,9 +591,6 @@
 			clearItems()
                         document.getElementById("selecta").style.display = "block";
 		});
-
-
-
                 document.getElementById("0selecta").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("selecta").style.display = "block";
@@ -629,7 +626,7 @@
 		document.getElementById("switch_to_kwachk").addEventListener("click", function () { 
 			clearItems()         
 			document.getElementById("kwachk").style.display = "block";						
-		}
+		});
                 document.getElementById("0arega").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("arega").style.display = "block";
