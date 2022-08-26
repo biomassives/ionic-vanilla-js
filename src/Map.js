@@ -619,6 +619,16 @@
 			clearItems()
 			document.getElementById("kusafisha").style.display = "block";
                 });
+                document.getElementById("switch_to_kwack").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("kwachk").style.display = "block";			
+                });
+                document.getElementById("switch_to_kwac").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("kwachk").style.display = "block";			
+                });
+
+
                 document.getElementById("0kwachk").addEventListener("click", function () {			
 			clearItems()         
 			document.getElementById("kwachk").style.display = "block";			
