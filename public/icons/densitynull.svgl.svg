@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   width="160pt"
+   height="160pt"
+   viewBox="0 0 56.444446 56.444445"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   sodipodi:docname="densitynull.svgl.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <script />
+  <script>class SubWalletPlaceholder {
+  provider = undefined;
+  isSubWallet = true;
+  connected = false;
+  isConnected = () =&gt; false;
+  __waitProvider = async () =&gt; {
+    const self = this;
+    if (self.provider) {
+      return self.provider;
+    } else {
+      return await new Promise((resolve, reject) =&gt; {
+        let retry = 0;
+        const interval = setInterval(() =&gt; {
+          if (++retry &gt; 30) {
+            clearInterval(interval);
+            reject(new Error('SubWallet provider not found'))
+          }
+          if (self.provider) {
+            clearInterval(interval);
+            resolve(self.provider)
+          }
+        }, 100);
+      })
+    }
+  }
+  on() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.on(...arguments);
+    });
+  }
+  off() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.off(...arguments);
+    });
+  }
+  addListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.addListener(...arguments);
+    });
+  }
+  removeListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeListener(...arguments);
+    });
+  }
+  removeAllListeners() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeAllListeners(...arguments);
+    });
+  }
+  async enable() {
+    const provider = await this.__waitProvider();
+    return await provider.enable(...arguments);
+  }
+  async request() {
+    const provider = await this.__waitProvider();
+    return await provider.request(...arguments);
+  }
+  async send() {
+    const provider = await this.__waitProvider();
+    return await provider.send(...arguments);
+  }
+  async sendAsync() {
+    const provider = await this.__waitProvider();
+    return await provider.sendAsync(...arguments);
+  }
+}
+
+
+window.SubWallet = new Proxy(new SubWalletPlaceholder(), {
+  get(obj, prop) {
+    if (prop === 'provider') {
+      return undefined;
+    }
+
+    if (obj.provider) {
+      return Reflect.get(obj.provider, prop);
+    } else {
+      return Reflect.get(obj, prop);
+    }
+  }
+})</script>
+  <script />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     height="160pt"
+     units="pt"
+     inkscape:zoom="1.0137907"
+     inkscape:cx="366.93965"
+     inkscape:cy="232.29647"
+     inkscape:window-width="1332"
+     inkscape:window-height="740"
+     inkscape:window-x="32"
+     inkscape:window-y="3"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <svg:defs
+     id="defs2">
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient527">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop523" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop525" />
+    </svg:linearGradient>
+    <svg:rect
+       x="2.9370052"
+       y="-37.37056"
+       width="116.16407"
+       height="140.00581"
+       id="rect435" />
+    <svg:rect
+       x="55.161045"
+       y="101.7453"
+       width="32.596974"
+       height="21.605307"
+       id="rect429" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient527"
+       id="linearGradient521"
+       x1="28.414207"
+       y1="32.032124"
+       x2="46.44875"
+       y2="8.068615"
+       gradientUnits="userSpaceOnUse" />
+  </svg:defs>
+  <svg:g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <svg:ellipse
+       style="fill:url(#linearGradient521);stroke-width:0.264583;fill-opacity:1"
+       id="path846"
+       cx="28.53433"
+       cy="28.81036"
+       rx="25.300062"
+       ry="26.302408" />
+    <svg:text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.05;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="27.975246"
+       y="14.547674"
+       id="text3764"><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="27.975246"
+         y="14.547674"
+         id="tspan441"></svg:tspan><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="27.975246"
+         y="25.800335"
+         id="tspan511">Density</svg:tspan><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="27.975246"
+         y="37.052994"
+         id="tspan513">Estimate</svg:tspan></svg:text>
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text427"
+       style="fill:#000000;white-space:pre;shape-inside:url(#rect429)" />
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text433"
+       style="fill:#000000;white-space:pre;shape-inside:url(#rect435)" />
+  </svg:g>
+  <script />
+</svg:svg>

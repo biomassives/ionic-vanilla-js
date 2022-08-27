@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   width="160pt"
+   height="160pt"
+   viewBox="0 0 56.444446 56.444445"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   sodipodi:docname="densitynulll.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <script />
+  <script>class SubWalletPlaceholder {
+  provider = undefined;
+  isSubWallet = true;
+  connected = false;
+  isConnected = () =&gt; false;
+  __waitProvider = async () =&gt; {
+    const self = this;
+    if (self.provider) {
+      return self.provider;
+    } else {
+      return await new Promise((resolve, reject) =&gt; {
+        let retry = 0;
+        const interval = setInterval(() =&gt; {
+          if (++retry &gt; 30) {
+            clearInterval(interval);
+            reject(new Error('SubWallet provider not found'))
+          }
+          if (self.provider) {
+            clearInterval(interval);
+            resolve(self.provider)
+          }
+        }, 100);
+      })
+    }
+  }
+  on() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.on(...arguments);
+    });
+  }
+  off() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.off(...arguments);
+    });
+  }
+  addListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.addListener(...arguments);
+    });
+  }
+  removeListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeListener(...arguments);
+    });
+  }
+  removeAllListeners() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeAllListeners(...arguments);
+    });
+  }
+  async enable() {
+    const provider = await this.__waitProvider();
+    return await provider.enable(...arguments);
+  }
+  async request() {
+    const provider = await this.__waitProvider();
+    return await provider.request(...arguments);
+  }
+  async send() {
+    const provider = await this.__waitProvider();
+    return await provider.send(...arguments);
+  }
+  async sendAsync() {
+    const provider = await this.__waitProvider();
+    return await provider.sendAsync(...arguments);
+  }
+}
+
+
+window.SubWallet = new Proxy(new SubWalletPlaceholder(), {
+  get(obj, prop) {
+    if (prop === 'provider') {
+      return undefined;
+    }
+
+    if (obj.provider) {
+      return Reflect.get(obj.provider, prop);
+    } else {
+      return Reflect.get(obj, prop);
+    }
+  }
+})</script>
+  <script />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     height="160pt"
+     units="pt"
+     inkscape:zoom="1.0137907"
+     inkscape:cx="366.93965"
+     inkscape:cy="232.29647"
+     inkscape:window-width="1332"
+     inkscape:window-height="740"
+     inkscape:window-x="107"
+     inkscape:window-y="50"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <svg:defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-18.815567 : 32.449503 : 1"
+       inkscape:vp_y="0 : 1065.6543 : 0"
+       inkscape:vp_z="77.920616 : 32.449503 : 1"
+       inkscape:persp3d-origin="29.552525 : 22.424458 : 1"
+       id="perspective686" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient527">
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop523" />
+      <svg:stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop525" />
+    </svg:linearGradient>
+    <svg:rect
+       x="2.9370052"
+       y="-37.37056"
+       width="116.16407"
+       height="140.00581"
+       id="rect435" />
+    <svg:rect
+       x="55.161045"
+       y="101.7453"
+       width="32.596974"
+       height="21.605307"
+       id="rect429" />
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient527"
+       id="linearGradient521"
+       x1="25.278534"
+       y1="30.25495"
+       x2="51.762375"
+       y2="16.035326"
+       gradientUnits="userSpaceOnUse" />
+  </svg:defs>
+  <svg:g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <svg:ellipse
+       style="fill:url(#linearGradient521);stroke-width:0.264583;fill-opacity:1"
+       id="path846"
+       cx="28.53433"
+       cy="28.81036"
+       rx="25.300062"
+       ry="26.302408" />
+    <svg:text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.05;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="28.402834"
+       y="7.7421107"
+       id="text3764"><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.402834"
+         y="7.7421107"
+         id="tspan441"></svg:tspan><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.402834"
+         y="18.994772"
+         id="tspan511">Density</svg:tspan><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.402834"
+         y="30.247433"
+         id="tspan513">Estimate</svg:tspan></svg:text>
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text427"
+       style="white-space:pre;shape-inside:url(#rect429);display:inline;fill:#000000" />
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text433"
+       style="white-space:pre;shape-inside:url(#rect435);display:inline;fill:#000000" />
+    <svg:ellipse
+       style="fill:#000080;stroke-width:0.264583"
+       id="path626"
+       cx="21.664772"
+       cy="32.810448"
+       rx="0.9977141"
+       ry="0.86520302" />
+    <svg:g
+       sodipodi:type="inkscape:box3d"
+       id="g688"
+       style="fill:#000080"
+       inkscape:perspectiveID="#perspective686"
+       inkscape:corner0="0.43355702 : -0.0092886374 : 0 : 1"
+       inkscape:corner7="0.034780989 : -0.018552219 : 0.38349564 : 1">
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path700"
+         style="fill:#e9e9ff;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="11"
+         d="m 28.21994,34.959688 13.224947,3.082952 v 6.960402 L 28.21994,40.392539 Z"
+         points="41.444887,38.04264 41.444887,45.003042 28.21994,40.392539 28.21994,34.959688 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path690"
+         style="fill:#353564;fill-rule:evenodd;stroke:none;stroke-width:1.24049;stroke-linejoin:round"
+         inkscape:box3dsidetype="6"
+         d="m 14.924347,37.892904 v 6.886211 L 28.21994,40.392539 v -5.432851 z"
+         points="14.924347,44.779115 28.21994,40.392539 28.21994,34.959688 14.924347,37.892904 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path698"
+         style="fill:#afafde;fill-rule:evenodd;stroke:none;stroke-width:1.24049;stroke-linejoin:round"
+         inkscape:box3dsidetype="13"
+         d="M 14.924347,44.779115 27.926779,52.788761 41.444887,45.003042 28.21994,40.392539 Z"
+         points="27.926779,52.788761 41.444887,45.003042 28.21994,40.392539 14.924347,44.779115 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path692"
+         style="fill:#4d4d9f;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="5"
+         d="M 14.924347,37.892904 27.926779,43.248795 41.444887,38.04264 28.21994,34.959688 Z"
+         points="27.926779,43.248795 41.444887,38.04264 28.21994,34.959688 14.924347,37.892904 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path696"
+         style="fill:#d7d7ff;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="14"
+         d="m 27.926779,43.248795 v 9.539966 L 41.444887,45.003042 V 38.04264 Z"
+         points="27.926779,52.788761 41.444887,45.003042 41.444887,38.04264 27.926779,43.248795 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path694"
+         style="fill:#8686bf;fill-rule:evenodd;stroke:none;stroke-width:1.30913;stroke-linejoin:round"
+         inkscape:box3dsidetype="3"
+         d="m 14.924347,37.892904 13.002432,5.355891 v 9.539966 L 14.924347,44.779115 Z"
+         points="27.926779,43.248795 27.926779,52.788761 14.924347,44.779115 14.924347,37.892904 " />
+    </svg:g>
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path811"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="9.0130663"
+       sodipodi:cy="38.421089"
+       sodipodi:r1="1.8707105"
+       sodipodi:r2="0.93535519"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 9.0130663,36.550379 0.549788,1.113992 1.2293637,0.178637 L 9.9026419,38.71013 10.112642,39.934526 9.0130663,39.356444 7.9134902,39.934526 8.1234906,38.71013 7.2339149,37.843008 8.4632783,37.664371 Z"
+       inkscape:transform-center-y="-0.17863745" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path813"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="19.637857"
+       sodipodi:cy="34.661945"
+       sodipodi:r1="1.8149086"
+       sodipodi:r2="0.90745425"
+       sodipodi:arg1="-1.124163"
+       sodipodi:arg2="-0.4958445"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 20.421774,33.025068 0.01425,1.205134 1.00084,0.671469 -1.141747,0.38596 -0.329329,1.159351 -0.719889,-0.966598 -1.204376,0.04505 0.696831,-0.98335 -0.415016,-1.131509 1.150554,0.358853 z"
+       inkscape:transform-center-x="-0.101336"
+       inkscape:transform-center-y="0.074078864"
+       transform="translate(-3.1750001,-0.52916663)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path813-3"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="19.637857"
+       sodipodi:cy="34.661945"
+       sodipodi:r1="1.8149086"
+       sodipodi:r2="0.90745425"
+       sodipodi:arg1="-1.124163"
+       sodipodi:arg2="-0.4958445"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 20.421774,33.025068 0.01425,1.205134 1.00084,0.671469 -1.141747,0.38596 -0.329329,1.159351 -0.719889,-0.966598 -1.204376,0.04505 0.696831,-0.98335 -0.415016,-1.131509 1.150554,0.358853 z"
+       inkscape:transform-center-x="-0.101336"
+       inkscape:transform-center-y="0.074078864"
+       transform="translate(26.814933,4.4691895)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459" />
+  </svg:g>
+  <script />
+</svg:svg>
