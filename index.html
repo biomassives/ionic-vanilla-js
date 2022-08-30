@@ -1235,6 +1235,22 @@ btn.addEventListener('click', function (event) {
 			<script>document.querySelector('.table-sortable').tsortable()</script> 
 			      			      
 		        <script>
+			
+			function geolocate(){	  
+
+			    if (navigator.geolocation) {
+			      navigator.geolocation.getCurrentPosition(position => {
+				const lat = position.coords.latitude;
+				const long = position.coords.longitude;
+				console.log('Latitude: ', lat);
+				console.log('Longitude: ', long);
+			      }, error => {
+				console.log('Need access to get location.');
+			      });
+			    }		
+			}
+							
+				
 			// load existing data as page loads	
 			checkinLoadLocalstorageData();
 			function checkin0(){	  
