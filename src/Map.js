@@ -563,6 +563,9 @@
                         document.getElementById("kumaintain").style.display = "none";
                         document.getElementById("stingozandifu").style.display = "none";
                         document.getElementById("maxchange").style.display = "none";	
+                        document.getElementById("carboncredit").style.display = "none";	
+                        document.getElementById("nfthub").style.display = "none";	
+                        document.getElementById("profile").style.display = "none";	
 		}
 
             /*    document.getElementById("0checkin").addEventListener("click", function () {
