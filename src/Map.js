@@ -656,7 +656,7 @@
 			clearItems()         
 			document.getElementById("mabroker").style.display = "block";			
                 });
-                document.getElementById("switch_to_mabroker").addEventListener("click", function () {			
+                document.getElementById("switch_to_mabro").addEventListener("click", function () {			
 			clearItems()         
 			document.getElementById("mabroker").style.display = "block";			
                 });
