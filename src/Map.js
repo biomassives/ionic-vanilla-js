@@ -637,6 +637,17 @@
 			clearItems()         
 			document.getElementById("kwachk").style.display = "block";						
 		});
+                document.getElementById("switch_to_arega").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("arega").style.display = "block";			
+                });
+                document.getElementById("switch_to_areg").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("arega").style.display = "block";			
+                });
+
+
+
                 document.getElementById("0arega").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("arega").style.display = "block";
