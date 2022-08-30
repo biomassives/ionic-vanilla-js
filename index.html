@@ -294,13 +294,7 @@
 	
 		            </div>
 	
-		      
-		      
-	      <div id=nfthub style="display:none;"><h1 id="nfthub_content">NFT Hub<img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orodha"></h1>
-		      
-		            </div>
-	
-		           
+		      					           
 		      
 	      <div id=nfthub style="display:none;"><h1 id="nfthub_content">NFT Hub<img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orodha"></h1>
 	        
@@ -394,82 +388,6 @@
 		</tbody>
 	</table>
 		 
-			<script src="/tablesort.min.js"></script>
-			<script>document.querySelector('.table-sortable').tsortable()</script> 
-			      			      
-		        <script>
-			// load existing data as page loads	
-			checkinLoadLocalstorageData();
-			function checkin0(){	  
-				event.preventDefault();				
-				var item = document.querySelector('#ldplastictype').value;
-				document.querySelector('#ldplastictype').value = "";
-				var name = document.querySelector('#ldprovider').value;
-				document.querySelector('#ldprovider').value = "";
-				var weightkg = document.querySelector('#ldweightkg').value;
-				document.querySelector('#ldweightkg').value = "";
-				var witness = document.querySelector('#ldwitness').value;
-				document.querySelector('#ldwitness').value = "";
-				var description = document.querySelector('#lddescription').value;
-				document.querySelector('#lddescription').value = "";
-				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
-				const currentTimeInSeconds=Math.floor(Date.now()/1000);
-				
-				
-				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, item+" , "+weightkg+", "+name+", "+witness+", "+description );									
-				var idx = localStorage.getItem("plasticsCheckinIndex");									
-	
-					if (typeof idx === 'undefined' || idx === null) {
-						localStorage.setItem("plasticsCheckinIndex", "plastics_checkin"+currentTimeInSeconds);									
-					} else {
-						idx = idx+",";
-						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
-					}
-				// updata existing data display after form submit
-				checkinLoadLocalstorageData()
-				};
-				
-				
-				
-			//var checkinlist = document.querySelector('#plastic_checkins').value;											
-			function checkinLoadLocalstorageData(){	
-				
-				var checkinTableContentLoop = "";
-				var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
-				const checkinArr = checkinIndex.split(',');
-					checkinArr.forEach(element => {
-						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
-							element0 = localStorage.getItem(element);
-							const splitArr = element0.split(',');
-  							const dateof = element.split('plastics_checkin');
-							//dateof = dateToJulianNumber(dateof[1])
-							checkinTableContentLoop = "<tr><td>"+dateof[1]+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
-					});	      	  
-
-				//var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
-				//document.getElementById("plastic_checkins").innerHTML=checkinList;
-
-				console.log("hello0");
-
-				document.getElementById("checkinTableContent").innerHTML=checkinTableContentLoop;
-
-				console.log("hello2");
-			}				
-
-				
-				function dateToJulianNumber(d) {
-				    // convert a Gregorian Date to a Julian number. 
-				    //    S.Boisseau / BubblingApp.com / 2014
-				    var x = Math.floor((14 - d.getMonth())/12);
-				    var y = d.getFullYear() + 4800 - x;
-				    var z = d.getMonth() - 3 + 12 * x;
-				    var n = d.getDate() + Math.floor(((153 * z) + 2)/5) + (365 * y) + Math.floor(y/4) + Math.floor(y/400) - Math.floor(y/100) - 32045;
-				    return n;
-				}   
-
-				
-				
-		        </script>			      			      			      			      			      			      			      
 		      
 		     
 		      
@@ -479,7 +397,7 @@
 	      </div>
 	      <div id=selecta style="display:none;"><h1 ><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orod"> <span id="sele_title">Selecta</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_kusafisha"></h1>
 		      
-		      
+		     <img src=/peerreviewed.svg> 
 		      
 		      
 		      
@@ -1322,5 +1240,81 @@ btn.addEventListener('click', function (event) {
 	
 				}
 		}
-</script>
+			</script>
+			<script src="/tablesort.min.js"></script>
+			<script>document.querySelector('.table-sortable').tsortable()</script> 
+			      			      
+		        <script>
+			// load existing data as page loads	
+			checkinLoadLocalstorageData();
+			function checkin0(){	  
+				event.preventDefault();				
+				var item = document.querySelector('#ldplastictype').value;
+				document.querySelector('#ldplastictype').value = "";
+				var name = document.querySelector('#ldprovider').value;
+				document.querySelector('#ldprovider').value = "";
+				var weightkg = document.querySelector('#ldweightkg').value;
+				document.querySelector('#ldweightkg').value = "";
+				var witness = document.querySelector('#ldwitness').value;
+				document.querySelector('#ldwitness').value = "";
+				var description = document.querySelector('#lddescription').value;
+				document.querySelector('#lddescription').value = "";
+				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
+				const currentTimeInSeconds=Math.floor(Date.now()/1000);
+				
+				
+				localStorage.setItem("plastics_checkin"+currentTimeInSeconds, item+" , "+weightkg+", "+name+", "+witness+", "+description );									
+				var idx = localStorage.getItem("plasticsCheckinIndex");									
+	
+					if (typeof idx === 'undefined' || idx === null) {
+						localStorage.setItem("plasticsCheckinIndex", "plastics_checkin"+currentTimeInSeconds);									
+					} else {
+						idx = idx+",";
+						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
+					}
+				// updata existing data display after form submit
+				checkinLoadLocalstorageData()
+				};
+				
+				
+				
+			//var checkinlist = document.querySelector('#plastic_checkins').value;											
+			function checkinLoadLocalstorageData(){	
+				
+				var checkinTableContentLoop = "";
+				var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
+				const checkinArr = checkinIndex.split(',');
+					checkinArr.forEach(element => {
+						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
+							element0 = localStorage.getItem(element);
+							const splitArr = element0.split(',');
+  							const dateof = element.split('plastics_checkin');
+							//dateof = dateToJulianNumber(dateof[1])
+							checkinTableContentLoop = "<tr><td>"+dateof[1]+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
+					});	      	  
+
+				//var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
+				//document.getElementById("plastic_checkins").innerHTML=checkinList;
+
+				console.log("hello0");
+
+				document.getElementById("checkinTableContent").innerHTML=checkinTableContentLoop;
+
+				console.log("hello2");
+			}				
+
+				
+				function dateToJulianNumber(d) {
+				    // convert a Gregorian Date to a Julian number. 
+				    //    S.Boisseau / BubblingApp.com / 2014
+				    var x = Math.floor((14 - d.getMonth())/12);
+				    var y = d.getFullYear() + 4800 - x;
+				    var z = d.getMonth() - 3 + 12 * x;
+				    var n = d.getDate() + Math.floor(((153 * z) + 2)/5) + (365 * y) + Math.floor(y/4) + Math.floor(y/400) - Math.floor(y/100) - 32045;
+				    return n;
+				}   
+
+				
+				
+		        </script>			      			      			      			      			      			      			      
 </html>
