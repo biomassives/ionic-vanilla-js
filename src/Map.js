@@ -686,8 +686,18 @@
 			clearItems()
                         document.getElementById("maxchange").style.display = "block";
                 });
-
-
+                document.getElementById("0carboncredit").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("carboncredit").style.display = "block";
+                });
+                document.getElementById("0nfthub").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("nfthub").style.display = "block";
+                });
+                document.getElementById("0profile").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("profile").style.display = "block";
+                });
 		// save button actions
 		//
 		//
