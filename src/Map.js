@@ -645,12 +645,17 @@
 			clearItems()         
 			document.getElementById("arega").style.display = "block";			
                 });
-
-
-
                 document.getElementById("0arega").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("arega").style.display = "block";
+                });
+                document.getElementById("switch_to_mabr").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("mabroker").style.display = "block";			
+                });
+                document.getElementById("switch_to_mabroker").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("mabroker").style.display = "block";			
                 });
                 document.getElementById("0mabroker").addEventListener("click", function () {
 			clearItems()
