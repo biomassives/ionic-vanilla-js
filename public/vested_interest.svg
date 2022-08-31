@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   width="160pt"
+   height="160pt"
+   viewBox="0 0 56.444446 56.444445"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   sodipodi:docname="vested_interest.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <script />
+  <script>class SubWalletPlaceholder {
+  provider = undefined;
+  isSubWallet = true;
+  connected = false;
+  isConnected = () =&gt; false;
+  __waitProvider = async () =&gt; {
+    const self = this;
+    if (self.provider) {
+      return self.provider;
+    } else {
+      return await new Promise((resolve, reject) =&gt; {
+        let retry = 0;
+        const interval = setInterval(() =&gt; {
+          if (++retry &gt; 30) {
+            clearInterval(interval);
+            reject(new Error('SubWallet provider not found'))
+          }
+          if (self.provider) {
+            clearInterval(interval);
+            resolve(self.provider)
+          }
+        }, 100);
+      })
+    }
+  }
+  on() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.on(...arguments);
+    });
+  }
+  off() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.off(...arguments);
+    });
+  }
+  addListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.addListener(...arguments);
+    });
+  }
+  removeListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeListener(...arguments);
+    });
+  }
+  removeAllListeners() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeAllListeners(...arguments);
+    });
+  }
+  async enable() {
+    const provider = await this.__waitProvider();
+    return await provider.enable(...arguments);
+  }
+  async request() {
+    const provider = await this.__waitProvider();
+    return await provider.request(...arguments);
+  }
+  async send() {
+    const provider = await this.__waitProvider();
+    return await provider.send(...arguments);
+  }
+  async sendAsync() {
+    const provider = await this.__waitProvider();
+    return await provider.sendAsync(...arguments);
+  }
+}
+
+
+window.SubWallet = new Proxy(new SubWalletPlaceholder(), {
+  get(obj, prop) {
+    if (prop === 'provider') {
+      return undefined;
+    }
+
+    if (obj.provider) {
+      return Reflect.get(obj.provider, prop);
+    } else {
+      return Reflect.get(obj, prop);
+    }
+  }
+})</script>
+  <script />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     height="160pt"
+     units="pt"
+     inkscape:zoom="1.4337166"
+     inkscape:cx="142.28754"
+     inkscape:cy="130.43024"
+     inkscape:window-width="748"
+     inkscape:window-height="721"
+     inkscape:window-x="146"
+     inkscape:window-y="40"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <svg:defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-18.815567 : 32.449503 : 1"
+       inkscape:vp_y="0 : 1065.6543 : 0"
+       inkscape:vp_z="77.920616 : 32.449503 : 1"
+       inkscape:persp3d-origin="29.552525 : 22.424458 : 1"
+       id="perspective686" />
+    <svg:rect
+       x="2.9370052"
+       y="-37.37056"
+       width="116.16407"
+       height="140.00581"
+       id="rect435" />
+    <svg:rect
+       x="55.161045"
+       y="101.7453"
+       width="32.596974"
+       height="21.605307"
+       id="rect429" />
+  </svg:defs>
+  <svg:g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <svg:ellipse
+       style="fill:#008000;stroke-width:0.264583;fill-opacity:1"
+       id="path846"
+       cx="28.53433"
+       cy="28.81036"
+       rx="25.300062"
+       ry="26.302408" />
+    <svg:text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.05;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="28.90169"
+       y="-4.5418892"
+       id="text3764"><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.90169"
+         y="-4.5418892"
+         id="tspan441" /><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.90169"
+         y="6.7107711"
+         id="tspan511" /><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.90169"
+         y="17.963432"
+         id="tspan513">Vested</svg:tspan><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="28.90169"
+         y="29.216091"
+         id="tspan3880">Interest</svg:tspan></svg:text>
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text427"
+       style="white-space:pre;shape-inside:url(#rect429);display:inline;fill:#000000" />
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text433"
+       style="white-space:pre;shape-inside:url(#rect435);display:inline;fill:#000000" />
+    <svg:g
+       sodipodi:type="inkscape:box3d"
+       id="g688"
+       style="fill:#000080"
+       inkscape:perspectiveID="#perspective686"
+       inkscape:corner0="0.43355702 : -0.0092886374 : 0 : 1"
+       inkscape:corner7="0.034780989 : -0.018552219 : 0.38349564 : 1">
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path700"
+         style="fill:#e9e9ff;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="11"
+         d="m 28.21994,34.959688 13.224947,3.082952 v 6.960402 L 28.21994,40.392539 Z"
+         points="41.444887,38.04264 41.444887,45.003042 28.21994,40.392539 28.21994,34.959688 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path690"
+         style="fill:#353564;fill-rule:evenodd;stroke:none;stroke-width:1.24049;stroke-linejoin:round"
+         inkscape:box3dsidetype="6"
+         d="m 14.924347,37.892904 v 6.886211 L 28.21994,40.392539 v -5.432851 z"
+         points="14.924347,44.779115 28.21994,40.392539 28.21994,34.959688 14.924347,37.892904 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path698"
+         style="fill:#afafde;fill-rule:evenodd;stroke:none;stroke-width:1.24049;stroke-linejoin:round"
+         inkscape:box3dsidetype="13"
+         d="M 14.924347,44.779115 27.926779,52.788761 41.444887,45.003042 28.21994,40.392539 Z"
+         points="27.926779,52.788761 41.444887,45.003042 28.21994,40.392539 14.924347,44.779115 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path692"
+         style="fill:#4d4d9f;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="5"
+         d="M 14.924347,37.892904 27.926779,43.248795 41.444887,38.04264 28.21994,34.959688 Z"
+         points="27.926779,43.248795 41.444887,38.04264 28.21994,34.959688 14.924347,37.892904 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path696"
+         style="fill:#d7d7ff;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="14"
+         d="m 27.926779,43.248795 v 9.539966 L 41.444887,45.003042 V 38.04264 Z"
+         points="27.926779,52.788761 41.444887,45.003042 41.444887,38.04264 27.926779,43.248795 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path694"
+         style="fill:#8686bf;fill-rule:evenodd;stroke:none;stroke-width:1.30913;stroke-linejoin:round"
+         inkscape:box3dsidetype="3"
+         d="m 14.924347,37.892904 13.002432,5.355891 v 9.539966 L 14.924347,44.779115 Z"
+         points="27.926779,43.248795 27.926779,52.788761 14.924347,44.779115 14.924347,37.892904 " />
+    </svg:g>
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path811"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="9.0130663"
+       sodipodi:cy="38.421089"
+       sodipodi:r1="1.8707105"
+       sodipodi:r2="0.93535519"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 9.0130663,36.550379 0.549788,1.113992 1.2293637,0.178637 L 9.9026419,38.71013 10.112642,39.934526 9.0130663,39.356444 7.9134902,39.934526 8.1234906,38.71013 7.2339149,37.843008 8.4632783,37.664371 Z"
+       inkscape:transform-center-y="-0.17863745"
+       transform="translate(37.357224,2.1877786)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path813"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="19.637857"
+       sodipodi:cy="34.661945"
+       sodipodi:r1="1.8149086"
+       sodipodi:r2="0.90745425"
+       sodipodi:arg1="-1.124163"
+       sodipodi:arg2="-0.4958445"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 20.421774,33.025068 0.01425,1.205134 1.00084,0.671469 -1.141747,0.38596 -0.329329,1.159351 -0.719889,-0.966598 -1.204376,0.04505 0.696831,-0.98335 -0.415016,-1.131509 1.150554,0.358853 z"
+       inkscape:transform-center-x="-0.101336"
+       inkscape:transform-center-y="0.074078864"
+       transform="translate(23.578354,-1.9233477)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path813-3"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="19.637857"
+       sodipodi:cy="34.661945"
+       sodipodi:r1="1.8149086"
+       sodipodi:r2="0.90745425"
+       sodipodi:arg1="-1.124163"
+       sodipodi:arg2="-0.4958445"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 20.421774,33.025068 0.01425,1.205134 1.00084,0.671469 -1.141747,0.38596 -0.329329,1.159351 -0.719889,-0.966598 -1.204376,0.04505 0.696831,-0.98335 -0.415016,-1.131509 1.150554,0.358853 z"
+       inkscape:transform-center-x="-0.101336"
+       inkscape:transform-center-y="0.074078864"
+       transform="translate(-4.2060784,-2.3814822)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(28.680739,1.8313122)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817-7"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(-5.7568654,-14.521568)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817-1"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(22.348093,-39.727189)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817-72"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(0.525727,-7.5630916)" />
+    <svg:text
+       xml:space="preserve"
+       style="font-size:3.8991px;fill:#000000;stroke-width:0.324925"
+       x="28.563169"
+       y="26.572739"
+       id="text3396"
+       transform="matrix(0.7618533,0.38582081,-0.24758927,1.1872035,0,0)"><svg:tspan
+         sodipodi:role="line"
+         id="tspan3394"
+         x="28.563169"
+         y="26.572739"
+         style="stroke-width:0.324925">eco ops</svg:tspan></svg:text>
+    <svg:g
+       id="g4235">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719" />
+    </svg:g>
+    <svg:g
+       id="g4235-9"
+       transform="translate(-3.3537749,-1.1919261)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8"
+       transform="translate(-6.3930192,-1.8954835)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3" />
+    </svg:g>
+    <svg:g
+       id="g4235-7"
+       transform="translate(-2.9331766,1.9042714)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-9" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-2"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-28"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-9"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-7" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-3"
+       transform="translate(-6.2869515,0.71234533)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-6"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-1" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-29"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-3"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-1"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-9" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-4"
+       transform="translate(-9.3261958,0.00878793)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-7"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-8" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-4"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-0"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-3" />
+    </svg:g>
+    <svg:g
+       id="g4235-6"
+       transform="translate(-7.5201921,2.1882562)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-1"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-06" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-3"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-20"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-61"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-5" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-5"
+       transform="translate(-10.873967,0.99633015)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-7" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-6"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-93" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-7"
+       transform="translate(-13.913212,0.29277275)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-5" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-2"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-54"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-7"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-4" />
+    </svg:g>
+    <svg:g
+       id="g4235-4"
+       transform="translate(-10.979541,3.4703471)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-30"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-7" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-8"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-68"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-8"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-4" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-31"
+       transform="translate(-14.333316,2.278421)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-49"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-2" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-0"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-6"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-8"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-92" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-6"
+       transform="translate(-17.372561,1.5748636)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-6"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-4" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-9"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-50"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-4"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-8" />
+    </svg:g>
+  </svg:g>
+  <script />
+</svg:svg>
