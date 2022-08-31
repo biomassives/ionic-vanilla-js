@@ -680,6 +680,10 @@
                         document.getElementById("pusha").style.display = "block";
                 });
 */		
+                document.getElementById("switch_to_moldya").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("presha").style.display = "block";			
+                });
                 document.getElementById("0presha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("presha").style.display = "block";
