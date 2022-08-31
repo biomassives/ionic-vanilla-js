@@ -575,15 +575,18 @@
 		*/
 		document.getElementById("0maleaf").addEventListener("click", function () {
 			clearItems()
+                        document.getElementById("0greeting").style.display = "block";
+
+                });
+		document.getElementById("0maleaf").addEventListener("click", function () {
+			clearItems()
                         document.getElementById("map").style.display = "block";
-                        document.getElementById("greeting").style.display = "block";
 			document.getElementById("mapbuttons").style.display = "block";
 
                 });
 		document.getElementById("switch_to_map").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("map").style.display = "block";
-                        document.getElementById("greeting").style.display = "block";
 			document.getElementById("mapbuttons").style.display = "block";
                 });
 		document.getElementById("switch_to_selecta").addEventListener("click", function () {
