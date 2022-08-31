@@ -579,12 +579,14 @@
                 });
 		document.getElementById("0maleaf").addEventListener("click", function () {
 			clearItems()
+                        document.getElementById("resourcemap").style.display = "block";
                         document.getElementById("map").style.display = "block";
 			document.getElementById("mapbuttons").style.display = "block";
 
                 });
 		document.getElementById("switch_to_map").addEventListener("click", function () {
 			clearItems()
+			document.getElementById("resourcemap").style.display = "block";
                         document.getElementById("map").style.display = "block";
 			document.getElementById("mapbuttons").style.display = "block";
                 });
