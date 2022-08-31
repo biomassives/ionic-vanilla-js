@@ -680,6 +680,10 @@
 			clearItems()
                         document.getElementById("pusha").style.display = "block";
                 });
+		document.getElementById("switch_to_boilerpusha").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("pusha").style.display = "block";			
+                });
                 document.getElementById("switch_to_pusha").addEventListener("click", function () {			
 			clearItems()         
 			document.getElementById("pusha").style.display = "block";			
