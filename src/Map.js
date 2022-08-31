@@ -553,7 +553,6 @@
                         document.getElementById("kwachk").style.display = "none";
                         document.getElementById("arega").style.display = "none";
                         document.getElementById("mabroker").style.display = "none";
-                        document.getElementById("boiler").style.display = "none";
                         document.getElementById("footsoldiers").style.display = "none";
                         document.getElementById("pusha").style.display = "none";
                         document.getElementById("presha").style.display = "none";
