@@ -665,10 +665,6 @@
 			clearItems()
 			document.getElementById("mabroker").style.display = "block";
                 });
-                document.getElementById("0boiler").addEventListener("click", function () {
-			clearItems()
-                        document.getElementById("boiler").style.display = "block";
-                });
                 document.getElementById("switch_to_mafo").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
