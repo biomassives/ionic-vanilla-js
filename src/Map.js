@@ -679,6 +679,10 @@
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
                 });
+                document.getElementById("switch_to_push").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("pusha").style.display = "block";
+                });
                 document.getElementById("0pusha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("pusha").style.display = "block";
@@ -703,11 +707,20 @@
 			clearItems()
                         document.getElementById("dizo").style.display = "block";
                 });
+                document.getElementById("switch_to_dizoo").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("dizo").style.display = "block";
+                });
+
                 document.getElementById("0gascooker").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gascooker").style.display = "block";
                 });
                 document.getElementById("0gastangi").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("gastangi").style.display = "block";
+                });
+                document.getElementById("switch_to_gast").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gastangi").style.display = "block";
                 });
