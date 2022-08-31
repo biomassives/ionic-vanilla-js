@@ -633,8 +633,6 @@
 			clearItems()         
 			document.getElementById("kwachk").style.display = "block";			
                 });
-
-
                 document.getElementById("0kwachk").addEventListener("click", function () {			
 			clearItems()         
 			document.getElementById("kwachk").style.display = "block";			
@@ -670,6 +668,10 @@
                 document.getElementById("0boiler").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("boiler").style.display = "block";
+                });
+                document.getElementById("switch_to_footsoldiers").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("footsoldiers").style.display = "block";
                 });
                 document.getElementById("0footsoldiers").addEventListener("click", function () {
 			clearItems()
