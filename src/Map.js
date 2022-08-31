@@ -681,11 +681,14 @@
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
                 });
-/*                document.getElementById("0pusha").addEventListener("click", function () {
+                document.getElementById("0pusha").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("pusha").style.display = "block";
                 });
-*/		
+                document.getElementById("switch_to_pusha").addEventListener("click", function () {			
+			clearItems()         
+			document.getElementById("pusha").style.display = "block";			
+                });
                 document.getElementById("switch_to_moldya").addEventListener("click", function () {			
 			clearItems()         
 			document.getElementById("presha").style.display = "block";			
