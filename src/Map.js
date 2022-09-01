@@ -780,6 +780,10 @@
 			clearItems()
                         document.getElementById("stingozandifu").style.display = "block";
                 });
+                document.getElementById("switch_to_maxc").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("maxchange").style.display = "block";
+                });
                 document.getElementById("switch_to_maxchange").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("maxchange").style.display = "block";
@@ -789,6 +793,10 @@
                         document.getElementById("maxchange").style.display = "block";
                 });
                 document.getElementById("0carboncredit").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("carboncredit").style.display = "block";
+                });
+                document.getElementById("switch_to_carboncredit").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("carboncredit").style.display = "block";
                 });
