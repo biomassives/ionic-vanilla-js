@@ -772,6 +772,10 @@
 			clearItems()
                         document.getElementById("stingozandifu").style.display = "block";
                 });
+                document.getElementById("switch_to_stin").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("stingozandifu").style.display = "block";
+                });
                 document.getElementById("0stingozandifu").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("stingozandifu").style.display = "block";
@@ -787,6 +791,10 @@
                 document.getElementById("0carboncredit").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("carboncredit").style.display = "block";
+                });
+                document.getElementById("switch_to_nfthub").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("nfthub").style.display = "block";
                 });
                 document.getElementById("0nfthub").addEventListener("click", function () {
 			clearItems()
