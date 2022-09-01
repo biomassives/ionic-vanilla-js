@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   width="160pt"
+   height="160pt"
+   viewBox="0 0 56.444446 56.444445"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   sodipodi:docname="carbon_credit.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <script />
+  <script>class SubWalletPlaceholder {
+  provider = undefined;
+  isSubWallet = true;
+  connected = false;
+  isConnected = () =&gt; false;
+  __waitProvider = async () =&gt; {
+    const self = this;
+    if (self.provider) {
+      return self.provider;
+    } else {
+      return await new Promise((resolve, reject) =&gt; {
+        let retry = 0;
+        const interval = setInterval(() =&gt; {
+          if (++retry &gt; 30) {
+            clearInterval(interval);
+            reject(new Error('SubWallet provider not found'))
+          }
+          if (self.provider) {
+            clearInterval(interval);
+            resolve(self.provider)
+          }
+        }, 100);
+      })
+    }
+  }
+  on() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.on(...arguments);
+    });
+  }
+  off() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.off(...arguments);
+    });
+  }
+  addListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.addListener(...arguments);
+    });
+  }
+  removeListener() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeListener(...arguments);
+    });
+  }
+  removeAllListeners() {
+    this.__waitProvider().then((provider) =&gt; {
+      provider.removeAllListeners(...arguments);
+    });
+  }
+  async enable() {
+    const provider = await this.__waitProvider();
+    return await provider.enable(...arguments);
+  }
+  async request() {
+    const provider = await this.__waitProvider();
+    return await provider.request(...arguments);
+  }
+  async send() {
+    const provider = await this.__waitProvider();
+    return await provider.send(...arguments);
+  }
+  async sendAsync() {
+    const provider = await this.__waitProvider();
+    return await provider.sendAsync(...arguments);
+  }
+}
+
+
+window.SubWallet = new Proxy(new SubWalletPlaceholder(), {
+  get(obj, prop) {
+    if (prop === 'provider') {
+      return undefined;
+    }
+
+    if (obj.provider) {
+      return Reflect.get(obj.provider, prop);
+    } else {
+      return Reflect.get(obj, prop);
+    }
+  }
+})</script>
+  <script />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     height="160pt"
+     units="pt"
+     inkscape:zoom="1.4337166"
+     inkscape:cx="66.261352"
+     inkscape:cy="131.47647"
+     inkscape:window-width="1341"
+     inkscape:window-height="768"
+     inkscape:window-x="25"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <svg:defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-6.6040373 : 28.093603 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="49.840409 : 28.093603 : 1"
+       inkscape:persp3d-origin="21.618186 : 18.686195 : 1"
+       id="perspective1481" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="25.073037 : 9.1949176 : 1"
+       inkscape:vp_y="0 : 138.0888 : 0"
+       inkscape:vp_z="131.6371 : 9.1949176 : 1"
+       inkscape:persp3d-origin="78.355061 : 7.8958599 : 1"
+       id="perspective1042" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-4.4378753 : 31.690852 : 1"
+       inkscape:vp_y="0 : 1065.6543 : 0"
+       inkscape:vp_z="92.298311 : 31.690852 : 1"
+       inkscape:persp3d-origin="43.93022 : 21.665807 : 1"
+       id="perspective686" />
+    <svg:rect
+       x="2.9370052"
+       y="-37.37056"
+       width="116.16407"
+       height="140.00581"
+       id="rect435" />
+    <svg:rect
+       x="55.161045"
+       y="101.7453"
+       width="32.596974"
+       height="21.605307"
+       id="rect429" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-12.35938 : 111.34509 : 1"
+       inkscape:vp_y="0 : 281.95437 : 0"
+       inkscape:vp_z="13.235401 : 111.34509 : 1"
+       inkscape:persp3d-origin="0.43801074 : 108.69263 : 1"
+       id="perspective686-3" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="21.066709 : 11.03024 : 1"
+       inkscape:vp_y="0 : 281.95437 : 0"
+       inkscape:vp_z="46.66149 : 11.03024 : 1"
+       inkscape:persp3d-origin="33.8641 : 8.37778 : 1"
+       id="perspective686-36" />
+    <svg:meshgradient
+       inkscape:collect="always"
+       id="meshgradient1211"
+       gradientUnits="userSpaceOnUse"
+       x="18.765169"
+       y="12.359991"
+       gradientTransform="translate(-3.2753793,-3.2408456)">
+      <svg:meshrow
+         id="meshrow3957">
+        <svg:meshpatch
+           id="meshpatch3959">
+          <svg:stop
+             path="c 9.02123,0  18.0425,0  27.0637,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop3961" />
+          <svg:stop
+             path="c 10.0826,-1.25244  4.03724,54.2321  -5.90727,49.5242"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop3963" />
+          <svg:stop
+             path="c -9.02098,0.000153505  -12.1354,-32.0701  -21.1567,-32.0701"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop3965" />
+          <svg:stop
+             path="c -9.72861,4.63288  -10.8097,-23.5757  0.00027,-17.4541"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop3967" />
+        </svg:meshpatch>
+      </svg:meshrow>
+    </svg:meshgradient>
+  </svg:defs>
+  <svg:g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <svg:ellipse
+       style="fill:#00d455;stroke-width:0.264583;fill-opacity:1"
+       id="path846"
+       cx="28.53433"
+       cy="28.81036"
+       rx="25.300062"
+       ry="26.302408" />
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text427"
+       style="white-space:pre;shape-inside:url(#rect429);display:inline;fill:#000000" />
+    <svg:text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text433"
+       style="white-space:pre;shape-inside:url(#rect435);display:inline;fill:#000000" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path811"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="9.0130663"
+       sodipodi:cy="38.421089"
+       sodipodi:r1="1.8707105"
+       sodipodi:r2="0.93535519"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.9424778"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 9.0130663,36.550379 0.549788,1.113992 1.2293637,0.178637 L 9.9026419,38.71013 10.112642,39.934526 9.0130663,39.356444 7.9134902,39.934526 8.1234906,38.71013 7.2339149,37.843008 8.4632783,37.664371 Z"
+       inkscape:transform-center-y="-0.17863745"
+       transform="translate(34.484869,-0.29245508)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path813"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="19.637857"
+       sodipodi:cy="34.661945"
+       sodipodi:r1="1.8149086"
+       sodipodi:r2="0.90745425"
+       sodipodi:arg1="-1.124163"
+       sodipodi:arg2="-0.4958445"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 20.421774,33.025068 0.01425,1.205134 1.00084,0.671469 -1.141747,0.38596 -0.329329,1.159351 -0.719889,-0.966598 -1.204376,0.04505 0.696831,-0.98335 -0.415016,-1.131509 1.150554,0.358853 z"
+       inkscape:transform-center-x="-0.101336"
+       inkscape:transform-center-y="0.074078864"
+       transform="translate(23.578354,-1.9233477)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path813-3"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="19.637857"
+       sodipodi:cy="34.661945"
+       sodipodi:r1="1.8149086"
+       sodipodi:r2="0.90745425"
+       sodipodi:arg1="-1.124163"
+       sodipodi:arg2="-0.4958445"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 20.421774,33.025068 0.01425,1.205134 1.00084,0.671469 -1.141747,0.38596 -0.329329,1.159351 -0.719889,-0.966598 -1.204376,0.04505 0.696831,-0.98335 -0.415016,-1.131509 1.150554,0.358853 z"
+       inkscape:transform-center-x="-0.101336"
+       inkscape:transform-center-y="0.074078864"
+       transform="translate(-4.2060784,-2.3814822)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817-7"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(-5.7568654,-14.521568)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817-1"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(22.348093,-39.727189)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ffff00;fill-rule:evenodd;stroke-width:0.264583"
+       id="path817-72"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="12.566952"
+       sodipodi:cy="46.376534"
+       sodipodi:r1="1.411093"
+       sodipodi:r2="0.70554638"
+       sodipodi:arg1="-2.2218733"
+       sodipodi:arg2="-1.5935547"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 11.711768,45.254106 0.839128,0.417064 0.819282,-0.454814 -0.137347,0.926938 0.685725,0.638638 -0.924013,0.155815 -0.39548,0.849514 -0.433724,-0.830639 -0.930146,-0.11361 0.655957,-0.669178 z"
+       inkscape:transform-center-x="-0.0099228263"
+       inkscape:transform-center-y="0.12527459"
+       transform="translate(0.525727,-7.5630916)" />
+    <svg:g
+       id="g4235">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719" />
+    </svg:g>
+    <svg:g
+       id="g4235-9"
+       transform="translate(-3.3537749,-1.1919261)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8"
+       transform="translate(-6.3930192,-1.8954835)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3" />
+    </svg:g>
+    <svg:g
+       id="g4235-7"
+       transform="translate(-2.9331766,1.9042714)"
+       style="fill:#ccffaa">
+      <svg:rect
+         style="fill:#ccffaa;stroke-width:0.264583"
+         id="rect3608-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#ccffaa;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-9" />
+      <svg:ellipse
+         style="fill:#ccffaa;stroke-width:0.207531"
+         id="path3450-2"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#ccffaa;stroke-width:0.264583"
+         id="rect3608-3-28"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#ccffaa;stroke-width:0.254462"
+         id="rect3608-3-6-9"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#ccffaa;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-7" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-3"
+       transform="translate(-6.2869515,0.71234533)"
+       style="fill:#ffd5d5">
+      <svg:rect
+         style="fill:#ffd5d5;stroke-width:0.264583"
+         id="rect3608-36-6"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#ffd5d5;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-1" />
+      <svg:ellipse
+         style="fill:#ffd5d5;stroke-width:0.207531"
+         id="path3450-6-29"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#ffd5d5;stroke-width:0.264583"
+         id="rect3608-3-2-3"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#ffd5d5;stroke-width:0.254462"
+         id="rect3608-3-6-6-1"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#ffd5d5;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-9" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-4"
+       transform="translate(-9.3261958,0.00878793)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-7"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-8" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-4"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-0"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-3" />
+    </svg:g>
+    <svg:g
+       id="g4235-6"
+       transform="translate(-7.5201921,2.1882562)"
+       style="fill:#d4ff2a">
+      <svg:rect
+         style="fill:#d4ff2a;stroke-width:0.264583"
+         id="rect3608-1"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#d4ff2a;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-06" />
+      <svg:ellipse
+         style="fill:#d4ff2a;stroke-width:0.207531"
+         id="path3450-3"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#d4ff2a;stroke-width:0.264583"
+         id="rect3608-3-20"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#d4ff2a;stroke-width:0.254462"
+         id="rect3608-3-6-61"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#d4ff2a;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-5" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-5"
+       transform="translate(-10.873967,0.99633015)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-7" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-6"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-93" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-7"
+       transform="translate(-13.913212,0.29277275)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-5" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-2"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-54"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-7"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-4" />
+    </svg:g>
+    <svg:g
+       id="g4235-4"
+       transform="translate(-10.979541,3.4703471)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-30"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-7" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-8"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-68"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-8"
+         width="1.3132771"
+         height="0"
+         x="-20.335243"
+         y="57.313202"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-4" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-31"
+       transform="translate(-14.333316,2.278421)"
+       style="fill:#22280b">
+      <svg:rect
+         style="fill:#22280b;stroke-width:0.264583"
+         id="rect3608-36-49"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#22280b;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-2" />
+      <svg:ellipse
+         style="fill:#22280b;stroke-width:0.207531"
+         id="path3450-6-0"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#22280b;stroke-width:0.264583"
+         id="rect3608-3-2-6"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#22280b;stroke-width:0.254462"
+         id="rect3608-3-6-6-8"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#22280b;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-92" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-6"
+       transform="translate(-17.372561,1.5748636)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-6"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-4" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-9"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-50"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-4"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-8" />
+    </svg:g>
+    <svg:g
+       sodipodi:type="inkscape:box3d"
+       id="g688-6"
+       style="fill:#000080"
+       inkscape:perspectiveID="#perspective686-3"
+       inkscape:corner0="0.43355702 : -0.0092886374 : 0 : 1"
+       inkscape:corner7="0.034780989 : -0.018552219 : 0.38349564 : 1">
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path700-7"
+         style="fill:#e9e9ff;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="11"
+         d="m 0.0854314,-51.999553 3.4991003,0.815698 v 1.841606 l -3.4991003,-1.219862 z"
+         points="3.5845317,-51.183855 3.5845317,-49.342249 0.085431397,-50.562111 0.085431397,-51.999553 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path690-5"
+         style="fill:#353564;fill-rule:evenodd;stroke:none;stroke-width:1.24049;stroke-linejoin:round"
+         inkscape:box3dsidetype="6"
+         d="m -3.4323608,-51.223473 v 1.821977 l 3.5177922,-1.160615 v -1.437442 z"
+         points="-3.4323608,-49.401496 0.085431397,-50.562111 0.085431397,-51.999553 -3.4323608,-51.223473 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path698-3"
+         style="fill:#afafde;fill-rule:evenodd;stroke:none;stroke-width:1.24049;stroke-linejoin:round"
+         inkscape:box3dsidetype="13"
+         d="m -3.4323608,-49.401496 3.4402265,2.119219 3.576666,-2.059972 -3.4991003,-1.219862 z"
+         points="0.0078657028,-47.282277 3.5845317,-49.342249 0.085431397,-50.562111 -3.4323608,-49.401496 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path692-5"
+         style="fill:#4d4d9f;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="5"
+         d="m -3.4323608,-51.223473 3.4402265,1.41708 3.576666,-1.377462 -3.4991003,-0.815698 z"
+         points="0.0078657028,-49.806393 3.5845317,-51.183855 0.085431397,-51.999553 -3.4323608,-51.223473 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path696-6"
+         style="fill:#d7d7ff;fill-rule:evenodd;stroke:none;stroke-width:1.31129;stroke-linejoin:round"
+         inkscape:box3dsidetype="14"
+         d="m 0.0078657,-49.806393 v 2.524116 l 3.576666,-2.059972 v -1.841606 z"
+         points="0.0078657028,-47.282277 3.5845317,-49.342249 3.5845317,-51.183855 0.0078657028,-49.806393 " />
+      <svg:path
+         sodipodi:type="inkscape:box3dside"
+         id="path694-2"
+         style="fill:#8686bf;fill-rule:evenodd;stroke:none;stroke-width:1.30913;stroke-linejoin:round"
+         inkscape:box3dsidetype="3"
+         d="m -3.4323608,-51.223473 3.4402265,1.41708 v 2.524116 l -3.4402265,-2.119219 z"
+         points="0.0078657028,-49.806393 0.0078657028,-47.282277 -3.4323608,-49.401496 -3.4323608,-51.223473 " />
+    </svg:g>
+    <svg:g
+       id="g4235-2"
+       transform="translate(-11.329828,-0.61190319)"
+       style="fill:#d38d5f">
+      <svg:rect
+         style="fill:#d38d5f;stroke-width:0.264583"
+         id="rect3608-7"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#d38d5f;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-09" />
+      <svg:ellipse
+         style="fill:#d38d5f;stroke-width:0.207531"
+         id="path3450-36"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#d38d5f;stroke-width:0.264583"
+         id="rect3608-3-0"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#d38d5f;stroke-width:0.254462"
+         id="rect3608-3-6-62"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#d38d5f;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-6" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-1"
+       transform="translate(-14.683603,-1.8038292)"
+       style="fill:#de8787">
+      <svg:rect
+         style="fill:#de8787;stroke-width:0.264583"
+         id="rect3608-36-8"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#de8787;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-79" />
+      <svg:ellipse
+         style="fill:#de8787;stroke-width:0.207531"
+         id="path3450-6-20"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#de8787;stroke-width:0.264583"
+         id="rect3608-3-2-2"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#de8787;stroke-width:0.254462"
+         id="rect3608-3-6-6-3"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:g
+         id="g4235-7-1"
+         transform="translate(22.225601,2.4738745)"
+         style="fill:#de8787">
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.264583"
+           id="rect3608-5-4"
+           width="0.60470611"
+           height="1.5046775"
+           x="37.168907"
+           y="35.481037" />
+        <svg:path
+           style="fill:#de8787;stroke-width:0.264583"
+           d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+           id="path3717-9-9" />
+        <svg:ellipse
+           style="fill:#de8787;stroke-width:0.207531"
+           id="path3450-2-2"
+           cx="37.539925"
+           cy="34.667713"
+           rx="0.64097631"
+           ry="0.96058261" />
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.264583"
+           id="rect3608-3-28-0"
+           width="0.60470611"
+           height="1.5046775"
+           x="45.982937"
+           y="24.284504"
+           transform="rotate(16.552293)" />
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.254462"
+           id="rect3608-3-6-9-6"
+           width="0.56267059"
+           height="1.495733"
+           x="-17.941778"
+           y="50.373676"
+           transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+        <svg:path
+           style="fill:#de8787;stroke-width:0.264583"
+           d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+           id="path3719-7-8" />
+      </svg:g>
+      <svg:g
+         id="g4235-6-9"
+         transform="translate(17.638586,2.7578593)"
+         style="fill:#de8787">
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.264583"
+           id="rect3608-1-2"
+           width="0.60470611"
+           height="1.5046775"
+           x="37.168907"
+           y="35.481037" />
+        <svg:path
+           style="fill:#de8787;stroke-width:0.264583"
+           d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+           id="path3717-06-66" />
+        <svg:ellipse
+           style="fill:#de8787;stroke-width:0.207531"
+           id="path3450-3-4"
+           cx="37.539925"
+           cy="34.667713"
+           rx="0.64097631"
+           ry="0.96058261" />
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.264583"
+           id="rect3608-3-20-9"
+           width="0.60470611"
+           height="1.5046775"
+           x="45.982937"
+           y="24.284504"
+           transform="rotate(16.552293)" />
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.254462"
+           id="rect3608-3-6-61-5"
+           width="0.56267059"
+           height="1.495733"
+           x="-17.941778"
+           y="50.373676"
+           transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+        <svg:path
+           style="fill:#de8787;stroke-width:0.264583"
+           d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+           id="path3719-5-0" />
+      </svg:g>
+      <svg:g
+         id="g4235-2-4"
+         transform="translate(13.82895,-0.04230009)"
+         style="fill:#de8787">
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.264583"
+           id="rect3608-7-8"
+           width="0.60470611"
+           height="1.5046775"
+           x="37.168907"
+           y="35.481037" />
+        <svg:path
+           style="fill:#de8787;stroke-width:0.264583"
+           d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+           id="path3717-09-7" />
+        <svg:ellipse
+           style="fill:#de8787;stroke-width:0.207531"
+           id="path3450-36-1"
+           cx="37.539925"
+           cy="34.667713"
+           rx="0.64097631"
+           ry="0.96058261" />
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.264583"
+           id="rect3608-3-0-7"
+           width="0.60470611"
+           height="1.5046775"
+           x="45.982937"
+           y="24.284504"
+           transform="rotate(16.552293)" />
+        <svg:rect
+           style="fill:#de8787;stroke-width:0.254462"
+           id="rect3608-3-6-62-2"
+           width="0.56267059"
+           height="1.495733"
+           x="-17.941778"
+           y="50.373676"
+           transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+        <svg:path
+           style="fill:#de8787;stroke-width:0.264583"
+           d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+           id="path3719-6-7" />
+      </svg:g>
+      <svg:rect
+         style="fill:#de8787;stroke-width:0.254462"
+         id="rect3608-3-6-6-3-2"
+         width="0.56267059"
+         height="1.495733"
+         x="-27.90777"
+         y="54.284248"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#de8787;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-7" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-5"
+       transform="translate(-17.722847,-2.5073862)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-9"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-2" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-28"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-9"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-73"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-6" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-3-1"
+       transform="translate(-17.61678,0.10044181)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-6-2"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-1-9" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-29-3"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-3-1"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-1-9"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-9-4" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-4-7"
+       transform="translate(-20.656024,-0.60311519)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-7-8"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-8-4" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-4-5"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-5-0"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-0-3"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-3-6" />
+    </svg:g>
+    <svg:g
+       id="g4235-6-1"
+       transform="translate(-18.85002,1.5763528)"
+       style="fill:#17280b">
+      <svg:rect
+         style="fill:#17280b;stroke-width:0.264583"
+         id="rect3608-1-0"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#17280b;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-06-6" />
+      <svg:ellipse
+         style="fill:#17280b;stroke-width:0.207531"
+         id="path3450-3-3"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#17280b;stroke-width:0.264583"
+         id="rect3608-3-20-2"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#17280b;stroke-width:0.254462"
+         id="rect3608-3-6-61-0"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#17280b;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-5-6" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-7-1"
+       transform="translate(-25.24304,-0.31913019)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-36-7-4-5"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-5-5" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-6-2-2-4"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-2-0-54-7"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-7-6"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-4-5" />
+    </svg:g>
+    <svg:g
+       id="g4235-4-6"
+       transform="translate(-22.309369,2.8584438)">
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-30-9"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-7-3" />
+      <svg:ellipse
+         style="fill:#00ff00;stroke-width:0.207531"
+         id="path3450-8-7"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.264583"
+         id="rect3608-3-68-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#00ff00;stroke-width:0.254462"
+         id="rect3608-3-6-8-5"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#00ff00;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-4-2" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-31-5"
+       transform="translate(-25.663144,1.6665178)"
+       style="fill:#ff9955">
+      <svg:rect
+         style="fill:#ff9955;stroke-width:0.264583"
+         id="rect3608-36-49-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#ff9955;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-2-7" />
+      <svg:ellipse
+         style="fill:#ff9955;stroke-width:0.207531"
+         id="path3450-6-0-4"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#ff9955;stroke-width:0.264583"
+         id="rect3608-3-2-6-4"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#ff9955;stroke-width:0.254462"
+         id="rect3608-3-6-6-8-3"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#ff9955;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-92-0" />
+    </svg:g>
+    <svg:g
+       id="g4235-9-8-6-7"
+       transform="translate(-28.702389,0.96296081)"
+       style="fill:#ffb380">
+      <svg:rect
+         style="fill:#ffb380;stroke-width:0.264583"
+         id="rect3608-36-7-6-8"
+         width="0.60470611"
+         height="1.5046775"
+         x="37.168907"
+         y="35.481037" />
+      <svg:path
+         style="fill:#ffb380;stroke-width:0.264583"
+         d="m 37.983141,35.557957 c 0.250283,0.06627 1.425305,-0.09064 1.425305,0.315682"
+         id="path3717-0-9-4-6" />
+      <svg:ellipse
+         style="fill:#ffb380;stroke-width:0.207531"
+         id="path3450-6-2-9-8"
+         cx="37.539925"
+         cy="34.667713"
+         rx="0.64097631"
+         ry="0.96058261" />
+      <svg:rect
+         style="fill:#ffb380;stroke-width:0.264583"
+         id="rect3608-3-2-0-50-8"
+         width="0.60470611"
+         height="1.5046775"
+         x="45.982937"
+         y="24.284504"
+         transform="rotate(16.552293)" />
+      <svg:rect
+         style="fill:#ffb380;stroke-width:0.254462"
+         id="rect3608-3-6-6-2-4-4"
+         width="0.56267059"
+         height="1.495733"
+         x="-17.941778"
+         y="50.373676"
+         transform="matrix(-0.87914457,0.47655516,0.43820342,0.89887583,0,0)" />
+      <svg:path
+         style="fill:#ffb380;stroke-width:0.264583"
+         d="m 37.159903,35.403435 c -0.100957,0.0078 -0.207465,-0.01053 -0.302876,0.02339 -0.0906,0.0322 -0.623327,0.583951 -0.659204,0.678133 -0.01738,0.04563 -0.01781,0.131363 -0.01781,0.187068"
+         id="path3719-1-3-8-3" />
+    </svg:g>
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#ff6600;stroke-width:0.264583"
+       id="path984"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="46.600838"
+       sodipodi:cy="43.09734"
+       sodipodi:r1="1.5010095"
+       sodipodi:r2="2.9709554"
+       sodipodi:arg1="1.2636437"
+       sodipodi:arg2="0.13996225"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 47.054662,44.528099 2.488079,-1.016294 -4.162397,0.459276 1.735412,2.052252 -1.723049,-3.816751 -1.415536,2.284655 3.097495,-2.818157 -2.610261,-0.640257 3.637405,2.075034 -0.197694,-2.680357 z"
+       inkscape:transform-center-x="-0.081723491"
+       inkscape:transform-center-y="0.0041532183"
+       transform="matrix(1.3078437,0,0,1.2777572,-19.715802,-9.1332059)" />
+    <svg:path
+       sodipodi:type="star"
+       style="fill:#aad400;stroke-width:0.264583"
+       id="path986"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="14.997936"
+       sodipodi:cy="45.500214"
+       sodipodi:r1="0.53354204"
+       sodipodi:r2="4.482899"
+       sodipodi:arg1="1.3476955"
+       sodipodi:arg2="1.971538"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 15.115985,46.020532 -1.866834,3.607409 1.290412,-3.854669 -4.007733,-0.660714 4.064767,0.0361 -0.610081,-4.015752 1.221753,3.876978 3.630682,-1.821158 -3.309683,2.360008 2.853966,2.890215 z"
+       inkscape:transform-center-x="0.030792866"
+       inkscape:transform-center-y="1.9101541"
+       transform="translate(-7.6092109,0.26456065)" />
+    <svg:text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.05;font-family:sans-serif;text-align:center;text-anchor:middle;fill:url(#meshgradient1211);fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="29.002579"
+       y="-6.9891095"
+       id="text3764"><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:url(#meshgradient1211);fill-opacity:1;stroke-width:0.264583"
+         x="29.002579"
+         y="-6.9891095"
+         id="tspan441" /><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;fill:url(#meshgradient1211);fill-opacity:1;stroke-width:0.264583"
+         x="29.002579"
+         y="4.2635508"
+         id="tspan511" /><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';text-align:center;text-anchor:middle;fill:url(#meshgradient1211);fill-opacity:1;stroke-width:0.264583"
+         x="29.002579"
+         y="15.376015"
+         id="tspan3880">Carbon</svg:tspan><svg:tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';text-align:center;text-anchor:middle;fill:url(#meshgradient1211);fill-opacity:1;stroke-width:0.264583"
+         x="29.002579"
+         y="26.48848"
+         id="tspan3971">Credits</svg:tspan></svg:text>
+    <svg:text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';fill:#ccffaa;stroke-width:0.264583"
+       x="16.50798"
+       y="43.451218"
+       id="text3975"><svg:tspan
+         sodipodi:role="line"
+         id="tspan3973"
+         x="16.50798"
+         y="43.451218"
+         style="stroke-width:0.264583">Trees,</svg:tspan><svg:tspan
+         sodipodi:role="line"
+         x="16.50798"
+         y="47.419968"
+         style="stroke-width:0.264583"
+         id="tspan3977">compost,</svg:tspan><svg:tspan
+         sodipodi:role="line"
+         x="16.50798"
+         y="51.388718"
+         style="stroke-width:0.264583"
+         id="tspan3983">plastic</svg:tspan></svg:text>
+  </svg:g>
+  <script />
+  <svg:script
+     id="mesh_polyfill"
+     type="text/javascript">
+!function(){const t=&quot;http://www.w3.org/2000/svg&quot;,e=&quot;http://www.w3.org/1999/xlink&quot;,s=&quot;http://www.w3.org/1999/xhtml&quot;,r=2;if(document.createElementNS(t,&quot;meshgradient&quot;).x)return;const n=(t,e,s,r)=&gt;{let n=new x(.5*(e.x+s.x),.5*(e.y+s.y)),o=new x(.5*(t.x+e.x),.5*(t.y+e.y)),i=new x(.5*(s.x+r.x),.5*(s.y+r.y)),a=new x(.5*(n.x+o.x),.5*(n.y+o.y)),h=new x(.5*(n.x+i.x),.5*(n.y+i.y)),l=new x(.5*(a.x+h.x),.5*(a.y+h.y));return[[t,o,a,l],[l,h,i,r]]},o=t=&gt;{let e=t[0].distSquared(t[1]),s=t[2].distSquared(t[3]),r=.25*t[0].distSquared(t[2]),n=.25*t[1].distSquared(t[3]),o=e&gt;s?e:s,i=r&gt;n?r:n;return 18*(o&gt;i?o:i)},i=(t,e)=&gt;Math.sqrt(t.distSquared(e)),a=(t,e)=&gt;t.scale(2/3).add(e.scale(1/3)),h=t=&gt;{let e,s,r,n,o,i,a,h=new g;return t.match(/(\w+\(\s*[^)]+\))+/g).forEach(t=&gt;{let l=t.match(/[\w.-]+/g),d=l.shift();switch(d){case&quot;translate&quot;:2===l.length?e=new g(1,0,0,1,l[0],l[1]):(console.error(&quot;mesh.js: translate does not have 2 arguments!&quot;),e=new g(1,0,0,1,0,0)),h=h.append(e);break;case&quot;scale&quot;:1===l.length?s=new g(l[0],0,0,l[0],0,0):2===l.length?s=new g(l[0],0,0,l[1],0,0):(console.error(&quot;mesh.js: scale does not have 1 or 2 arguments!&quot;),s=new g(1,0,0,1,0,0)),h=h.append(s);break;case&quot;rotate&quot;:if(3===l.length&amp;&amp;(e=new g(1,0,0,1,l[1],l[2]),h=h.append(e)),l[0]){r=l[0]*Math.PI/180;let t=Math.cos(r),e=Math.sin(r);Math.abs(t)&lt;1e-16&amp;&amp;(t=0),Math.abs(e)&lt;1e-16&amp;&amp;(e=0),a=new g(t,e,-e,t,0,0),h=h.append(a)}else console.error(&quot;math.js: No argument to rotate transform!&quot;);3===l.length&amp;&amp;(e=new g(1,0,0,1,-l[1],-l[2]),h=h.append(e));break;case&quot;skewX&quot;:l[0]?(r=l[0]*Math.PI/180,n=Math.tan(r),o=new g(1,0,n,1,0,0),h=h.append(o)):console.error(&quot;math.js: No argument to skewX transform!&quot;);break;case&quot;skewY&quot;:l[0]?(r=l[0]*Math.PI/180,n=Math.tan(r),i=new g(1,n,0,1,0,0),h=h.append(i)):console.error(&quot;math.js: No argument to skewY transform!&quot;);break;case&quot;matrix&quot;:6===l.length?h=h.append(new g(...l)):console.error(&quot;math.js: Incorrect number of arguments for matrix!&quot;);break;default:console.error(&quot;mesh.js: Unhandled transform type: &quot;+d)}}),h},l=t=&gt;{let e=[],s=t.split(/[ ,]+/);for(let t=0,r=s.length-1;t&lt;r;t+=2)e.push(new x(parseFloat(s[t]),parseFloat(s[t+1])));return e},d=(t,e)=&gt;{for(let s in e)t.setAttribute(s,e[s])},c=(t,e,s,r,n)=&gt;{let o,i,a=[0,0,0,0];for(let h=0;h&lt;3;++h)e[h]&lt;t[h]&amp;&amp;e[h]&lt;s[h]||t[h]&lt;e[h]&amp;&amp;s[h]&lt;e[h]?a[h]=0:(a[h]=.5*((e[h]-t[h])/r+(s[h]-e[h])/n),o=Math.abs(3*(e[h]-t[h])/r),i=Math.abs(3*(s[h]-e[h])/n),a[h]&gt;o?a[h]=o:a[h]&gt;i&amp;&amp;(a[h]=i));return a},u=[[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],[-3,3,0,0,-2,-1,0,0,0,0,0,0,0,0,0,0],[2,-2,0,0,1,1,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],[0,0,0,0,0,0,0,0,-3,3,0,0,-2,-1,0,0],[0,0,0,0,0,0,0,0,2,-2,0,0,1,1,0,0],[-3,0,3,0,0,0,0,0,-2,0,-1,0,0,0,0,0],[0,0,0,0,-3,0,3,0,0,0,0,0,-2,0,-1,0],[9,-9,-9,9,6,3,-6,-3,6,-6,3,-3,4,2,2,1],[-6,6,6,-6,-3,-3,3,3,-4,4,-2,2,-2,-2,-1,-1],[2,0,-2,0,0,0,0,0,1,0,1,0,0,0,0,0],[0,0,0,0,2,0,-2,0,0,0,0,0,1,0,1,0],[-6,6,6,-6,-4,-2,4,2,-3,3,-3,3,-2,-1,-2,-1],[4,-4,-4,4,2,2,-2,-2,2,-2,2,-2,1,1,1,1]],f=t=&gt;{let e=[];for(let s=0;s&lt;16;++s){e[s]=0;for(let r=0;r&lt;16;++r)e[s]+=u[s][r]*t[r]}return e},p=(t,e,s)=&gt;{const r=e*e,n=s*s,o=e*e*e,i=s*s*s;return t[0]+t[1]*e+t[2]*r+t[3]*o+t[4]*s+t[5]*s*e+t[6]*s*r+t[7]*s*o+t[8]*n+t[9]*n*e+t[10]*n*r+t[11]*n*o+t[12]*i+t[13]*i*e+t[14]*i*r+t[15]*i*o},y=t=&gt;{let e=[],s=[],r=[];for(let s=0;s&lt;4;++s)e[s]=[],e[s][0]=n(t[0][s],t[1][s],t[2][s],t[3][s]),e[s][1]=[],e[s][1].push(...n(...e[s][0][0])),e[s][1].push(...n(...e[s][0][1])),e[s][2]=[],e[s][2].push(...n(...e[s][1][0])),e[s][2].push(...n(...e[s][1][1])),e[s][2].push(...n(...e[s][1][2])),e[s][2].push(...n(...e[s][1][3]));for(let t=0;t&lt;8;++t){s[t]=[];for(let r=0;r&lt;4;++r)s[t][r]=[],s[t][r][0]=n(e[0][2][t][r],e[1][2][t][r],e[2][2][t][r],e[3][2][t][r]),s[t][r][1]=[],s[t][r][1].push(...n(...s[t][r][0][0])),s[t][r][1].push(...n(...s[t][r][0][1])),s[t][r][2]=[],s[t][r][2].push(...n(...s[t][r][1][0])),s[t][r][2].push(...n(...s[t][r][1][1])),s[t][r][2].push(...n(...s[t][r][1][2])),s[t][r][2].push(...n(...s[t][r][1][3]))}for(let t=0;t&lt;8;++t){r[t]=[];for(let e=0;e&lt;8;++e)r[t][e]=[],r[t][e][0]=s[t][0][2][e],r[t][e][1]=s[t][1][2][e],r[t][e][2]=s[t][2][2][e],r[t][e][3]=s[t][3][2][e]}return r};class x{constructor(t,e){this.x=t||0,this.y=e||0}toString(){return`(x=${this.x}, y=${this.y})`}clone(){return new x(this.x,this.y)}add(t){return new x(this.x+t.x,this.y+t.y)}scale(t){return void 0===t.x?new x(this.x*t,this.y*t):new x(this.x*t.x,this.y*t.y)}distSquared(t){let e=this.x-t.x,s=this.y-t.y;return e*e+s*s}transform(t){let e=this.x*t.a+this.y*t.c+t.e,s=this.x*t.b+this.y*t.d+t.f;return new x(e,s)}}class g{constructor(t,e,s,r,n,o){void 0===t?(this.a=1,this.b=0,this.c=0,this.d=1,this.e=0,this.f=0):(this.a=t,this.b=e,this.c=s,this.d=r,this.e=n,this.f=o)}toString(){return`affine: ${this.a} ${this.c} ${this.e} \n       ${this.b} ${this.d} ${this.f}`}append(t){t instanceof g||console.error(&quot;mesh.js: argument to Affine.append is not affine!&quot;);let e=this.a*t.a+this.c*t.b,s=this.b*t.a+this.d*t.b,r=this.a*t.c+this.c*t.d,n=this.b*t.c+this.d*t.d,o=this.a*t.e+this.c*t.f+this.e,i=this.b*t.e+this.d*t.f+this.f;return new g(e,s,r,n,o,i)}}class w{constructor(t,e){this.nodes=t,this.colors=e}paintCurve(t,e){if(o(this.nodes)&gt;r){const s=n(...this.nodes);let r=[[],[]],o=[[],[]];for(let t=0;t&lt;4;++t)r[0][t]=this.colors[0][t],r[1][t]=(this.colors[0][t]+this.colors[1][t])/2,o[0][t]=r[1][t],o[1][t]=this.colors[1][t];let i=new w(s[0],r),a=new w(s[1],o);i.paintCurve(t,e),a.paintCurve(t,e)}else{let s=Math.round(this.nodes[0].x);if(s&gt;=0&amp;&amp;s&lt;e){let r=4*(~~this.nodes[0].y*e+s);t[r]=Math.round(this.colors[0][0]),t[r+1]=Math.round(this.colors[0][1]),t[r+2]=Math.round(this.colors[0][2]),t[r+3]=Math.round(this.colors[0][3])}}}}class m{constructor(t,e){this.nodes=t,this.colors=e}split(){let t=[[],[],[],[]],e=[[],[],[],[]],s=[[[],[]],[[],[]]],r=[[[],[]],[[],[]]];for(let s=0;s&lt;4;++s){const r=n(this.nodes[0][s],this.nodes[1][s],this.nodes[2][s],this.nodes[3][s]);t[0][s]=r[0][0],t[1][s]=r[0][1],t[2][s]=r[0][2],t[3][s]=r[0][3],e[0][s]=r[1][0],e[1][s]=r[1][1],e[2][s]=r[1][2],e[3][s]=r[1][3]}for(let t=0;t&lt;4;++t)s[0][0][t]=this.colors[0][0][t],s[0][1][t]=this.colors[0][1][t],s[1][0][t]=(this.colors[0][0][t]+this.colors[1][0][t])/2,s[1][1][t]=(this.colors[0][1][t]+this.colors[1][1][t])/2,r[0][0][t]=s[1][0][t],r[0][1][t]=s[1][1][t],r[1][0][t]=this.colors[1][0][t],r[1][1][t]=this.colors[1][1][t];return[new m(t,s),new m(e,r)]}paint(t,e){let s,n=!1;for(let t=0;t&lt;4;++t)if((s=o([this.nodes[0][t],this.nodes[1][t],this.nodes[2][t],this.nodes[3][t]]))&gt;r){n=!0;break}if(n){let s=this.split();s[0].paint(t,e),s[1].paint(t,e)}else{new w([...this.nodes[0]],[...this.colors[0]]).paintCurve(t,e)}}}class b{constructor(t){this.readMesh(t),this.type=t.getAttribute(&quot;type&quot;)||&quot;bilinear&quot;}readMesh(t){let e=[[]],s=[[]],r=Number(t.getAttribute(&quot;x&quot;)),n=Number(t.getAttribute(&quot;y&quot;));e[0][0]=new x(r,n);let o=t.children;for(let t=0,r=o.length;t&lt;r;++t){e[3*t+1]=[],e[3*t+2]=[],e[3*t+3]=[],s[t+1]=[];let r=o[t].children;for(let n=0,o=r.length;n&lt;o;++n){let o=r[n].children;for(let r=0,i=o.length;r&lt;i;++r){let i=r;0!==t&amp;&amp;++i;let h,d=o[r].getAttribute(&quot;path&quot;),c=&quot;l&quot;;null!=d&amp;&amp;(c=(h=d.match(/\s*([lLcC])\s*(.*)/))[1]);let u=l(h[2]);switch(c){case&quot;l&quot;:0===i?(e[3*t][3*n+3]=u[0].add(e[3*t][3*n]),e[3*t][3*n+1]=a(e[3*t][3*n],e[3*t][3*n+3]),e[3*t][3*n+2]=a(e[3*t][3*n+3],e[3*t][3*n])):1===i?(e[3*t+3][3*n+3]=u[0].add(e[3*t][3*n+3]),e[3*t+1][3*n+3]=a(e[3*t][3*n+3],e[3*t+3][3*n+3]),e[3*t+2][3*n+3]=a(e[3*t+3][3*n+3],e[3*t][3*n+3])):2===i?(0===n&amp;&amp;(e[3*t+3][3*n+0]=u[0].add(e[3*t+3][3*n+3])),e[3*t+3][3*n+1]=a(e[3*t+3][3*n],e[3*t+3][3*n+3]),e[3*t+3][3*n+2]=a(e[3*t+3][3*n+3],e[3*t+3][3*n])):(e[3*t+1][3*n]=a(e[3*t][3*n],e[3*t+3][3*n]),e[3*t+2][3*n]=a(e[3*t+3][3*n],e[3*t][3*n]));break;case&quot;L&quot;:0===i?(e[3*t][3*n+3]=u[0],e[3*t][3*n+1]=a(e[3*t][3*n],e[3*t][3*n+3]),e[3*t][3*n+2]=a(e[3*t][3*n+3],e[3*t][3*n])):1===i?(e[3*t+3][3*n+3]=u[0],e[3*t+1][3*n+3]=a(e[3*t][3*n+3],e[3*t+3][3*n+3]),e[3*t+2][3*n+3]=a(e[3*t+3][3*n+3],e[3*t][3*n+3])):2===i?(0===n&amp;&amp;(e[3*t+3][3*n+0]=u[0]),e[3*t+3][3*n+1]=a(e[3*t+3][3*n],e[3*t+3][3*n+3]),e[3*t+3][3*n+2]=a(e[3*t+3][3*n+3],e[3*t+3][3*n])):(e[3*t+1][3*n]=a(e[3*t][3*n],e[3*t+3][3*n]),e[3*t+2][3*n]=a(e[3*t+3][3*n],e[3*t][3*n]));break;case&quot;c&quot;:0===i?(e[3*t][3*n+1]=u[0].add(e[3*t][3*n]),e[3*t][3*n+2]=u[1].add(e[3*t][3*n]),e[3*t][3*n+3]=u[2].add(e[3*t][3*n])):1===i?(e[3*t+1][3*n+3]=u[0].add(e[3*t][3*n+3]),e[3*t+2][3*n+3]=u[1].add(e[3*t][3*n+3]),e[3*t+3][3*n+3]=u[2].add(e[3*t][3*n+3])):2===i?(e[3*t+3][3*n+2]=u[0].add(e[3*t+3][3*n+3]),e[3*t+3][3*n+1]=u[1].add(e[3*t+3][3*n+3]),0===n&amp;&amp;(e[3*t+3][3*n+0]=u[2].add(e[3*t+3][3*n+3]))):(e[3*t+2][3*n]=u[0].add(e[3*t+3][3*n]),e[3*t+1][3*n]=u[1].add(e[3*t+3][3*n]));break;case&quot;C&quot;:0===i?(e[3*t][3*n+1]=u[0],e[3*t][3*n+2]=u[1],e[3*t][3*n+3]=u[2]):1===i?(e[3*t+1][3*n+3]=u[0],e[3*t+2][3*n+3]=u[1],e[3*t+3][3*n+3]=u[2]):2===i?(e[3*t+3][3*n+2]=u[0],e[3*t+3][3*n+1]=u[1],0===n&amp;&amp;(e[3*t+3][3*n+0]=u[2])):(e[3*t+2][3*n]=u[0],e[3*t+1][3*n]=u[1]);break;default:console.error(&quot;mesh.js: &quot;+c+&quot; invalid path type.&quot;)}if(0===t&amp;&amp;0===n||r&gt;0){let e=window.getComputedStyle(o[r]).stopColor.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i),a=window.getComputedStyle(o[r]).stopOpacity,h=255;a&amp;&amp;(h=Math.floor(255*a)),e&amp;&amp;(0===i?(s[t][n]=[],s[t][n][0]=Math.floor(e[1]),s[t][n][1]=Math.floor(e[2]),s[t][n][2]=Math.floor(e[3]),s[t][n][3]=h):1===i?(s[t][n+1]=[],s[t][n+1][0]=Math.floor(e[1]),s[t][n+1][1]=Math.floor(e[2]),s[t][n+1][2]=Math.floor(e[3]),s[t][n+1][3]=h):2===i?(s[t+1][n+1]=[],s[t+1][n+1][0]=Math.floor(e[1]),s[t+1][n+1][1]=Math.floor(e[2]),s[t+1][n+1][2]=Math.floor(e[3]),s[t+1][n+1][3]=h):3===i&amp;&amp;(s[t+1][n]=[],s[t+1][n][0]=Math.floor(e[1]),s[t+1][n][1]=Math.floor(e[2]),s[t+1][n][2]=Math.floor(e[3]),s[t+1][n][3]=h))}}e[3*t+1][3*n+1]=new x,e[3*t+1][3*n+2]=new x,e[3*t+2][3*n+1]=new x,e[3*t+2][3*n+2]=new x,e[3*t+1][3*n+1].x=(-4*e[3*t][3*n].x+6*(e[3*t][3*n+1].x+e[3*t+1][3*n].x)+-2*(e[3*t][3*n+3].x+e[3*t+3][3*n].x)+3*(e[3*t+3][3*n+1].x+e[3*t+1][3*n+3].x)+-1*e[3*t+3][3*n+3].x)/9,e[3*t+1][3*n+2].x=(-4*e[3*t][3*n+3].x+6*(e[3*t][3*n+2].x+e[3*t+1][3*n+3].x)+-2*(e[3*t][3*n].x+e[3*t+3][3*n+3].x)+3*(e[3*t+3][3*n+2].x+e[3*t+1][3*n].x)+-1*e[3*t+3][3*n].x)/9,e[3*t+2][3*n+1].x=(-4*e[3*t+3][3*n].x+6*(e[3*t+3][3*n+1].x+e[3*t+2][3*n].x)+-2*(e[3*t+3][3*n+3].x+e[3*t][3*n].x)+3*(e[3*t][3*n+1].x+e[3*t+2][3*n+3].x)+-1*e[3*t][3*n+3].x)/9,e[3*t+2][3*n+2].x=(-4*e[3*t+3][3*n+3].x+6*(e[3*t+3][3*n+2].x+e[3*t+2][3*n+3].x)+-2*(e[3*t+3][3*n].x+e[3*t][3*n+3].x)+3*(e[3*t][3*n+2].x+e[3*t+2][3*n].x)+-1*e[3*t][3*n].x)/9,e[3*t+1][3*n+1].y=(-4*e[3*t][3*n].y+6*(e[3*t][3*n+1].y+e[3*t+1][3*n].y)+-2*(e[3*t][3*n+3].y+e[3*t+3][3*n].y)+3*(e[3*t+3][3*n+1].y+e[3*t+1][3*n+3].y)+-1*e[3*t+3][3*n+3].y)/9,e[3*t+1][3*n+2].y=(-4*e[3*t][3*n+3].y+6*(e[3*t][3*n+2].y+e[3*t+1][3*n+3].y)+-2*(e[3*t][3*n].y+e[3*t+3][3*n+3].y)+3*(e[3*t+3][3*n+2].y+e[3*t+1][3*n].y)+-1*e[3*t+3][3*n].y)/9,e[3*t+2][3*n+1].y=(-4*e[3*t+3][3*n].y+6*(e[3*t+3][3*n+1].y+e[3*t+2][3*n].y)+-2*(e[3*t+3][3*n+3].y+e[3*t][3*n].y)+3*(e[3*t][3*n+1].y+e[3*t+2][3*n+3].y)+-1*e[3*t][3*n+3].y)/9,e[3*t+2][3*n+2].y=(-4*e[3*t+3][3*n+3].y+6*(e[3*t+3][3*n+2].y+e[3*t+2][3*n+3].y)+-2*(e[3*t+3][3*n].y+e[3*t][3*n+3].y)+3*(e[3*t][3*n+2].y+e[3*t+2][3*n].y)+-1*e[3*t][3*n].y)/9}}this.nodes=e,this.colors=s}paintMesh(t,e){let s=(this.nodes.length-1)/3,r=(this.nodes[0].length-1)/3;if(&quot;bilinear&quot;===this.type||s&lt;2||r&lt;2){let n;for(let o=0;o&lt;s;++o)for(let s=0;s&lt;r;++s){let r=[];for(let t=3*o,e=3*o+4;t&lt;e;++t)r.push(this.nodes[t].slice(3*s,3*s+4));let i=[];i.push(this.colors[o].slice(s,s+2)),i.push(this.colors[o+1].slice(s,s+2)),(n=new m(r,i)).paint(t,e)}}else{let n,o,a,h,l,d,u;const x=s,g=r;s++,r++;let w=new Array(s);for(let t=0;t&lt;s;++t){w[t]=new Array(r);for(let e=0;e&lt;r;++e)w[t][e]=[],w[t][e][0]=this.nodes[3*t][3*e],w[t][e][1]=this.colors[t][e]}for(let t=0;t&lt;s;++t)for(let e=0;e&lt;r;++e)0!==t&amp;&amp;t!==x&amp;&amp;(n=i(w[t-1][e][0],w[t][e][0]),o=i(w[t+1][e][0],w[t][e][0]),w[t][e][2]=c(w[t-1][e][1],w[t][e][1],w[t+1][e][1],n,o)),0!==e&amp;&amp;e!==g&amp;&amp;(n=i(w[t][e-1][0],w[t][e][0]),o=i(w[t][e+1][0],w[t][e][0]),w[t][e][3]=c(w[t][e-1][1],w[t][e][1],w[t][e+1][1],n,o));for(let t=0;t&lt;r;++t){w[0][t][2]=[],w[x][t][2]=[];for(let e=0;e&lt;4;++e)n=i(w[1][t][0],w[0][t][0]),o=i(w[x][t][0],w[x-1][t][0]),w[0][t][2][e]=n&gt;0?2*(w[1][t][1][e]-w[0][t][1][e])/n-w[1][t][2][e]:0,w[x][t][2][e]=o&gt;0?2*(w[x][t][1][e]-w[x-1][t][1][e])/o-w[x-1][t][2][e]:0}for(let t=0;t&lt;s;++t){w[t][0][3]=[],w[t][g][3]=[];for(let e=0;e&lt;4;++e)n=i(w[t][1][0],w[t][0][0]),o=i(w[t][g][0],w[t][g-1][0]),w[t][0][3][e]=n&gt;0?2*(w[t][1][1][e]-w[t][0][1][e])/n-w[t][1][3][e]:0,w[t][g][3][e]=o&gt;0?2*(w[t][g][1][e]-w[t][g-1][1][e])/o-w[t][g-1][3][e]:0}for(let s=0;s&lt;x;++s)for(let r=0;r&lt;g;++r){let n=i(w[s][r][0],w[s+1][r][0]),o=i(w[s][r+1][0],w[s+1][r+1][0]),c=i(w[s][r][0],w[s][r+1][0]),x=i(w[s+1][r][0],w[s+1][r+1][0]),g=[[],[],[],[]];for(let t=0;t&lt;4;++t){(d=[])[0]=w[s][r][1][t],d[1]=w[s+1][r][1][t],d[2]=w[s][r+1][1][t],d[3]=w[s+1][r+1][1][t],d[4]=w[s][r][2][t]*n,d[5]=w[s+1][r][2][t]*n,d[6]=w[s][r+1][2][t]*o,d[7]=w[s+1][r+1][2][t]*o,d[8]=w[s][r][3][t]*c,d[9]=w[s+1][r][3][t]*x,d[10]=w[s][r+1][3][t]*c,d[11]=w[s+1][r+1][3][t]*x,d[12]=0,d[13]=0,d[14]=0,d[15]=0,u=f(d);for(let e=0;e&lt;9;++e){g[t][e]=[];for(let s=0;s&lt;9;++s)g[t][e][s]=p(u,e/8,s/8),g[t][e][s]&gt;255?g[t][e][s]=255:g[t][e][s]&lt;0&amp;&amp;(g[t][e][s]=0)}}h=[];for(let t=3*s,e=3*s+4;t&lt;e;++t)h.push(this.nodes[t].slice(3*r,3*r+4));l=y(h);for(let s=0;s&lt;8;++s)for(let r=0;r&lt;8;++r)(a=new m(l[s][r],[[[g[0][s][r],g[1][s][r],g[2][s][r],g[3][s][r]],[g[0][s][r+1],g[1][s][r+1],g[2][s][r+1],g[3][s][r+1]]],[[g[0][s+1][r],g[1][s+1][r],g[2][s+1][r],g[3][s+1][r]],[g[0][s+1][r+1],g[1][s+1][r+1],g[2][s+1][r+1],g[3][s+1][r+1]]]])).paint(t,e)}}}transform(t){if(t instanceof x)for(let e=0,s=this.nodes.length;e&lt;s;++e)for(let s=0,r=this.nodes[0].length;s&lt;r;++s)this.nodes[e][s]=this.nodes[e][s].add(t);else if(t instanceof g)for(let e=0,s=this.nodes.length;e&lt;s;++e)for(let s=0,r=this.nodes[0].length;s&lt;r;++s)this.nodes[e][s]=this.nodes[e][s].transform(t)}scale(t){for(let e=0,s=this.nodes.length;e&lt;s;++e)for(let s=0,r=this.nodes[0].length;s&lt;r;++s)this.nodes[e][s]=this.nodes[e][s].scale(t)}}document.querySelectorAll(&quot;rect,circle,ellipse,path,text&quot;).forEach((r,n)=&gt;{let o=r.getAttribute(&quot;id&quot;);o||(o=&quot;patchjs_shape&quot;+n,r.setAttribute(&quot;id&quot;,o));const i=r.style.fill.match(/^url\(\s*&quot;?\s*#([^\s&quot;]+)&quot;?\s*\)/),a=r.style.stroke.match(/^url\(\s*&quot;?\s*#([^\s&quot;]+)&quot;?\s*\)/);if(i&amp;&amp;i[1]){const a=document.getElementById(i[1]);if(a&amp;&amp;&quot;meshgradient&quot;===a.nodeName){const i=r.getBBox();let l=document.createElementNS(s,&quot;canvas&quot;);d(l,{width:i.width,height:i.height});const c=l.getContext(&quot;2d&quot;);let u=c.createImageData(i.width,i.height);const f=new b(a);&quot;objectBoundingBox&quot;===a.getAttribute(&quot;gradientUnits&quot;)&amp;&amp;f.scale(new x(i.width,i.height));const p=a.getAttribute(&quot;gradientTransform&quot;);null!=p&amp;&amp;f.transform(h(p)),&quot;userSpaceOnUse&quot;===a.getAttribute(&quot;gradientUnits&quot;)&amp;&amp;f.transform(new x(-i.x,-i.y)),f.paintMesh(u.data,l.width),c.putImageData(u,0,0);const y=document.createElementNS(t,&quot;image&quot;);d(y,{width:i.width,height:i.height,x:i.x,y:i.y});let g=l.toDataURL();y.setAttributeNS(e,&quot;xlink:href&quot;,g),r.parentNode.insertBefore(y,r),r.style.fill=&quot;none&quot;;const w=document.createElementNS(t,&quot;use&quot;);w.setAttributeNS(e,&quot;xlink:href&quot;,&quot;#&quot;+o);const m=&quot;patchjs_clip&quot;+n,M=document.createElementNS(t,&quot;clipPath&quot;);M.setAttribute(&quot;id&quot;,m),M.appendChild(w),r.parentElement.insertBefore(M,r),y.setAttribute(&quot;clip-path&quot;,&quot;url(#&quot;+m+&quot;)&quot;),u=null,l=null,g=null}}if(a&amp;&amp;a[1]){const o=document.getElementById(a[1]);if(o&amp;&amp;&quot;meshgradient&quot;===o.nodeName){const i=parseFloat(r.style.strokeWidth.slice(0,-2))*(parseFloat(r.style.strokeMiterlimit)||parseFloat(r.getAttribute(&quot;stroke-miterlimit&quot;))||1),a=r.getBBox(),l=Math.trunc(a.width+i),c=Math.trunc(a.height+i),u=Math.trunc(a.x-i/2),f=Math.trunc(a.y-i/2);let p=document.createElementNS(s,&quot;canvas&quot;);d(p,{width:l,height:c});const y=p.getContext(&quot;2d&quot;);let g=y.createImageData(l,c);const w=new b(o);&quot;objectBoundingBox&quot;===o.getAttribute(&quot;gradientUnits&quot;)&amp;&amp;w.scale(new x(l,c));const m=o.getAttribute(&quot;gradientTransform&quot;);null!=m&amp;&amp;w.transform(h(m)),&quot;userSpaceOnUse&quot;===o.getAttribute(&quot;gradientUnits&quot;)&amp;&amp;w.transform(new x(-u,-f)),w.paintMesh(g.data,p.width),y.putImageData(g,0,0);const M=document.createElementNS(t,&quot;image&quot;);d(M,{width:l,height:c,x:0,y:0});let S=p.toDataURL();M.setAttributeNS(e,&quot;xlink:href&quot;,S);const k=&quot;pattern_clip&quot;+n,A=document.createElementNS(t,&quot;pattern&quot;);d(A,{id:k,patternUnits:&quot;userSpaceOnUse&quot;,width:l,height:c,x:u,y:f}),A.appendChild(M),o.parentNode.appendChild(A),r.style.stroke=&quot;url(#&quot;+k+&quot;)&quot;,g=null,p=null,S=null}}})}();
+</svg:script>
+</svg:svg>
