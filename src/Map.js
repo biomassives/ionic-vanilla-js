@@ -760,6 +760,10 @@
 			clearItems()
                         document.getElementById("kumaintain").style.display = "block";
                 });
+                document.getElementById("switch_to_stingozandifu").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("stingozandifu").style.display = "block";
+                });
                 document.getElementById("0stingozandifu").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("stingozandifu").style.display = "block";
