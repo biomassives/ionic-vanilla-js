@@ -776,6 +776,10 @@
 			clearItems()
                         document.getElementById("stingozandifu").style.display = "block";
                 });
+                document.getElementById("switch_to_maxchange").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("maxchange").style.display = "block";
+                });
                 document.getElementById("0maxchange").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("maxchange").style.display = "block";
