@@ -756,6 +756,10 @@
 			clearItems()
                         document.getElementById("gastangi").style.display = "block";
                 });
+                document.getElementById("switch_to_kuma").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("kumaintain").style.display = "block";
+                });
                 document.getElementById("switch_to_kumaintain").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("kumaintain").style.display = "block";
