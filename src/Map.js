@@ -728,6 +728,10 @@
 			clearItems()
                         document.getElementById("gascooker").style.display = "block";
                 });
+                document.getElementById("switch_to_gasc").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("gascooker").style.display = "block";
+                });
                 document.getElementById("0gascooker").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gascooker").style.display = "block";
