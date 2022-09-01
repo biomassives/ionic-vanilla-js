@@ -740,6 +740,10 @@
 			clearItems()
                         document.getElementById("gastangi").style.display = "block";
                 });
+                document.getElementById("switch_to_gastangi").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("gastangi").style.display = "block";
+                });
                 document.getElementById("switch_to_gast").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gastangi").style.display = "block";
