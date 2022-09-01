@@ -732,7 +732,7 @@
 			clearItems()
                         document.getElementById("gascooker").style.display = "block";
                 });
-                document.getElementById("switch_to_gastang").addEventListener("click", function () {
+                document.getElementById("switch_to_gastangi").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("gastangi").style.display = "block";
                 });
