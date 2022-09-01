@@ -804,6 +804,10 @@
 			clearItems()
                         document.getElementById("nfthub").style.display = "block";
                 });
+                document.getElementById("switch_to_nfth").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("nfthub").style.display = "block";
+                });
                 document.getElementById("0nfthub").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("nfthub").style.display = "block";
@@ -812,6 +816,11 @@
 			clearItems()
                         document.getElementById("profile").style.display = "block";
                 });
+                document.getElementById("switch_to_profile").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("profile").style.display = "block";
+                });
+
 		// save button actions
 		//
 		//
