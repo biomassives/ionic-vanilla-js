@@ -581,6 +581,10 @@
 			clearItems()
                         document.getElementById("greeting").style.display = "block";
                 });
+		document.getElementById("switch_to_homee").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("greeting").style.display = "block";
+                });
 		document.getElementById("0maleaf").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("resourcemap").style.display = "block";
