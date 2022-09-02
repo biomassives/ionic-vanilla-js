@@ -528,8 +528,6 @@
 		//
 		document.getElementById("0checkin").addEventListener("click", function () {
 
-		document.getElementById("0checkin").addEventListener("click", function () {
-
 			let nodata = '{"type":"FeatureCollection","features":[]}';
 			let jsonData = (JSON.stringify(drawnItems.toGeoJSON()));
 			let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(jsonData);
@@ -575,19 +573,6 @@
                         document.getElementById("checkin").style.display = "block";
                 });
 		*/
-		document.getElementById("switch_to_downloads").addEventListener("click", function () {
-			clearItems()
-                        document.getElementById("downloads").style.display = "block";
-                });
-		document.getElementById("switch_to_down").addEventListener("click", function () {
-			clearItems()
-                        document.getElementById("downloads").style.display = "block";
-                });
-		document.getElementById("0checkin").addEventListener("click", function () {
-			clearItems()
-                        document.getElementById("downloads").style.display = "block";
-                });
-			
 		document.getElementById("0maleaf").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("greeting").style.display = "block";
