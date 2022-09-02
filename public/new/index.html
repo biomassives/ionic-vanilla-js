@@ -17,7 +17,7 @@
         box-sizing: border-box;
     }
     body {
-        background-image: linear-gradient(rgba(0,0,0,.7), rgba(5,5,5,.9));
+        background-image: linear-gradient(rgba(0,0,0,.7), rgba(123,5,152,.9));
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -151,7 +151,7 @@
   <body>
 
 <div class="container">
-        <h1 id="title">Ground Cover Mapper</h1>
+        <h1 id="title">ECO OPS APP</h1>
         <p id="description">Thank you for taking the time to help us improve the platform</p>
         <form id="survey-form" action="">
         <div class="field-container">
@@ -190,3 +190,46 @@
         </div>
         </form>
     </div>
+
+       
+    
+    <! link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+     <div class="well">
+
+    <h3>Click the button to get your location with error handling</h3>
+    <button  class="btn btn-primary btn-lg"  onclick="getlocation();">
+        getlocation
+    </button>
+    <h3 id="location"></h3>
+    <script>
+        var variable1 = document.getElementById("location");
+        function getlocation(){
+            navigator.geolocation.getCurrentPosition(showLoc, showError);
+        }
+        function showLoc(pos){
+            variable1.innerHTML = "Latitude: " + pos.coords.latitude +
+                "<br>Longitude: " + pos.coords.longitude;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+    
+    
