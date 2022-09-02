@@ -1,0 +1,216 @@
+<html>
+  <head>
+  <title>Eco Ops App input form</title>
+  
+  <style>
+    :root {
+        --form-background-color: rgba(255,255,255,.9);
+        --top-text-color: #fff;
+        --input-border-color: #aaa;
+        --submit-text-color: #fff;
+        --submit-background-color: #000;
+        --input-active-border-color: rgba(54, 218, 247, 0.8);
+    } 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: linear-gradient(rgba(0,0,0,.7), rgba(5,5,5,.9));
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        display: flex;
+    }
+    .container {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 60px auto;
+    }
+    .small {
+        font-size: .8em;
+    }
+    #title {
+        font-size: 1.7em;
+        font-weight: 500;
+        text-align: center;
+        padding: 8px;
+        margin-bottom: 5px;
+    }
+    #description {
+        text-align: center;
+        font-size: .9em;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    #title, #description {
+        color: var(--top-text-color);
+    }
+    #survey-form {
+        border-radius: 10px;
+        background-color: #efefef;
+        padding: 45px 10px 55px 10px;
+    }
+    .field-container {
+        width: 90%;
+        margin: auto;
+    }
+    .field-group {
+        margin-bottom: 35px;
+    }
+    .field-group p {
+        margin-bottom: 10px;
+    }
+    .field-group select {
+      width: 100%; 
+      height: 40px;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+      font-size: .8em;
+      font-weight: 500;
+      padding: 5px 0 5px 20px;
+      border: 1px solid var(--input-border-color);
+    }
+    .input-field input[type="text"],
+    .input-field input[type="email"],
+    .input-field input[type="number"] {
+        display: block;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        border-radius: 100px;
+        border: 1px solid var(--input-border-color);
+        padding: 5px 0 5px 20px; 
+        font-size: .75em;
+    }
+    .input-field input[type="radio"],
+    .input-field input[type="checkbox"] {
+        margin: 0 10px 15px 0;
+    }
+    input[required] {
+        border-right: 2px solid #f00;
+    }
+    input:active, input:focus,
+    select:active, select:focus,
+    textarea:active, textarea:focus {
+        outline: none;
+        box-shadow:  0 1px 3px 1px var(--input-active-border-color);
+    }
+    textarea {
+        width: 100%;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: .8em;
+        font-weight: 500;
+        padding: 5px 5px 5px 20px;
+        border: 1px solid var(--input-border-color);
+    }
+    #submit-btn {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: .9em;
+        color: var(--submit-text-color);
+        background-color: var(--submit-background-color);
+        transition: background-color .5s ease-in-out;
+    }
+    #submit-btn:hover {
+        background-color: hsl(0, 0%, 5%);
+        cursor: pointer;
+    }
+    @media (max-width: 480px) {
+        #title {
+            font-size: 1.2em;
+        }
+        #description {
+            font-size: .8em;
+        }
+    }
+    @media (max-width: 1024px) {
+        .container, #survey-form {
+            width: 100%;
+        }
+        #title {
+            font-size: 2em;
+        }
+        #description {
+            font-size: 1em;
+        }
+    }
+  </style>
+  </head>
+  <body>
+
+<div class="container">
+        <h1 id="title">Ground Cover Mapper</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <form id="survey-form" action="">
+        <div class="field-container">
+            <div class="field-group">
+                <div class="input-field"><label for="name" id="name-label">Name</label><input type="text" name="name" id="name" placeholder="Enter your name" required></div>
+                <div class="input-field"><label for="email" id="email-label">Email</label><input type="email" name="email" id="email" placeholder="Enter your email" required></div>
+                <div class="input-field"><label for="age" id="age-label">Location nicname (<span class="small">optional</span>)</label><input type="number" name="age" id="age" min="10" max="100" placeholder="Age"></div>
+            </div>
+            <div class="field-group">
+                <p>Describe current action</p>
+                <select name="role" id="role" class="dropdown">
+                    <option value="" disabled selected>Select current task</option>
+                    <option value="student">Map a dumpsite</option>
+                    <option value="full time job">Check in recycling</option>
+                     <option value="log_hours">Log hours</option>
+                    <option value="full time learner">Check in compostables</option>
+                    <optifulon value="prefer not to say">Broker an item</option>
+                    <option value="other">List item for sale</option>
+                                 <option value="request_item">Request item</option>
+                                              <option value="Buy_climate_nft">Buy Climate NFT</option>
+           <option value="sell_climate_nft">Sell a Climate NFT</option>
+     
+                </select>
+            </div>
+            <div class="field-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <div class="input-field"><label for="definitely"><input type="radio" name="recommend" id="definitely">Definitely</label></div>
+                <div class="input-field"><label for="maybe"><input type="radio" name="recommend" id="maybe">Maybe</label></div>
+                <div class="input-field"><label for="not-sure"><input type="radio" name="recommend" id="not-sure">Not Sure</label></div>
+            </div>
+            <div class="field-group">
+                <p>What is your favorite feature of freeCodeCamp?</p>
+                <select name="favorite" id="favorite">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open source">Open Source</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <p>What would you like to see improved? (<span class="small">Check all that apply</span>)</p>
+                <div class="input-field"><label for="front-end"><input type="checkbox" name="would-like" id="front-end" value="front end projects">Front-end projects</label></div>
+                <div class="input-field"><label for="back-end"><input type="checkbox" name="would-like" id="back-end" value="back end projects">Back-end projects</label></div>
+                <div class="input-field"><label for="data-visualization"><input type="checkbox" name="would-like" id="data-visualization" value="data visualization">Data visualization</label></div>
+                <div class="input-field"><label for="challenges"><input type="checkbox" name="would-like" id="challenges" value="challenges">Challenges</label></div> 
+                <div class="input-field"><label for="open-source"><input type="checkbox" name="would-like" id="open-source" value="open source community">Open Source Community</label></div> 
+                <div class="input-field"><label for="gitter-help"><input type="checkbox" name="would-like" id="gitter-help" value="gitter help rooms">Gitter Help Rooms</label></div> 
+                <div class="input-field"><label for="videos"><input type="checkbox" name="would-like" id="videos" value="videos">Videos</label></div> 
+                <div class="input-field"><label for="city-meetups"><input type="checkbox" name="would-like" id="city-meetups" value="city meetups">City Meetups</label></div> 
+                <div class="input-field"><label for="wiki"><input type="checkbox" name="would-like" id="wiki" value="wiki">Wiki</label></div> 
+                <div class="input-field"><label for="forum"><input type="checkbox" name="would-like" id="forum" value="forum">Forum</label></div> 
+                <div class="input-field"><label for="additional-courses"><input type="checkbox" name="would-like" id="additional-courses" value="additional courses">Additional Courses</label></div> 
+            </div>
+            <div class="field-group">
+                <p>Any comments or suggestions?</p>
+                <textarea name="comments" id="comments" cols="50" rows="10" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <input type="submit" value="Submit" id="submit-btn">
+        </div>
+        </form>
+    </div>
