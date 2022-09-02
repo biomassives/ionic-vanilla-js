@@ -189,7 +189,7 @@
             <input type="submit" value="Submit" id="submit-btn">
         </div>
         </form>
-    </div>
+
 
        
     
@@ -202,7 +202,10 @@
         getlocation
     </button>
     <h3 id="location"></h3>
-    <script>
+
+           </div>
+       
+       <script>
         var variable1 = document.getElementById("location");
         function getlocation(){
             navigator.geolocation.getCurrentPosition(showLoc, showError);
@@ -229,6 +232,9 @@
             }
         }
     </script>
+       
+       
+       
 </body>
 </html>
     
