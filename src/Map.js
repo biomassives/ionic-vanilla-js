@@ -566,6 +566,7 @@
                         document.getElementById("carboncredit").style.display = "none";	
                         document.getElementById("nfthub").style.display = "none";	
                         document.getElementById("profile").style.display = "none";	
+                        document.getElementById("pakuayako").style.display = "none";	
 		}
 
             	document.getElementById("0download").addEventListener("click", function () {
