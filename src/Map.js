@@ -568,15 +568,11 @@
                         document.getElementById("profile").style.display = "none";	
 		}
 
-            /*    document.getElementById("0checkin").addEventListener("click", function () {
+            	document.getElementById("0downloadReports").addEventListener("click", function () {
 			clearItems()
-                        document.getElementById("checkin").style.display = "block";
+                        document.getElementById("downloadreports").style.display = "block";
                 });
-		*/
-		document.getElementById("0maleaf").addEventListener("click", function () {
-			clearItems()
-                        document.getElementById("greeting").style.display = "block";
-                });
+
 		document.getElementById("switch_to_home").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("greeting").style.display = "block";
