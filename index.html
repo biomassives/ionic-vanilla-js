@@ -1504,9 +1504,8 @@ btn.addEventListener('click', function (event) {
 				
 				var maintTableContentLoop = "";
 				var maintIndex = localStorage.getItem("maintCheckinIndex");
-				const maintArr = checkinIndex.split(',');
+				const maintArr = maintIndex.split(',');
 					maintArr.forEach(element => {
-						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
 							element0 = localStorage.getItem(element);
 							const splitArr = element0.split(',');
   							const dateof = element.split('plastics_checkin');
