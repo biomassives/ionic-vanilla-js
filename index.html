@@ -1592,9 +1592,12 @@ btn.addEventListener('click', function (event) {
 				document.getElementById("maintTableContent").innerHTML=maintTableContentLoop;
 
 				console.log("hello2");
-			}				
-				maintLoadLocalstorageData()
+			}		
 				
+
+			var idx = localStorage.getItem("maintCheckinIndex");									
+			if (typeof idx === 'undefined' || idx === null) {  } else { maintLoadLocalstorageData(); }				
+								
 				
 				function dateToJulianNumber(d) {
 				    // convert a Gregorian Date to a Julian number. 
