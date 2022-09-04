@@ -1483,7 +1483,7 @@ btn.addEventListener('click', function (event) {
 				
 			// load existing data as page loads
 			var idx = localStorage.getItem("plasticsCheckinIndex");									
-			if (typeof idx === 'undefined' || idx === null) {  } else { checkinLoadLocalstorageData(); }
+			if (typeof idx === 'undefined' || idx === null) { checkinLoadLocalstorageData(); }
 
 			function checkin0(){	  
 				event.preventDefault();				
@@ -1569,6 +1569,7 @@ btn.addEventListener('click', function (event) {
 						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
 					}
 				// updata existing data display after form submit
+				maintLoadLocalstorageData()
 				};
 				
 			function maintLoadLocalstorageData(){	
@@ -1596,7 +1597,7 @@ btn.addEventListener('click', function (event) {
 				
 
 			var idx = localStorage.getItem("maintCheckinIndex");									
-			if (typeof idx === 'undefined' || idx === null) {  } else { maintLoadLocalstorageData(); }				
+			if (typeof idx === 'undefined' || idx === null) { maintLoadLocalstorageData(); }				
 								
 				
 				function dateToJulianNumber(d) {
