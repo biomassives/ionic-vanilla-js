@@ -618,6 +618,20 @@
 		      <span  id="kuma_title">Kumaintain / Kukacheza</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_stingozandifu"></h1>
 		      Maintanance of systems can be logged here. T
 
+		      		<table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
+		<thead>
+			<tr>
+				<th data-sort="date">Date</th>
+				<th data-sort="string">Service Provided</th>
+				<th data-sort="string">Service Provider</th>
+				<th data-sort="float">Duration</th>
+				<th data-sort="int">Witness</th>
+				<th data-sort="string">Notes</th>
+			</tr>
+		</thead>
+		<tbody id="maintTableContent"> 
+		</tbody>
+	</table>
 		    		      
 		      
 		     </div>
@@ -1455,7 +1469,6 @@ btn.addEventListener('click', function (event) {
 						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
 					}
 				// updata existing data display after form submit
-				checkinLoadLocalstorageData()
 				};
 				
 				
@@ -1484,7 +1497,34 @@ btn.addEventListener('click', function (event) {
 
 				console.log("hello2");
 			}				
+				checkinLoadLocalstorageData()
 
+				
+			function maintLoadLocalstorageData(){	
+				
+				var maintTableContentLoop = "";
+				var maintIndex = localStorage.getItem("maintCheckinIndex");
+				const maintArr = checkinIndex.split(',');
+					maintArr.forEach(element => {
+						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
+							element0 = localStorage.getItem(element);
+							const splitArr = element0.split(',');
+  							const dateof = element.split('plastics_checkin');
+							//dateof = dateToJulianNumber(dateof[1])
+							maintTableContentLoop = "<tr><td>"+dateof[1]+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
+					});	      	  
+
+				//var checkinList = "<b>Current checkins:</b><BR>"+checkinList;
+				//document.getElementById("plastic_checkins").innerHTML=checkinList;
+
+				console.log("hello0");
+
+				document.getElementById("maintTableContent").innerHTML=maintTableContentLoop;
+
+				console.log("hello2");
+			}				
+				maintLoadLocalstorageData()
+				
 				
 				function dateToJulianNumber(d) {
 				    // convert a Gregorian Date to a Julian number. 
