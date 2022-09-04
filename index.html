@@ -618,6 +618,46 @@
 		      <span  id="kuma_title">Kumaintain / Kukacheza</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_stingozandifu"></h1>
 		      Maintanance of systems can be logged here. T
 
+		      
+	  			      
+		      <form id="maint_checkin" onsubmit="maintcheckin0()">
+
+			  <b>Service provided:</b>
+  			  <br>
+			      <input id="mainttype" type=text>
+			      
+  			  <br>
+			  <b>Duration:</b>
+			      <br>
+				      	<input type=text name="ld-weight" id="durationhours" size="5"> Hours
+  			      <br>
+			      
+			  <b>Provider:</b>
+			      <br>
+			      <input type=text name="maint-provider" id="maintprovider">  <div id="overlay"><b>±</b></div> 
+  			      <br>
+				      
+			  <b>Witness:</b>
+			      <br>
+				      	<input type=text name="maint-witness" id="maintwitness">
+			      <br>	      
+			      
+  			  <b>Notes:</b>
+  			  <br>
+			      
+  			  <textarea id="maintnotes" rows="4" cols="30"></textarea>
+  			  <br><br>
+			      
+  			  <input type="submit" name="submit" value="Record Checkin" onsubmit="maintcheckin0()">
+			</form>		        	      
+
+		      
+		      
+		      
+		      
+		      
+		      
+		      
 		      		<table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
 		<thead>
 			<tr>
@@ -1469,6 +1509,7 @@ btn.addEventListener('click', function (event) {
 						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
 					}
 				// updata existing data display after form submit
+				checkinLoadLocalstorageData()
 				};
 				
 				
@@ -1497,8 +1538,36 @@ btn.addEventListener('click', function (event) {
 
 				console.log("hello2");
 			}				
-				checkinLoadLocalstorageData()
 
+				 
+				
+			function maintcheckin0(){	  
+				event.preventDefault();				
+				var item = document.querySelector('#mainttype').value;
+				document.querySelector('#mainttype').value = "";
+				var name = document.querySelector('#maintprovider').value;
+				document.querySelector('#maintprovider').value = "";
+				var weightkg = document.querySelector('#durationhours').value;
+				document.querySelector('#durationhours').value = "";
+				var witness = document.querySelector('#maintwitness').value;
+				document.querySelector('#maintwitness').value = "";
+				var description = document.querySelector('#maintnotes').value;
+				document.querySelector('#maintnotes').value = "";
+				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
+				const currentTimeInSeconds=Math.floor(Date.now()/1000);
+				
+				
+				localStorage.setItem("maint_checkin"+currentTimeInSeconds, item+" , "+weightkg+", "+name+", "+witness+", "+description );									
+				var idx = localStorage.getItem("maintCheckinIndex");									
+	
+					if (typeof idx === 'undefined' || idx === null) {
+						localStorage.setItem("plasticsCheckinIndex", "plastics_checkin"+currentTimeInSeconds);									
+					} else {
+						idx = idx+",";
+						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
+					}
+				// updata existing data display after form submit
+				};
 				
 			function maintLoadLocalstorageData(){	
 				
