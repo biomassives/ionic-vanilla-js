@@ -1481,8 +1481,10 @@ btn.addEventListener('click', function (event) {
 			}
 							
 				
-			// load existing data as page loads	
-			checkinLoadLocalstorageData();
+			// load existing data as page loads
+			var idx = localStorage.getItem("plasticsCheckinIndex");									
+			if (typeof idx === 'undefined' || idx === null) {  } else { checkinLoadLocalstorageData(); }
+
 			function checkin0(){	  
 				event.preventDefault();				
 				var item = document.querySelector('#ldplastictype').value;
