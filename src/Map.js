@@ -569,6 +569,20 @@
                         document.getElementById("pakuayako").style.display = "none";	
 		}
 
+
+            	document.getElementById("0compost").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("compost").style.display = "block";
+                });
+            	document.getElementById("0nursery").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("nursery").style.display = "block";
+                });
+            	document.getElementById("0trees").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("trees").style.display = "block";
+                });
+
             	document.getElementById("0download").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("pakuayako").style.display = "block";
