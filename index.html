@@ -398,16 +398,68 @@
 		<h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_home"> 
 			<span id="resourcemap_title"> Add a Witness </span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orodha"></h1>
 
-	      
-	      
-	      
+			<link rel="stylesheet" href="/js/style.css">
+			<link rel="stylesheet" href="/js/sigpadstyle.css">
+
+
+			<div class="container">
+			  <div class="interior">
+			    <a class="btn" href="#open-modal">👋 Add a Witness</a>
+			  </div>
+			</div>
+			<div id="open-modal" class="modal-window">
+			  <div>
+			    <a href="#" title="Close" class="modal-close">Close</a>
+
+			    <br>
+			    <div><small>I bear witness to the truth of these statements.</small></div>
+
+
+			     <div id="signature-pad" class="m-signature-pad">
+			    <div class="m-signature-pad--body">
+			      <canvas></canvas>
+			    </div>
+			    <div class="m-signature-pad--footer">
+			      <div class="description">Sign above</div>
+			      <div class="left">
+				<button type="button" class="button clear" data-action="clear">Clear</button>
+				<button type="button" class="button debug" data-action="debug-points">Draw points</button>
+			      </div>
+			      <div class="right">
+				<button type="button" class="button save" data-action="save-svg">Save</button>
+			      </div>
+			    </div>
+			  </div>
+			  <div id=witnessformdiv>
+			    <BR><BR><BR><BR><BR>
+				  <h1>Add a witness</h1>
+			    <div>This helps verify your climate credit earnings</div>
+
+			    <form id=witness1modal>
+			    Name: <input type=text id=witness1name><BR><BR>
+				  <input type=hidden id="sigimg">
+
+
+			    Phone: <input type=text id=witness1phone><BR>
+			    Email: <input type=text id=witness1email><BR>
+			    Image: <input type=file id=witness1file><BR>
+				<button type="button" class="button save" data-action="save-send">Send</button>
+
+			    </form>
+
+			  </div>  
+
+
+
+
+			  </div>
+			</div>
+			</div>       
+			<!-- partial -->
+			  <script  src="/js/sigpadscript.js"></script>
+    	      
 	      
 	      </div>
-
-	      
-	      
-	      
-	      
 	      
 	      
 	      <div id="compost" style="display:none;">
