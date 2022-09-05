@@ -636,6 +636,7 @@ debugPointsButton.addEventListener("click", function (event) {
     signaturePad.drawDataAsPoints();
 });
 
+/*
 savePNGButton.addEventListener("click", function (event) {
     if (signaturePad.isEmpty()) {
         alert("Please provide signature first.");
@@ -643,6 +644,7 @@ savePNGButton.addEventListener("click", function (event) {
         window.open(signaturePad.toDataURL());
     }
 });
+*/
 
 saveSVGButton.addEventListener("click", function (event) {
     if (signaturePad.isEmpty()) {
