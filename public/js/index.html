@@ -2,9 +2,11 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Eco OPs App</title>
+  <title>Eco Ops App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./sigpadstyle.css">
+
 
 </head>
 <body>
@@ -18,12 +20,31 @@
   <div>
     <a href="#" title="Close" class="modal-close">Close</a>
     <h1>Add a witness</h1>
-    <div>This helps verify your climate credit earning efforts</div>
+    <div>This helps verify your climate credit earnings</div>
     <br>
     <div><small>👇👇👇👇👇👇👇</small></div>
  
   <form id=witness1modal>
-    Name: <input type=text id=witness1name><BR>
+    Name: <input type=text id=witness1name><BR><BR>
+    
+     <div id="signature-pad" class="m-signature-pad">
+    <div class="m-signature-pad--body">
+      <canvas></canvas>
+    </div>
+    <div class="m-signature-pad--footer">
+      <div class="description">Sign above</div>
+      <div id="sigimg"></div>
+      <div class="left">
+        <button type="button" class="button clear" data-action="clear">Clear</button>
+        <button type="button" class="button debug" data-action="debug-points">Draw points</button>
+      </div>
+      <div class="right">
+        <button type="button" class="button save" data-action="save-png">Save as PNG</button>
+        <button type="button" class="button save" data-action="save-svg">Save as SVG</button>
+      </div>
+    </div>
+  </div>
+   
     Phone: <input type=text id=witness1phone><BR>
     Email: <input type=text id=witness1email><BR>
     Image: <input type=file id=witness1file>
@@ -32,7 +53,11 @@
   </div>
 </div>
 </div>
+    
+    
 <!-- partial -->
-  
+  <script  src="./sigpadscript.js"></script>
+    
+    
 </body>
 </html>
