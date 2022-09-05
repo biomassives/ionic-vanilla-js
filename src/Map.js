@@ -832,6 +832,12 @@
                         document.getElementById("profile").style.display = "block";
                 });
 
+                document.getElementById("addawitnessbutton").addEventListener("click", function () {
+			clearItems()			
+			document.getElementById("addawitness").style.display = "block";
+                });
+
+
 		// save button actions
 		//
 		//
