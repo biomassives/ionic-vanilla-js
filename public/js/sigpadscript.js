@@ -649,5 +649,6 @@ saveSVGButton.addEventListener("click", function (event) {
         alert("Please provide signature first.");
     } else {
         window.open(signaturePad.toDataURL('image/svg+xml'));
+	document.getElementById("sigimg").innerHTML=signaturePad.toDataURL('image/svg+xml');    
     }
 });
