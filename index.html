@@ -1692,7 +1692,8 @@ btn.addEventListener('click', function (event) {
 				var maintIndex = localStorage.getItem("maintCheckinIndex");
 				if (typeof idx === 'undefined' || idx === null) {
 					maintIndex = "date,arr0,arr1,...,arr3,arr4,arr5"
-				}
+					
+				} else {
 				const maintArr = maintIndex.split(',');
 					maintArr.forEach(element => {
 							element0 = localStorage.getItem(element);
@@ -1710,6 +1711,7 @@ btn.addEventListener('click', function (event) {
 				document.getElementById("maintTableContent").innerHTML=maintTableContentLoop;
 
 				console.log("hello2");
+			}		
 			}		
 				
 
