@@ -799,6 +799,27 @@
 
 <script>
 	
+			/*
+		Now, try adding, ?geo=UK&size=300x600 to this page's URL and you will see the parameter
+		values in the console
+		URL sample: https://mrvirk.com?geo=UK&size=300x600
+		*/
+		window.onload = function() {
+					try {
+						var url_string = (window.location.href).toLowerCase();
+						var url = new URL(url_string);
+						var page = url.searchParams.get("page");
+						
+						if (page === "orodoha") {
+						   			clearItems()
+						}		        document.getElementById("orodha").style.display = "block";						
+						console.log(page);
+					} catch (err) {
+						console.log("Issues with Parsing URL Parameter's - " + err);
+					}
+		}
+	
+	
 	function on() {
   	  document.getElementById("overlay").style.display = "block";
 	}
