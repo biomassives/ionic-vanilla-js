@@ -45,14 +45,14 @@
     <div>This helps verify your climate credit earnings</div>
       
     <form id=witness1modal>
-    Name: <input type=text id=witness1name><BR><BR>
+    Name: <input type=text id=witness1name><BR>
           <input type=hidden id="sigimg">
 
    
     Phone: <input type=text id=witness1phone><BR>
     Email: <input type=text id=witness1email><BR>
     Image: <input type=file id=witness1file><BR>
-        <button type="button" class="button save" data-action="save-send">Send</button>
+        <button type="button" id="newwitness" class="button save" data-action="save-send">Send</button>
       
     </form>
         
@@ -68,7 +68,17 @@
     
 <!-- partial -->
   <script  src="./sigpadscript.js"></script>
-    
-    
+    <script>
+      document.addEventListener('newwitness',function(e){
+        
+          var referrer = "get this";
+          var witness1name = document.getElementById('witness1name');
+          var witness1phone = document.getElementById('witness1phone');
+          var witness1email = document.getElementById('witness1email');
+          var sigimg = document.getElementById('sigimg');
+        
+      		localStorage.setItem("ecoops_witnesses", "{ \"name\": ["+ witness1name +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
+      
+    </script> 
 </body>
 </html>
