@@ -52,7 +52,7 @@
     Phone: <input type=text id=witness1phone><BR>
     Email: <input type=text id=witness1email><BR>
     Image: <input type=file id=witness1file><BR>
-        <button type="button" id="newwitness" class="button save" data-action="save-send">Send</button>
+        <button type="button" id="newwitness" class="button save">Send</button>
       
     </form>
         
@@ -77,7 +77,7 @@
           var witness1email = document.getElementById('witness1email');
           var sigimg = document.getElementById('sigimg');
         
-      		localStorage.setItem("ecoops_witnesses", "{ \"name\": ["+ witness1name +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
+      		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
 
       });
     </script> 
