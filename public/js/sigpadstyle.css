@@ -48,7 +48,6 @@
   left: 20px;
   right: 20px;
   top: 20px;
-  bottom: 80px;
   border: 1px solid #f4f4f4;
 }
 
@@ -100,7 +99,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 300px;
+    bottom: 250px;
     width: auto;
     min-width: 250px;
     min-height: 140px;
