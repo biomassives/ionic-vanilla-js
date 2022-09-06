@@ -832,9 +832,17 @@
                         document.getElementById("profile").style.display = "block";
                 });
 
-                document.getElementById("addawitnessbutton").addEventListener("click", function () {
+  /*              document.getElementById("addawitnessbutton").addEventListener("click", function () {
 			clearItems()			
 			document.getElementById("addawitness").style.display = "block";
+                });
+*/		
+                document.getElementById("addawitnessbutton").addEventListener("click", function () {
+
+			let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+			width=330,height=700`;
+
+			open('/js/', 'test', params);
                 });
 
 
