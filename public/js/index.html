@@ -13,14 +13,15 @@
 <!-- partial:index.partial.html -->
 <div class="container">
   <div class="interior">
-    <a class="btn" href="#open-modal">👋 Add a Witness</a>
+        <a class="btn" id="returnhome">Return to Eco Ops</a>
+
+        <a class="btn" href="#open-modal">👋 Add a Witness</a>
   </div>
 </div>
 <div id="open-modal" class="modal-window">
   <div>
     <a href="#" title="Close" class="modal-close">Close</a>
 
-    <a href=window.history.go(-1)>back to eco ops</a>
     
     <br>
     <div><small>I bear witness to the truth of these statements.</small></div>
@@ -72,8 +73,9 @@
   <script  src="./sigpadscript.js"></script>
     <script>
       
-      window.history.go(-1)
-      
+      document.getElementById("returnhome").addEventListener("click", function () {
+          window.history.go(-1)
+      });
       
       document.getElementById("newwitness").addEventListener("click", function () {
         
