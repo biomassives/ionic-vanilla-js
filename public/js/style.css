@@ -1,11 +1,11 @@
 .modal-window {
-  position: fixed;
- // max-width: 640px;
+  position: relative;
+  max-width: 640px;
   background-color: rgba(255, 255, 255, 0.25);
   top: 0;
-  right: 0;
+  right:50%;
   bottom: 0;
-  left: 0;
+  left: 50%;
   z-index: 999;
   visibility: hidden;
   opacity: 0;
