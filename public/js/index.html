@@ -75,7 +75,7 @@
           var witness1name = document.getElementById('witness1name').value;
           var witness1phone = document.getElementById('witness1phone').value;
           var witness1email = document.getElementById('witness1email').value;
-          var sigimg = document.getElementById('sigimg').value;
+          var sigimg = signaturePad.toDataURL('image/svg+xml');
         
       		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
 
