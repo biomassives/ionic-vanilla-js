@@ -480,7 +480,16 @@
 	      <div id="compost" style="display:none;">
 		<h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_home"> 
 			<span id="resourcemap_title"> Compost </span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orodha"></h1>
+		
+		      
+	  	        <iframe src="/js"></iframe>      
+	 	      
+		      
+		      
 	      </div>
+	      
+	      
+	      
 	      <div id="trees" style="display:none;">
 		<h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_home"> 
 			<span id="resourcemap_title"> Trees </span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orodha"></h1>
@@ -1677,8 +1686,8 @@ btn.addEventListener('click', function (event) {
 				var maintTableContentLoop = "";
 				var maintIndex = localStorage.getItem("maintCheckinIndex");
 				if (typeof idx === 'undefined' || idx === null) {
-					var nogo = "nogo"
-				} else {
+					maintIndex = "date,arr0,arr1,...,arr3,arr4,arr5"
+				}
 				const maintArr = maintIndex.split(',');
 					maintArr.forEach(element => {
 							element0 = localStorage.getItem(element);
@@ -1696,7 +1705,6 @@ btn.addEventListener('click', function (event) {
 				document.getElementById("maintTableContent").innerHTML=maintTableContentLoop;
 
 				console.log("hello2");
-	  			}		
 			}		
 				
 
