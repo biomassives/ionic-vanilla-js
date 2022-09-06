@@ -836,7 +836,7 @@
 			clearItems()			
 			document.getElementById("addawitness").style.display = "block";
                 });
-*/		
+	
                 document.getElementById("addawitnessbutton").addEventListener("click", function () {
 
 			let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
@@ -844,7 +844,7 @@
 
 			open('/js/', 'test', params);
                 });
-
+*/	
 
 		// save button actions
 		//
