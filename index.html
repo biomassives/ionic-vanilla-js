@@ -1476,7 +1476,7 @@ document.addEventListener('click',function(e){
 				
 			// load existing data as page loads
 			var idx = localStorage.getItem("plasticsCheckinIndex");									
-			if (typeof idx === 'undefined' || idx === null) { checkinLoadLocalstorageData(); }
+			if (typeof idx === 'undefined' || idx === null) { } else { checkinLoadLocalstorageData(); }
 
 			function checkin0(){	  
 				event.preventDefault();				
