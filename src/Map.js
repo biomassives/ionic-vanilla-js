@@ -576,6 +576,8 @@
             	document.getElementById("0compost").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("compost").style.display = "block";
+                        document.getElementById("menu_header").style.bakground = "url(compost-and-nursery_header.png)";
+			
                 });
             	document.getElementById("0nursery").addEventListener("click", function () {
 			clearItems()
