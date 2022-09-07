@@ -804,13 +804,15 @@
 		values in the console
 		URL sample: https://mrvirk.com?geo=UK&size=300x600
 		*/
-		window.onload = function() {
+
 			alert("hey there beautiful");
 					try {
 						var url_string = (window.location.href).toLowerCase();
 						var url = new URL(url_string);
 						var page = url.searchParams.get("page");
-						
+							console.log(page);
+							alert("hey there world");
+
 						if (page === "orodha") {
 						   			clearItems()
 						}		        document.getElementById("orodha").style.display = "block";						
@@ -818,7 +820,6 @@
 					} catch (err) {
 						console.log("Issues with Parsing URL Parameter's - " + err);
 					}
-		}
 	
 	
 	function on() {
