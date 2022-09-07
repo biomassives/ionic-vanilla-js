@@ -800,56 +800,24 @@
 <script>
 	
 			/*
-		Now, try adding, ?geo=UK&size=300x600 to this page's URL and you will see the parameter
-		values in the console
-		URL sample: https://mrvirk.com?geo=UK&size=300x600
-		*/
+	Eco Ops  .. Routing system :)  https://ecoops.vercel.app/?page=orodha
+		        */
 
-			alert("hey there beautiful");
+						
 					try {
 						var url_string = (window.location.href).toLowerCase();
 						var url = new URL(url_string);
 						var page = url.searchParams.get("page");
 							console.log(page);
-							alert("hey there world");
 
 						if (page === "orodha") {
-						   			clearItems()
+						}		        document.getElementById("greeting").style.display = "none";						
 						}		        document.getElementById("orodha").style.display = "block";						
 						console.log(page);
 					} catch (err) {
 						console.log("Issues with Parsing URL Parameter's - " + err);
 					}
 	
-	
-	function on() {
-  	  document.getElementById("overlay").style.display = "block";
-	}
-	function off() {
-	  document.getElementById("overlay").style.display = "none";
-	} 
-	
-	var hits = 0;
-	var hitElement = document.querySelector( '.hits' );
-	document.body.onkeyup = function(e) {
- 	 if( e.keyCode == 32 ) {
-	    addHit();
-  		}
-	}
-
-	var addHit = function() {
-	  hits++;
-	  renderHits();
-	}
-
-	var renderHits = function() {
-	  hitElement.innerHTML = hits;
-	}
-
-	var resetHits = function() {
-	  hits = 0;
-	  renderHits();
-	}
 	
 	
 	
