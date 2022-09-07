@@ -111,7 +111,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 80px;
     width: auto;
     height: auto;
     min-width: 250px;
@@ -134,7 +134,7 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 32px;
+    bottom: 80px;
   }
   .m-signature-pad--footer {
     left: 20px;
