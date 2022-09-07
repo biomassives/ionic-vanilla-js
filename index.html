@@ -1021,32 +1021,31 @@ h1{
 			/*
 	Eco Ops  .. Routing system :)  https://ecoops.vercel.app/?page=orodha
 		        */
-
 						
 					try {
 						var url_string = (window.location.href).toLowerCase();
 						var url = new URL(url_string);
 						var page = url.searchParams.get("page");
 							console.log(page);
-
 						if (page === "orodha") {
 							        document.getElementById("greeting").style.display = "none";						
 							        document.getElementById("orodha").style.display = "block";						
 						                console.log(page);
-						} elseif (page === "compost") {
+						} 
+						if (page === "compost") {
 							        document.getElementById("greeting").style.display = "none";						
 							        document.getElementById("compost").style.display = "block";						
 						                console.log(page);
+								style="background:url(/icons/compost-and-nursery_header.png);
 						}
 					} catch (err) {
 						console.log("Issues with Parsing URL Parameter's - " + err);
 					}
 		
+			/*
+	Eco Ops  .. form processing :)  https://ecoops.vercel.app/?page=orodha
+		        */
 	
-	// welcome display form: id=welcome_chooser
-	
-	
-// form processing
 	
 var userhash = localStorage.getItem("userhash");
 		
