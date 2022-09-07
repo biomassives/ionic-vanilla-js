@@ -579,6 +579,14 @@
                         document.getElementById("menu_header").style.bakground = "url(compost-and-nursery_header.png)";
 			
                 });
+		document.getElementById("switch_to_nurs").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("nursery").style.display = "block";
+                });
+		document.getElementById("switch_to_nursery").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("nursery").style.display = "block";
+                });
             	document.getElementById("0nursery").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("nursery").style.display = "block";
