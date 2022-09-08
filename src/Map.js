@@ -591,6 +591,10 @@
 			clearItems()
                         document.getElementById("nursery").style.display = "block";
                 });
+		document.getElementById("switch_to_tree").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("trees").style.display = "block";
+                });
             	document.getElementById("0trees").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("trees").style.display = "block";
@@ -615,6 +619,12 @@
                         document.getElementById("map").style.display = "block";
 			document.getElementById("mapbuttons").style.display = "block";
 
+                });
+		document.getElementById("switch_to_resourcemap").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("resourcemap").style.display = "block";
+                        document.getElementById("map").style.display = "block";
+			document.getElementById("mapbuttons").style.display = "block";
                 });
 		document.getElementById("switch_to_map").addEventListener("click", function () {
 			clearItems()
