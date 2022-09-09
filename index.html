@@ -410,6 +410,76 @@
 	      <div id="compost" style="display:none;">
 		<h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_home"> 
 			<span id="compost_title"> Compost </span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_trees"></h1>				      	  	       		      
+
+		      
+		      	      <form id="compostables_checkin" onsubmit="checkin1()">
+
+			  <b>Material type:</b>
+  			  <br>
+			      <select id="composabletype">
+				  <option value=compostable>Compostable</option>
+				  <option value=compost_product>Compost Product</option>
+				  <option value=soil_amendment_hoofhornhair>Hoof /Horn /Hair soil amendment</option>
+				  <option value=compost_greens>Compost Product</option>
+				  <option value=compost_browns>Compost Product</option>
+				  <option value=compost_mycelia>Mycelia</option>
+				  <option value=worm_castings>Worm castings</option>	
+			      </select>
+			      
+  			  <br>
+			  <b>Weight:</b>
+			      <br>
+				      	<input type=text name="ld-weight" id="ldweightkg" size="5"> kg
+  			      <br>
+			      
+			  <b>Provider:</b>
+			      <br>
+			      <input type=text name="ld-provider" id="ldprovider">  <div id="overlay"><b>±</b></div> 
+  			      <br>
+				      
+			      <b>Witness: <a href="/js/">(+)</a></b>
+			      <br>
+				      	<input type=text name="ld-witness" id="ldwitness">
+			      <br>	      
+			      
+  			  <b>Notes:</b>
+  			  <br>
+			      
+  			  <textarea id="lddescription" rows="4" cols="30"></textarea>
+  			  <br><br>
+			      
+  			  <input type="submit" name="submit" value="Record Checkin" onsubmit="checkin0()">
+			</form>		        	      
+
+			        
+			      
+		</div>			      			    
+
+		      <br><br><br>
+		      
+		<table class="table table-sm table-striped table-sortable" style="table-layout: fixed;">
+		<thead>
+			<tr>
+				<th data-sort="date">Date</th>
+				<th data-sort="string">Item Type</th>
+				<th data-sort="string">Provider</th>
+				<th data-sort="float">Weight</th>
+				<th data-sort="int">Witness</th>
+				<th data-sort="string">Notes</th>
+			</tr>
+		</thead>
+		<tbody id="checkin1TableContent"> 
+		</tbody>
+	</table>
+		 
+		      
+		      
+	    
+	      
+	    
+	    
+	    
+	    
 	      </div>
 	      
 	      
@@ -441,6 +511,11 @@
 
 	      
 	      
+	    
+	    
+	    
+	    
+	    
 	      
 	      <div id=orodha style="display:none;"><img src="/theme/mupy1/plastics_weigh_station_witness_and_scale_operator800.JPG" width="360" height="360" align="left"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_map"> <span id="orod_title">Orodoha Ya Ma Orodoha</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_selecta"></h1>		      
 		      		      
@@ -466,13 +541,6 @@
 				  <option value=PP>PP</option>
 				  <option value=PS>PS</option>
 				  <option value=mixed_plastics>Mixed</option>
-				  <option value=compostable>Compostable</option>
-				  <option value=compost_product>Compost Product</option>
-				  <option value=soil_amendment_hoofhornhair>Hoof /Horn /Hair soil amendment</option>
-				  <option value=compost_greens>Compost Product</option>
-				  <option value=compost_browns>Compost Product</option>
-				  <option value=compost_mycelia>Mycelia</option>
-				  <option value=worm_castings>Worm castings</option>
 			      </select>
 			      
   			  <br>
@@ -1619,6 +1687,8 @@ document.addEventListener('click',function(e){
 				
 				
 				
+				
+				
 			//var checkinlist = document.querySelector('#plastic_checkins').value;											
 			function checkinLoadLocalstorageData(){	
 				
@@ -1646,6 +1716,55 @@ document.addEventListener('click',function(e){
 
 			checkinLoadLocalstorageData();
 				 
+
+
+				
+	function checkin1(){	  
+				event.preventDefault();				
+				var item = document.querySelector('#ldcompostabletype').value;
+				document.querySelector('#ldcompostabletype').value = "";
+				var name = document.querySelector('#ldcompostableprovider').value;
+				document.querySelector('#ldcompostableprovider').value = "";
+				var weightkg = document.querySelector('#ldcompostableweightkg').value;
+				document.querySelector('#ldcompostableweightkg').value = "";
+				var witness = document.querySelector('#ldcompostablewitness').value;
+				document.querySelector('#ldcompostablewitness').value = "";
+				var description = document.querySelector('#ldcompostabledescription').value;
+				document.querySelector('#ldcompostabledescription').value = "";
+				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
+				const currentTimeInSeconds=Math.floor(Date.now()/1000);
+				
+				
+				localStorage.setItem("compostable_checkin"+currentTimeInSeconds, item+" , "+weightkg+", "+name+", "+witness+", "+description );									
+				var idx = localStorage.getItem("compostableCheckinIndex");									
+	
+					if (typeof idx === 'undefined' || idx === null) {
+						localStorage.setItem("compostableCheckinIndex", "compostable_checkin"+currentTimeInSeconds);									
+					} else {
+						idx = idx+",";
+						localStorage.setItem("compostableCheckinIndex", idx+ "compostable_checkin"+currentTimeInSeconds);									
+					}
+				// updata existing data display after form submit
+				checkin1LoadLocalstorageData()
+				};				
+				
+			function checkin1LoadLocalstorageData(){	
+				
+				var checkinTableContentLoop = "";
+				var checkinIndex = localStorage.getItem("compostableCheckinIndex");
+				const checkinArr = checkinIndex.split(',');
+					checkinArr.forEach(element => {
+						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
+							element0 = localStorage.getItem(element);
+							const splitArr = element0.split(',');
+  							const dateof = element.split('compost_checkin');
+							//dateof = dateToJulianNumber(dateof[1])
+							checkinTableContentLoop = "<tr><td>"+dateof[1]+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
+					});	      	  
+				document.getElementById("checkin1TableContent").innerHTML=checkinTableContentLoop;
+			}					
+				
+				
 				
 			function maintcheckin0(){	  
 				event.preventDefault();				
