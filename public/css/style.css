@@ -349,9 +349,10 @@
 	--yAngle: 45deg;
 	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1280 - 320));
 }
-body, h3, input {
+input {
 	color: var(--fg);
 	font: 1em/1.5 Hind, sans-serif;
+	background-color: #c7cad1;
 }
 
 h3 {
