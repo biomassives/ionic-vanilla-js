@@ -349,10 +349,10 @@
 	--yAngle: 45deg;
 	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1280 - 320));
 }
-input {
+input, textarea {
 	color: var(--fg);
 	font: 1em/1.5 Hind, sans-serif;
-	background-color: #c7cad1;
+	background-color: ##e9ecef;
 }
 
 h3 {
