@@ -83,10 +83,23 @@
           var witness1name = document.getElementById('witness1name').value;
           var witness1phone = document.getElementById('witness1phone').value;
           var witness1email = document.getElementById('witness1email').value;
+          var witness1eventdate = Math.floor(Date.now()/1000);
+
+
           var sigimg = signaturePad.toDataURL('image/svg+xml');
         
-      		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
+      		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , "{ \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
 
+        
+        
+         // add to witnessList
+         var witnessList = localStorage.getItem("ecoopswitnessIndex");
+         var witnessList = witnessList + "," + referrer + witness1name + witness1eventdate;  
+        
+         // add to index of ecoopswitnesses
+         localStorage.setItem("ecoopswitnessIndex", "{ "+ witnessList +" }");
+
+        
       });
     </script> 
 </body>
