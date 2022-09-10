@@ -358,6 +358,8 @@ input, textarea {
 	color: var(--fg);
 	font: 1em/1.5 Hind, sans-serif;
 	background-color: #e9ecef;
+	border-style: solid;
+        border-width: 1px;
 }
 
 h3 {
