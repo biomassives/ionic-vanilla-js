@@ -42,7 +42,57 @@
   <script src="https://unpkg.com/@supabase/supabase-js"></script>	
   <link rel="stylesheet" href="https://ecoops.vercel.app/css/style.css" />
 
+<style>
+  
+.ibuttons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.square {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 2.2em;
+  width: 2.2em;
+  height: 2.2em;
+  transition: all 0.65s cubic-bezier(0.51, 0.04, 0.63, 1.4);
+  cursor: pointer;
+}
+.square i {
+  transition: all 0.65s cubic-bezier(0.68, -0.12, 0.78, 1.6);
+}
+.square:hover {
+  transform: rotate(-90deg);
+  border-radius: 100%;
+  box-shadow: 0 0 15px 0px #333;
+}
+.square:hover i {
+  transform: rotate(90deg);
+}
+.square.blue {
+  background: #495b92;
+}
+.square.blue:hover {
+  background: #3f5cb5;
+}
+.square.red {
+  background: #924949;
+}
+.square.red:hover {
+  background: #b53f3f;
+}
+.square.green {
+  background: #499249;
+}
+.square.green:hover {
+  background: #3fb53f;
+}
+</style>
 </head>
 <body>
 	
@@ -179,6 +229,16 @@
           </ion-menu-toggle>
 		<ion-item><br>Eco Ops App &nbsp; <a href="https://github.com/biomassives/ionic-vanilla-js/archive/refs/heads/eco-ops-app.zip">free software</a>.</ion-item>
 		<ion-item><img src=/wheredifrom_zucchini-bread.png width=100%></ion-item>
+		
+		<div class="ibuttons">
+		  <div class="square blue"><i class="fa fa-coffee" aria-hidden="true"></i></div>
+		  <div class="square red"><i class="fa fa-fire" aria-hidden="true"></i></div>
+		  <div class="square green"><i class="fa fa-book" aria-hidden="true"></i></div>
+		</div>
+
+
+		
+		
         </ion-list>	      	      	   	      
       </ion-content>
     </ion-menu>
@@ -508,8 +568,10 @@
   			  <br><br>
 				      
 				      
-			<ion-button shape="round" fill="outline" id="checkin1bsubmit" onsubmit="checkin1()">Record Entry</ion-button>
-			
+				      
+		         <input shape="round" type=submit fill="outline" id="checkin1submit" onsubmit="checkin1()" value="Record Entry"> 
+ 
+			 
 			</form>		        	      
 
 			        
