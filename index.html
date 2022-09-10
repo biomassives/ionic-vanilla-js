@@ -1010,6 +1010,12 @@
 						                console.log(page);
 								document.getElementById("menu_header").style.background="url(/icons/compost-and-nursery_header.png)";
 						}
+						if (page === "nursery") {
+							        document.getElementById("greeting").style.display = "none";						
+							        document.getElementById("orodha").style.display = "block";						
+						                console.log(page);
+								document.getElementById("menu_header").style.background="url(/icons/nursery_header.png)";
+						}
 					} catch (err) {
 						console.log("Issues with Parsing URL Parameter's - " + err);
 					}
