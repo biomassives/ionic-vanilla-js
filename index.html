@@ -570,7 +570,7 @@
 				      
 		         <input type=submit id="checkin1submit" onsubmit="checkin1()" value="Record Entry"> 
  
-			 
+				      <p id="checkin1response"></p>
 			</form>		        	      
 
 			        
@@ -687,6 +687,9 @@
   			  <br><br>
 			      
   			  <input type="submit" name="submit" value="Record Checkin" onsubmit="checkin0()">
+			      
+			      				      <p id="checkin0response"></p>
+
 			</form>		        	      
 
 			        
@@ -1803,6 +1806,7 @@ document.addEventListener('click',function(e){
 						localStorage.setItem("plasticsCheckinIndex", idx+ "plastics_checkin"+currentTimeInSeconds);									
 					}
 				// updata existing data display after form submit
+				document.querySelector('#checkin0response').value = "Entry has been recorded";
 				checkinLoadLocalstorageData()
 				};
 				
@@ -1866,7 +1870,8 @@ document.addEventListener('click',function(e){
 						localStorage.setItem("compostableCheckinIndex", idx+ "compostable_checkin"+currentTimeInSeconds);									
 					}
 				// updata existing data display after form submit
-				checkin1LoadLocalstorageData()
+					document.querySelector('#checkin1response').value = "Entry has been recorded";
+				        checkin1LoadLocalstorageData()
 				};				
 				
 			function checkin1LoadLocalstorageData(){	
