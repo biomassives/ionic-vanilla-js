@@ -475,12 +475,13 @@
 
 			  <b>Material type:</b>
   			  <br>
-			      <select id="composabletype">
+			      <select id="ldcomposabletype">
 				  <option value=compostable>Compostable</option>
 				  <option value=compost_product>Compost Product</option>
 				  <option value=soil_amendment_hoofhornhair>Hoof /Horn /Hair soil amendment</option>
-				  <option value=compost_greens>Compost Product</option>
-				  <option value=compost_browns>Compost Product</option>
+				  <option value=compost_greens>Green Compostables</option>
+				  <option value=compost_browns>Dried Compostables</option>
+				  <option value=ag_waste>Agriultural Waste</option>
 				  <option value=compost_mycelia>Mycelia</option>
 				  <option value=worm_castings>Worm castings</option>	
 			      </select>
@@ -488,26 +489,28 @@
   			  <br>
 			  <b>Weight:</b>
 			      <br>
-				      	<input type=text name="ld-weight" id="ldweightkg" size="5"> kg
+				      	<input type=text name="ld-weight" id="ldcompostableweightkg" size="5"> kg
   			      <br>
 			      
 			  <b>Provider:</b>
 			      <br>
-			      <input type=text name="ld-provider" id="ldprovider">  <div id="overlay"><b>±</b></div> 
+			      <input type=text name="ld-provider" id="ldcompostableprovider">  <div id="overlay"><b>±</b></div> 
   			      <br>
 				      
 			      <b>Witness: <a href="/js/">(+)</a></b>
 			      <br>
-				      	<input type=text name="ld-witness" id="ldwitness">
+				      	<input type=text name="ld-witness" id="ldcompostablewitness">
 			      <br>	      
 			      
   			  <b>Notes:</b>
   			  <br>
 			      
-  			  <textarea id="lddescription" rows="4" cols="30"></textarea>
+  			  <textarea id="ldcompostabledescription" rows="4" cols="30"></textarea>
   			  <br><br>
-			      
-  			  <input type="submit" name="submit" value="Record Checkin" onsubmit="checkin0()">
+				      
+				      
+			<ion-button shape="round" fill="outline" onsubmit="checkin0()">Record Entry</ion-button>
+ 
 			</form>		        	      
 
 			        
