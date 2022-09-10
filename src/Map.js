@@ -570,6 +570,8 @@
                         document.getElementById("compost").style.display = "none";	
                         document.getElementById("trees").style.display = "none";	
                         document.getElementById("nursery").style.display = "none";	
+                        document.getElementById("mbinu").style.display = "none";	
+                        document.getElementById("jinsiya").style.display = "none";
 		}
 
 		document.getElementById("switch_to_comp").addEventListener("click", function () {
