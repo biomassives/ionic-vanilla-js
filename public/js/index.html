@@ -87,14 +87,14 @@
           
         
         
-      		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , "{ \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
+      		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , "{ \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }"  );
                 
          // add to witnessList
-         var witnessList = localStorage.getItem("ecoopswitnessIndex");
-         var witnessList = witnessList + "," + referrer + witness1name + witness1eventdate;  
+//         var witnessList = localStorage.getItem("ecoopswitnessIndex");
+         var witnessList = referrer + witness1name + witness1eventdate;  
         
          // add to index of ecoopswitnesses
-         localStorage.setItem("ecoopswitnessIndex", "{ "+ witnessList +" }");
+         localStorage.setItem("ecoopswitnessIndex", "{ "+ witnessList +" }" );
 
       });
     </script> 
