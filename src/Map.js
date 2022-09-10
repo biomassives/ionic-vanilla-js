@@ -608,6 +608,19 @@
                         document.getElementById("pakuayako").style.display = "block";
                 });
 
+
+            	document.getElementById("0mbinu").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("mbinu").style.display = "block";
+                });
+
+
+            	document.getElementById("0jinsiya").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("jinsiya").style.display = "block";
+                });
+
+
 		document.getElementById("switch_to_home").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("greeting").style.display = "block";
