@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <title>Eco Ops App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="./sigpadstyle.css">
-
-
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./sigpadstyle.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -84,14 +82,9 @@
           var witness1phone = document.getElementById('witness1phone').value;
           var witness1email = document.getElementById('witness1email').value;
           var witness1eventdate = Math.floor(Date.now()/1000);
-
-
           var sigimg = signaturePad.toDataURL('image/svg+xml');
-        
       		localStorage.setItem("ecoopswitnesses", "{ \"name\": ["+ witness1name +"] , "{ \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"] }");
-
-        
-        
+                
          // add to witnessList
          var witnessList = localStorage.getItem("ecoopswitnessIndex");
          var witnessList = witnessList + "," + referrer + witness1name + witness1eventdate;  
@@ -99,7 +92,6 @@
          // add to index of ecoopswitnesses
          localStorage.setItem("ecoopswitnessIndex", "{ "+ witnessList +" }");
 
-        
       });
     </script> 
 </body>
