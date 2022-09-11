@@ -617,6 +617,15 @@
                 });
 
 
+		document.getElementById("switch_to_jinsiya").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("jinsiya").style.display = "block";
+                });
+		document.getElementById("switch_to_jins").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("jinsiya").style.display = "block";
+                });
+
             	document.getElementById("0jinsiya").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("jinsiya").style.display = "block";
