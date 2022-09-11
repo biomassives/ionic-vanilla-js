@@ -1861,7 +1861,7 @@ document.addEventListener('click',function(e){
 
 
 				
-	function checkin1(){	  
+	 		function checkin1(){	  
 				event.preventDefault();				
 				var item = document.querySelector('#ldcompostabletype').value;
 				document.querySelector('#ldcompostabletype').value = "";
@@ -1907,6 +1907,8 @@ document.addEventListener('click',function(e){
 					});	      	  
 				document.getElementById("checkin1TableContent").innerHTML=checkinTableContentLoop;
 			}					
+				        
+			checkin1LoadLocalstorageData()
 				
 				
 				
