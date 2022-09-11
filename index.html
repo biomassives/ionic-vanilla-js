@@ -678,16 +678,30 @@
 			      <b>Witness: <a href="/js/">(+)</a></b>
 			      <br>
 			      <select id="ldwitness">
-				 <script>					 					 
+				 <script>	
+					 
+					 /* Adds Element AFTER NeighborElement */
+					 Element.prototype.appendAfter = function(element) {
+					   element.parentNode.insertBefore(this, element.nextSibling);
+					 }, false;
+					 
 					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
 					 const witnessArr = witnessIndex.split(',');
 					 witnessArr.forEach(element => {
-						 	alert(element);
-							element0 = localStorage.getItem(element);
-							const splitArr = element0.split(',');
-						 	var witnessLoop = witnessLoop+"<option value="+ splitArr[0] +">" + splitArr[1] + "</option>";
-					});
-				        document.getElementById("ldwitness").value = witnessLoop;
+						// 	alert(element);
+						//	element0 = localStorage.getItem(element);
+						//	const splitArr = element0.split(',');
+						// 	var witnessLoop = witnessLoop+"<option value="+ splitArr[0] +">" + splitArr[1] + "</option>";
+
+					        /* Typical Creation and Setup A New Orphaned Element Object */
+					        var NewElement = document.createElement('option');
+					        NewElement.innerHTML = element;
+					        NewElement.id = element;
+						/* Add NewElement BEFORE -OR- AFTER Using the Aforementioned Prototypes */
+						NewElement.appendAfter(document.getElementById('ldwitness'));
+					 
+					 });
+					 					 					 					 
 			         </script>
 			      </select>
 			      <br>	      
