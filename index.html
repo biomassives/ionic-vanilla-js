@@ -677,7 +677,19 @@
 				      
 			      <b>Witness: <a href="/js/">(+)</a></b>
 			      <br>
-				      	<input type=text name="ld-witness" id="ldwitness">
+			      <select id="ldwitness">
+				 <script>					 					 
+					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
+					 const witnessArr = witnessIndex.split(',');
+					 var witnessLoop = "";
+					 witnessArr.forEach(element => {
+							element0 = localStorage.getItem(element);
+							const splitArr = element0.split(',');
+						 	var witnessLoop = witnessLoop+"<option value="+ splitArr[0] +">" + splitArr[1] + "</option>";
+					});
+				        document.getElementById("ldwitness").value = witnessLoop;
+			         </script>
+			      </select>
 			      <br>	      
 			      
   			  <b>Notes:</b>
