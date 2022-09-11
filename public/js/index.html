@@ -91,7 +91,7 @@
                 
          // add to witnessList
          var witnessList = localStorage.getItem("ecoopswitnessIndex");
-         var witnessList =  witnessList + "," + referrer + witness1name + witness1eventdate;  
+         var witnessList =  witnessList + "," + referrer + "_" + witness1name + "_" + witness1eventdate;  
         
          // add to index of ecoopswitnesses
          localStorage.setItem("ecoopswitnessIndex", "{ "+ witnessList +" }" );
