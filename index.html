@@ -693,13 +693,12 @@
 						//	const splitArr = element0.split(',');
 						// 	var witnessLoop = witnessLoop+"<option value="+ splitArr[0] +">" + splitArr[1] + "</option>";
 
-					        /* Typical Creation and Setup A New Orphaned Element Object */
-					        var NewElement = document.createElement('option');
-					        NewElement.innerHTML = element;
-					        NewElement.id = element;
-						/* Add NewElement BEFORE -OR- AFTER Using the Aforementioned Prototypes */
-						NewElement.appendAfter(document.getElementById('ldwitness'));
-					 
+		 
+						    select = document.getElementById('ldwitness');
+						    var opt = document.createElement('option');
+						    opt.value = element;
+						    opt.innerHTML = element;
+						    select.appendChild(opt);
 					 });
 					 					 					 					 
 			         </script>
