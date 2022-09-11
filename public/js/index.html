@@ -76,16 +76,13 @@
       });
       
       document.getElementById("newwitness").addEventListener("click", function () {
-           alert(" you are loved person x ");
           var referrer = "get this";
           var witness1name = document.getElementById('witness1name').value;
           var witness1phone = document.getElementById('witness1phone').value;
           var witness1email = document.getElementById('witness1email').value;
           var witness1eventdate = Date.now()/1000;
           var sigimg = signaturePad.toDataURL('image/svg+xml');
-           alert( witness1eventdate );
-          
-        
+                  
         
       		localStorage.setItem(referrer + "_" + witness1name + "_" + witness1eventdate, " \"name\": ["+ witness1name +"] , \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"]"  );
                 
