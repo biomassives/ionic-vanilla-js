@@ -683,8 +683,9 @@
 					 const witnessArr = witnessIndex.split(',');
 					 var witnessLoop = "";
 					 witnessArr.forEach(element => {
+						 	alert(element);
 							element0 = localStorage.getItem(element);
-							const splitArr = element0.split(',');
+							const witnessLoop = element0.split(',');
 						 	var witnessLoop = witnessLoop+"<option value="+ splitArr[0] +">" + splitArr[1] + "</option>";
 					});
 				        document.getElementById("ldwitness").value = witnessLoop;
