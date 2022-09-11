@@ -455,19 +455,7 @@
 					</ul>
 					<p>'Eco Ops App' is essentially an activities calculator for group and individual 'sweat equity' benefits. (supplies, equipment, expertise, labor, raw materials, ..)   </p>
 				</div>
-			    </div>
-			
-
-
-		      
-		      
-		      
-		      
-		      
-		      
-
-		
-		
+			    </div>				
 		      </div>
 		      
 		      
@@ -690,14 +678,14 @@
 					 witnessArr.forEach(element => {
 						// 	alert(element);
 						//	element0 = localStorage.getItem(element);
-						//	const splitArr = element0.split(',');
+							const splitArr = element0.split('_');
 						// 	var witnessLoop = witnessLoop+"<option value="+ splitArr[0] +">" + splitArr[1] + "</option>";
 
 		 
 						    select = document.getElementById('ldwitness');
 						    var opt = document.createElement('option');
-						    opt.value = element;
-						    opt.innerHTML = element;
+						    opt.value = splitArr[2];
+						    opt.innerHTML = splitArr[2];
 						    select.appendChild(opt);
 					 });
 					 					 					 					 
