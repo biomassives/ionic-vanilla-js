@@ -609,14 +609,14 @@
 			clearItems()
                         document.getElementById("pakuayako").style.display = "block";
                 });
-
-
+            	document.getElementById("switch_to_mbinu").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("mbinu").style.display = "block";
+                });
             	document.getElementById("0mbinu").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("mbinu").style.display = "block";
                 });
-
-
 		document.getElementById("switch_to_jinsiya").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("jinsiya").style.display = "block";
@@ -654,6 +654,12 @@
 			document.getElementById("mapbuttons").style.display = "block";
                 });
 		document.getElementById("switch_to_map").addEventListener("click", function () {
+			clearItems()
+			document.getElementById("resourcemap").style.display = "block";
+                        document.getElementById("map").style.display = "block";
+			document.getElementById("mapbuttons").style.display = "block";
+                });
+		document.getElementById("switch_to_mapp").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("resourcemap").style.display = "block";
                         document.getElementById("map").style.display = "block";
