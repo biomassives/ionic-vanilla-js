@@ -52,8 +52,10 @@
    
     Phone: <input type=text id=witness1phone><BR>
     Email: <input type=text id=witness1email><BR>
-    Image: <input type=file id=witness1file><BR>
-        <button type="button" id="newwitness" class="button save">Send</button>
+    Address: <input type=text id=witness1address><BR>
+    Organization: <input type=text id=witness1org><BR>
+    Affiliation: <input type=text id=witness1affiliation><BR>
+        <button type="button" id="newwitness" class="button save">Save</button>
       
     </form>
         
@@ -80,13 +82,16 @@
           var witness1name = document.getElementById('witness1name').value;
           var witness1phone = document.getElementById('witness1phone').value;
           var witness1email = document.getElementById('witness1email').value;
+          var witness1org = document.getElementById('witness1org').value;
+          var witness1address = document.getElementById('witness1address').value;
+          var witness1affiliation = document.getElementById('witness1affiliation').value;
           var witness1eventdate = Date.now()/1000;
           var sigimg = signaturePad.toDataURL('image/svg+xml');
                   
         
-      		localStorage.setItem(referrer + "_" + witness1name + "_" + witness1eventdate, " \"name\": ["+ witness1name +"] , \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"]"  );
+      		localStorage.setItem(referrer + "_" + witness1name + "_" + witness1eventdate, " \"name\": ["+ witness1name +"] , \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"],\"witness1org\":[\""+witness1org+"\"],\"witness1address\":[\""+witness1address"\"],\"witness1affiliation\":[\""+witness1affiliation+"\"]");
                 
-         // add to witnessList
+         // add to witnessIndex
          var witnessList = localStorage.getItem("ecoopswitnessIndex");
          var witnessList =  witnessList + "," + referrer + "_" + witness1name + "_" + witness1eventdate;  
         
