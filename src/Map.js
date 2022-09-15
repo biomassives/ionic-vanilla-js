@@ -526,7 +526,7 @@
 		//
 		//
 		//
-		document.getElementById("0checkin").addEventListener("click", function () {
+		document.getElementById("mapdata").addEventListener("click", function () {
 
 			let nodata = '{"type":"FeatureCollection","features":[]}';
 			let jsonData = (JSON.stringify(drawnItems.toGeoJSON()));
@@ -907,6 +907,9 @@
 		//
 		//
 		//
+
+
+
 		document.getElementById("saveleafletdata").addEventListener("click", function () {
 
 			localStorage.setItem("user", JSON.stringify(drawnItems.toGeoJSON(), null, 2) );
