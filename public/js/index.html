@@ -85,10 +85,8 @@
           var witness1eventdate = Date.now()/1000;
           var sigimg = signaturePad.toDataURL('image/svg+xml');
                   
-        
-      		localStorage.setItem(referrer + "_" + witness1name + "_" + witness1eventdate, " \"name\": ["+ witness1name +"] , \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"],\"witness1org\":[\""+witness1org+"\"],\"witness1address\":[\""+witness1address"\"], \"witness1affiliation\": [\""+witness1affiliation+"\"]");
-                               
-                               
+          localStorage.setItem(referrer + "_" + witness1name + "_" + witness1eventdate, " \"name\": ["+ witness1name +"] , \"Date\": ["+ witness1eventdate +"] , \"phone\":[\""+witness1phone+"\"],\"email\":[\""+witness1email+"\"],\"sigimg\":[\""+sigimg+"\"],\"referer\":[\""+referrer+"\"],\"witness1org\":[\""+witness1org+"\"],\"witness1address\":[\""+witness1address+"\"], \"witness1affiliation\": [\""+witness1affiliation+"\"]");
+                 	                                                      
          // add to witnessIndex
          var witnessList = localStorage.getItem("ecoopswitnessIndex");
          var witnessList =  witnessList + "," + referrer + "_" + witness1name + "_" + witness1eventdate;  
