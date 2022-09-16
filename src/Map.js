@@ -605,7 +605,7 @@
                         document.getElementById("trees").style.display = "block";
                 });
 
-            	document.getElementById("0download").addEventListener("click", function () {
+            	document.getElementById("0pakuayako").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("pakuayako").style.display = "block";
                 });
