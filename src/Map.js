@@ -647,6 +647,13 @@
 			document.getElementById("mapbuttons").style.display = "block";
 
                 });
+
+		document.getElementById("avatar").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("profile").style.display = "block";
+                        document.getElementById("settings").style.display = "block";
+                });
+
 		document.getElementById("switch_to_resourcemap").addEventListener("click", function () {
 			clearItems()
 			document.getElementById("resourcemap").style.display = "block";
