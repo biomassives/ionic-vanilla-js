@@ -2184,8 +2184,8 @@ document.addEventListener('click',function(e){
 							element0 = localStorage.getItem(element);
 							const splitArr = element0.split(',');
   							const dateof = element.split('compost_checkin');
-							//dateof = dateToJulianNumber(dateof[1])
-							checkinTableContentLoop = "<tr><td>"+dateof[0]+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
+							const dateof0 = dateToJulianNumber(dateof[0])
+							checkinTableContentLoop = "<tr><td>"+dateof0+"</td><td>"+splitArr[0]+"</td><td>"+splitArr[1]+"</td><td>"+splitArr[2]+"</td><td>"+splitArr[3]+"</td><td>"+splitArr[4]+"</td></tr>" + checkinTableContentLoop;
 					});	      	  
 				document.getElementById("checkin1TableContent").innerHTML=checkinTableContentLoop;
 			}					
