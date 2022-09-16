@@ -75,7 +75,8 @@
       });
       
       document.getElementById("newwitness").addEventListener("click", function () {
-          var referrer = "get this";
+        
+        	var referrer = localStorage.getItem("user");
           var witness1name = document.getElementById('witness1name').value;
           var witness1phone = document.getElementById('witness1phone').value;
           var witness1email = document.getElementById('witness1email').value;
