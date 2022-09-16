@@ -318,8 +318,8 @@
 			      	<li>Current and projected balance sheets</li>
 			      </ul>
 			      <ul>
-				<li>certifications</li>
-				<li>training session attendance</li>		      
+				<li>Training session completions</li>		      
+				<li>Certifications</li>
 	      		      </ul>
 		      </p>	
 	      
@@ -342,7 +342,7 @@
                     children: [
                       new docx.Paragraph({
                         children: [
-                          new docx.TextRun("Eco Ops PRoject participant report"),
+                          new docx.TextRun("Eco Ops Project Participant Report"),
                           new docx.TextRun({
                             text: "\tAreas of plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
                             bold: true
@@ -2269,12 +2269,24 @@ document.addEventListener('click',function(e){
 								
 				
 				function dateToJulianNumber(d) {
-				    // convert a Gregorian Date to a Julian number. 
-				    //    S.Boisseau / BubblingApp.com / 2014
-				    var x = Math.floor((14 - d.getMonth())/12);
-				    var y = d.getFullYear() + 4800 - x;
-				    var z = d.getMonth() - 3 + 12 * x;
-				    var n = d.getDate() + Math.floor(((153 * z) + 2)/5) + (365 * y) + Math.floor(y/4) + Math.floor(y/400) - Math.floor(y/100) - 32045;
+					
+					
+					var millis = (d - 2440587.5) * 86400000;
+					var dateLocal = new Date(millis);
+					document.writeln(dateLocal);
+					document.writeln("<br>");
+					document.write(dateLocal.getUTCFullYear(), "-");
+					document.write(dateLocal.getUTCMonth()+1, "-");
+					document.write(dateLocal.getUTCDate(), "T12:00:00Z");
+					
+					n = dateLocal.getUTCFullYear();
+					
+				     // convert a Gregorian Date to a Julian number. 
+				     //    S.Boisseau / BubblingApp.com / 2014
+				     //var x = Math.floor((14 - d.getMonth())/12);
+				     //var y = d.getFullYear() + 4800 - x;
+				     //var z = d.getMonth() - 3 + 12 * x;
+				     //var n = d.getDate() + Math.floor(((153 * z) + 2)/5) + (365 * y) + Math.floor(y/4) + Math.floor(y/400) - Math.floor(y/100) - 32045;
 				    return n;
 				}   
 
