@@ -2148,7 +2148,9 @@ document.addEventListener('click',function(e){
 				
 				var checkinTableContentLoop = "";
 				var checkinIndex = localStorage.getItem("plasticsCheckinIndex");
-				const checkinArr = checkinIndex.split(',');
+				try {  
+					const checkinArr = checkinIndex.split(',');
+									
 					checkinArr.forEach(element => {
 						//checkinList = element+"<BR><div style=\"background:#efefef\">"+
 							element0 = localStorage.getItem(element);
@@ -2162,12 +2164,19 @@ document.addEventListener('click',function(e){
 				//document.getElementById("plastic_checkins").innerHTML=checkinList;
 
 				console.log("hello0");
-
 				document.getElementById("checkinTableContent").innerHTML=checkinTableContentLoop;
-
 				console.log("hello2");
+					
+				} catch { 
+					
+					const checkinArr = checkinIndex; 
+					checkinTableContentLoop = "<tr><td> ~ </td><td> ~ </td><td> ~ </td><td> ~ </td><td> ~ </td><td> ~ </td></tr>";
+					document.getElementById("checkinTableContent").innerHTML=checkinTableContentLoop;
+				}
+				
 			}				
 
+				
 			checkinLoadLocalstorageData();
 				 
 
