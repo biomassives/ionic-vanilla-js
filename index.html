@@ -318,7 +318,7 @@
 			      	<li>Quarterly report</li>
 			      	<li>Current and projected balance sheets</li>
 			      </ul>
-				      </td><td>
+		        </td><td>
 			      <ul>
 				<li>Training sessions</li>		      
 				<li>Sweat equity</li>		      
@@ -339,6 +339,8 @@
 
             <script>  
               function generatedoc1() {
+	      var referrer = localStorage.getItem("user");
+	      const userhash =
               const doc = new docx.Document({
                 sections: [
                   {
@@ -348,7 +350,7 @@
                         children: [
                           new docx.TextRun("Eco Ops Project Participant Report"),
                           new docx.TextRun({
-                            text: "\tAreas of plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
+                            text: "\t"+ referrer + " ~ plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
                             bold: true
                           }),
                           new docx.TextRun({
