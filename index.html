@@ -340,7 +340,8 @@
             <script>  
               function generatedoc1() {
 	      var referrer = localStorage.getItem("user");
-	      const userhash =
+	      console.log("user/ referrer :"+referrer);
+	      
               const doc = new docx.Document({
                 sections: [
                   {
@@ -350,7 +351,11 @@
                         children: [
                           new docx.TextRun("Eco Ops Project Participant Report"),
                           new docx.TextRun({
-                            text: "\t"+ referrer + " ~ plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
+                            text: "referrer + " ~ plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
+                            bold: true
+                          }),
+			  new docx.TextRun({
+                            text: "referrer + " ~ plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
                             bold: true
                           }),
                           new docx.TextRun({
