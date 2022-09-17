@@ -758,6 +758,10 @@
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
                 });
+                document.getElementById("switch_to_mafo2").addEventListener("click", function () {
+			clearItems()
+                        document.getElementById("footsoldiers").style.display = "block";
+                });
                 document.getElementById("switch_to_footsoldiers").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("footsoldiers").style.display = "block";
