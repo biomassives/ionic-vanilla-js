@@ -1489,7 +1489,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 		      
 		      
 		      <p>
-		      Welcome, Settings, activity timeline, and privacy settings may be managed here.
+		      Welcome, Your settings, activity timeline, and privacy settings are managed here.
 		      </p>
 		      <p>
 		      Default language and options settings
@@ -1516,9 +1516,10 @@ document.addEventListener("DOMContentLoaded", App.init)
 			
 
 	<div class="container">
-		<form onsubmit="profile0()"> 
+
 		<h1 class="title" id="profile_title">Modifier mon profil</h1>
 
+		<form>
 		<div class="grid">
 			<div class="form-group a">
 				<label for="prof_name">Nom</label>
@@ -1657,12 +1658,15 @@ document.addEventListener("DOMContentLoaded", App.init)
 	
 	<div class="form-group">
 		<div class="button-container">
-			<button class="mobutton" id="prof_reg" onClick="checkin1()" style="background:#879af8;">Enregister les modifications</button>
+			
+			<button class="mobutton" id="prof_reg">
+  			  <input type="submit" name="submit" style="background:#879af8;" value="Enregister les modifications" onsubmit="profile0()">
+			</button>
 		</div>
 	
         </div>
 
-		</form>
+		
 </div>
 				
 <style>
@@ -2611,7 +2615,34 @@ document.addEventListener('click',function(e){
 			      });
 			    }		
 			}
-							
+			
+				
+				
+			function profile0(){	  
+				event.preventDefault();				
+				var prof_name = document.querySelector('#prof_name').value;
+				var prof_firstname = document.querySelector('#prof_first-name').value;
+				var prof_address = document.querySelector('#prof_address').value;
+				var prof_phone = document.querySelector('#prof_phone').value;
+				var prof_email = document.querySelector('#prof_email').value;
+				var prof_city = document.querySelector('#prof_city').value;
+				var prof_zip = document.querySelector('#prof_zip').value;
+				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
+				const currentTimeInSeconds=Math.floor(Date.now()/1000);
+				
+				var user = localStorage.getItem("user");									
+
+				localStorage.setItem("profile_" + user, currentTimeInSeconds , "+prof_name+" , "+prof_firstname+", "+prof_address+", "+prof_phone+", "+prof_email+", "+ prof_city  +", "+ prof_zip );									
+				// updata existing data display after form submit
+				document.querySelector('#prof_response').value = "Entry has been recorded";
+			};
+				
+				
+				
+				
+				
+				
+				
 				
 			// load existing data as page loads
 			var idx = localStorage.getItem("plasticsCheckinIndex");									
