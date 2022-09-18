@@ -334,10 +334,45 @@
                      <h1>DOCX Word document</h1>
 
                      <button type="button" onclick="generatedoc1()">Click to generate your report</button>
+                     <button type="button" onclick="generatedoc2()">Report</button>
 
 
 
             <script>  
+		  
+	function generatedoc2() {
+
+		    
+		// docx header and footer demo
+		//const docx = require('docx@6.0.1');
+
+		const { Document, Footer, Header, Packer, Paragraph } = docx;
+
+		    const doc = new Document({
+			sections: [{
+			    headers: {
+				default: new Header({
+				    children: [new Paragraph("Header text")],
+				}),
+			    },
+			    footers: {
+				default: new Footer({
+				    children: [new Paragraph("Footer text")],
+				}),
+			    },
+			    children: [new Paragraph("Hello World")],
+			}],
+		    });
+
+		    const b64string = await Packer.toBase64String(doc);
+
+		    res.setHeader('Content-Disposition', 'attachment; filename=EcoOpsApp.docx');
+		    res.send(Buffer.from(b64string, 'base64'));
+	}
+		    
+		    
+		    
+		    
               function generatedoc1() {
 	      var referrer = localStorage.getItem("user");
 		try {
