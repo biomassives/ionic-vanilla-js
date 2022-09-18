@@ -1033,14 +1033,16 @@ body {
 		      <span id="areg_title">Arega/ Kusaga</span>  <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_mabroker"></h1>
 		      
 		      <form action="" id="myForm" onsubmit="chippingLog()">
-			      batch: <input type="text" id="chipping_batch" name="texto"><BR>
-			      <input type="text" id="chipping_amount" name="texto"><BR>
+			      <p>
+			      batch: <input type="text" id="chipping_batch" name="chipping_bathc"></p>
+			      <p>
+			      amount: <input type="text" id="chipping_amount" name="chipping_amount"></p>
 			      <input type="submit" value="submit" name="submit">
 		      </form>
 		 	<script>
 				function chippingLog() {
 					  event.preventDefault()
-  					  localStorage.clear()
+
 			      		  localStorage.setItem("lastname", "Word")
 				}
         		</script>
