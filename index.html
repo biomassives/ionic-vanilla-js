@@ -1422,7 +1422,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 			}
 			.container .heroes .hero::nth-child(1) .image{
-			  background: #879af8;
+			  background-image: url("https://raw.githubusercontent.com/ParkYoungWoong/overwatch-hero-selector-vanilla/master/images/hero1.png");
 
 			}    
 			</style>
@@ -1489,7 +1489,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 		      
 		      
 		      <p>
-		      Welcome, Your settings, activity timeline, and privacy settings are managed here.
+		      Welcome, Your profile, activity timeline, and privacy settings are managed here.
 		      </p>
 		      <p>
 		      Default language and options settings
@@ -1507,7 +1507,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 	      	      	      		      
 	      	      	      
 	      	    
-	      <div id=profileAdmin style="display:none;"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_mafo2"> 
+	      <div id=profile style="display:none;"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_mafo2"> 
 		      <span id="pusha_title">Profile</span>  <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_moo"></h1>
 
 		      
@@ -1519,7 +1519,6 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 		<h1 class="title" id="profile_title">Modifier mon profil</h1>
 
-		<form id="profileForm" onsubmit="profile0()">
 		<div class="grid">
 			<div class="form-group a">
 				<label for="prof_name">Nom</label>
@@ -1658,20 +1657,210 @@ document.addEventListener("DOMContentLoaded", App.init)
 	
 	<div class="form-group">
 		<div class="button-container">
-			
-			<button class="mobutton" id="prof_reg">
-  			  <input type="submit" name="submit" style="background:#879af8;" value="Enregister les modifications" onsubmit="profile0()">
-			</button>
+			<button class="mobutton" id="prof_reg" style="background:#879af8;">Enregister les modifications</button>
 		</div>
 	
         </div>
-			</form>
 
 		
-
+</div>
 				
-			
-								
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+body {
+	box-sizing: border-box;
+	background: #f2f2f2;
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	background: #fff;
+	width: 100%;
+	padding: 1rem;
+}
+
+.title {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: bold;
+	color: #374151;
+	padding-bottom: 11px;
+	border-bottom: 1px solid #d7dbdf;
+}
+
+.form-group {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.textarea-group label,
+.form-group label {
+	color: #374151;
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 10px;
+}
+
+.form-group [type],
+.textarea-group textarea {
+	border: 1px solid #d2d6db;
+	border-radius: 6px;
+	padding: 15px;
+}
+.form-group [type]:hover,
+.textarea-group textarea:hover {
+	border-color: #a8afb9;
+}
+.form-group [type]:focus,
+.textarea-group textarea:focus {
+	border-color: #5850eb;
+}
+
+.textarea-group {
+	margin-top: 24px;
+}
+
+.textarea-group textarea {
+	resize: none;
+	width: 100%;
+	margin-top: 10px;
+	height: calc(100% - 59px);
+}
+
+.checkbox-group {
+	margin-top: 25px;
+}
+
+.checkbox-group label {
+	display: flex;
+}
+
+.checkbox-group label::before {
+	content: "\0020";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	border: 1px solid #d2d6db;
+	border-radius: 6px;
+	transition: background 0.1s ease-in;
+}
+
+.checkbox-group input[type="checkbox"] {
+	/* ici on ne doit pas mettre de display: none afin de pouvoir "tabber" */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.checkbox-group input[type="checkbox"]:focus + label:before {
+	border-color: #5850eb;
+}
+.checkbox-group input[type="checkbox"]:checked + label:before {
+	color: #fff;
+	content: "\2713";
+	background: #5850eb;
+	border-color: #5850eb;
+}
+
+.mobutton {
+	font-weight: bold;
+	line-height: 19px;
+	background: #5850eb;
+	border: none;
+	padding: 15px 25px;
+	border-radius: 6px;
+	color: white;
+	width: 100%;
+	margin-top: 24px;
+}
+.mobutton:hover {
+	background: #6e67ee;
+}
+.mobutton:focus {
+	background: #4239e8;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container {
+		margin: 2rem;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		max-width: 32rem;
+		padding: 2rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.container {
+		max-width: 80%;
+		width: 100%;
+	}
+
+	.checkboxes {
+		display: flex;
+	}
+	.checkboxes > :not(:first-child) {
+		margin-left: 1rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-gap: 24px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-auto-rows: 1fr;
+	}
+
+	.email-group {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.phone-group {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.textarea-group {
+		grid-column: 3;
+		grid-row: span 2;
+		margin-right: 2rem;
+	}
+
+	.button-container {
+		text-align: right;
+	}
+
+	.button {
+		/* bon, bon, bon
+		c'est pas tout mais j'ai faim moi ^^
+		*/
+		width: auto;
+	}
+}
+
+	
+</style>				
+				
+				
+				
+				
+				
+				
 	      </div>
 
 		      
@@ -2422,34 +2611,7 @@ document.addEventListener('click',function(e){
 			      });
 			    }		
 			}
-			
-				
-				
-			function profile0(){	  
-				event.preventDefault();				
-				var prof_name = document.querySelector('#prof_name').value;
-				var prof_firstname = document.querySelector('#prof_first-name').value;
-				var prof_address = document.querySelector('#prof_address').value;
-				var prof_phone = document.querySelector('#prof_phone').value;
-				var prof_email = document.querySelector('#prof_email').value;
-				var prof_city = document.querySelector('#prof_city').value;
-				var prof_zip = document.querySelector('#prof_zip').value;
-				//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
-				const currentTimeInSeconds=Math.floor(Date.now()/1000);
-				
-				var user = localStorage.getItem("user");									
-
-				localStorage.setItem("profile_" + user, currentTimeInSeconds , "+prof_name+" , "+prof_firstname+", "+prof_address+", "+prof_phone+", "+prof_email+", "+ prof_city  +", "+ prof_zip );									
-				// updata existing data display after form submit
-				document.querySelector('#prof_response').value = "Entry has been recorded";
-			};
-				
-				
-				
-				
-				
-				
-				
+							
 				
 			// load existing data as page loads
 			var idx = localStorage.getItem("plasticsCheckinIndex");									
