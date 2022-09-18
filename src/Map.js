@@ -9,17 +9,16 @@
 
 		console.log("love");
 
-
+/*
 		function fetchJSON(url) {
 			return fetch(url)
 			  .then(function(response) {
 				return response.json();
 			  });
 		  }
-
 		var data = fetchJSON('/garbagemap_google_export_jun15_2022/Waste-Pile-Photos.geojson')
 		.then(function(data) { return data; alert("got here") })
-
+*/
 
 
 		if (localStorage.getItem("user") == null) {
