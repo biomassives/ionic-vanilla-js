@@ -625,13 +625,10 @@
 			clearItems()
                         document.getElementById("jinsiya").style.display = "block";
                 });
-
             	document.getElementById("0jinsiya").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("jinsiya").style.display = "block";
                 });
-
-
 		document.getElementById("switch_to_home").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("greeting").style.display = "block";
@@ -647,11 +644,9 @@
 			document.getElementById("mapbuttons").style.display = "block";
 
                 });
-
 		document.getElementById("avatar").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("profile").style.display = "block";
-                        document.getElementById("settings").style.display = "block";
                 });
 
 		document.getElementById("switch_to_resourcemap").addEventListener("click", function () {
