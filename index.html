@@ -1032,11 +1032,13 @@ body {
 	      <div id=arega style="display:none;"><h1 ><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_kwac"> 
 		      <span id="areg_title">Arega/ Kusaga</span>  <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_mabroker"></h1>
 		      
-		      <form action="" id="myForm" onsubmit="clearCache()">
+		      <form action="" id="myForm" onsubmit="chippingLog()">
+			      batch: <input type="text" id="chipping_batch" name="texto"><BR>
+			      <input type="text" id="chipping_amount" name="texto"><BR>
 			      <input type="submit" value="submit" name="submit">
 		      </form>
 		 	<script>
-				function clearCache() {
+				function chippingLog() {
 					  event.preventDefault()
   					  localStorage.clear()
 			      		  localStorage.setItem("lastname", "Word")
@@ -1641,7 +1643,7 @@ document.addEventListener("DOMContentLoaded", App.init)
         </div>
 
 		
-</div> <! - end container >
+</div>
 				
 <style>
 	@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
