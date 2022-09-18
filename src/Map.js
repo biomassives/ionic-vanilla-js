@@ -887,11 +887,11 @@
                 });
                 document.getElementById("0profile").addEventListener("click", function () {
 			clearItems()
-                        document.getElementById("profile").style.display = "block";
+                        document.getElementById("profileAdmin").style.display = "block";
                 });
                 document.getElementById("switch_to_profile").addEventListener("click", function () {
 			clearItems()
-                        document.getElementById("profile").style.display = "block";
+                        document.getElementById("profileAdmin").style.display = "block";
                 });
 
   /*              document.getElementById("addawitnessbutton").addEventListener("click", function () {
