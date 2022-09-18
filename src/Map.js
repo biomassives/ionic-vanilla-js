@@ -648,7 +648,7 @@
 
                 });
 
-		document.getElementById("avatar").addEventListener("click", function () {
+		document.getElementById("avatar.md").addEventListener("click", function () {
 			clearItems()
                         document.getElementById("profile").style.display = "block";
                         document.getElementById("settings").style.display = "block";
