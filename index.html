@@ -340,7 +340,7 @@
 
             <script>  
 		  
-	function generatedoc2() {
+	function generatedoc1() {
 
 		    
 		// docx header and footer demo
@@ -369,6 +369,62 @@
 		    res.setHeader('Content-Disposition', 'attachment; filename=EcoOpsApp.docx');
 		    res.send(Buffer.from(b64string, 'base64'));
 	}
+		
+		    
+		    
+		    function generatedoc2() {
+	      var referrer = localStorage.getItem("user");
+		try {
+	      		console.log("user/ referrer :" + referrer );
+	      	}
+		      	catch(err) {
+		console.log("no user/ referrer");
+	      	
+		}
+              const doc = new docx.Document({
+                sections: [
+                  {
+		   headers: {
+			default: new Header({
+			    children: [new Paragraph("Eco Ops App 2022 v1")],
+			}),
+		    },
+		    footers: {
+			default: new Footer({
+			    children: [new Paragraph("Eco Ops App supports transparent community level project verification.")],
+			}),
+		    },
+                    properties: {},
+                    children: [
+                      new docx.Paragraph({
+                        children: [
+                          new docx.TextRun("Eco Ops Project Participant Report"),
+                          new docx.TextRun({
+                            text: referrer,
+                            bold: true
+                          }),
+			  new docx.TextRun({
+                            text: " ~ plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
+                            bold: false
+                          }),
+                          new docx.TextRun({
+                            text: "\tEco Ops Report 2022",
+                            bold: true
+                          })
+                        ]
+                      })
+                    ]
+                  }
+                ]
+              });
+
+              docx.Packer.toBlob(doc).then((blob) => {
+                console.log(blob);
+                saveAs(blob, "ecoops_report_2022.docx");
+                console.log("Document 1 created successfully");
+              });
+            }
+		    
 		    
 		    
 		    
