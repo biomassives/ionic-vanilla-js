@@ -1489,7 +1489,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 		      
 		      
 		      <p>
-		      Welcome, Your profile, activity timeline, and privacy settings are managed here.
+		      Welcome, Settings, activity timeline, and privacy settings may be managed here.
 		      </p>
 		      <p>
 		      Default language and options settings
@@ -1516,7 +1516,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 			
 
 	<div class="container">
-
+		<form onsubmit="profile0()"> 
 		<h1 class="title" id="profile_title">Modifier mon profil</h1>
 
 		<div class="grid">
@@ -1657,12 +1657,12 @@ document.addEventListener("DOMContentLoaded", App.init)
 	
 	<div class="form-group">
 		<div class="button-container">
-			<button class="mobutton" id="prof_reg" style="background:#879af8;">Enregister les modifications</button>
+			<button class="mobutton" id="prof_reg" onClick="checkin1()" style="background:#879af8;">Enregister les modifications</button>
 		</div>
 	
         </div>
 
-		
+		</form>
 </div>
 				
 <style>
