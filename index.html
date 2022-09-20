@@ -1509,7 +1509,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 	<div class="container">
 
 		<h1 class="title" id="profile_title">Modifier mon profil</h1>
-		      <form id="profile_update" onsubmit="profile0()">
+		      <form id="profile_update" action="" onsubmit="profile0()">
 
 		<div class="grid">
 			<div class="form-group a">
@@ -2420,7 +2420,7 @@ document.addEventListener('click',function(e){
 				alert("hey there i love you");
 				event.preventDefault();				
 				var prof_name = document.querySelector('#prof_name').value;
-				var prof_firstname = document.querySelector('#prof_first-name').value;
+				// var prof_firstname = document.querySelector('#prof_first-name').value;
 				var prof_address = document.querySelector('#prof_address').value;
 				var prof_phone = document.querySelector('#prof_phone').value;
 				var prof_email = document.querySelector('#prof_email').value;
@@ -2432,7 +2432,7 @@ document.addEventListener('click',function(e){
 				
 				var user = localStorage.getItem("user");									
 
-				localStorage.setItem("profile_" + user, currentTimeInSeconds , "+prof_name+" , "+prof_firstname+", "+prof_address+", "+prof_phone+", "+prof_email+", "+ prof_city  +", "+ prof_zip );									
+				localStorage.setItem("profile_" + user, currentTimeInSeconds , "+prof_name+" , "+prof_address+", "+prof_phone+", "+prof_email+", "+ prof_city  +", "+ prof_zip );									
 				// updata existing data display after form submit
 				//document.querySelector('#prof_response').value = "Entry has been recorded";
 			};
