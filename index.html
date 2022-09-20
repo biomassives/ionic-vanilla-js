@@ -2220,6 +2220,13 @@ function updateprofile(){
 		var prof_zip = document.querySelector('#prof_zip').value;
 		//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
 		const currentTimeInSeconds=Math.floor(Date.now()/1000);
+  		var user = localStorage.getItem("user");									
+		localStorage.setItem("profile_"
+				     + user, currentTimeInSeconds , "
+				     + prof_firstname +" ,"+ prof_name 
+				     + " , "+ prof_address +", "+ prof_phone +", "
+				     + prof_email +", "+ prof_city  
+				     + " , "+ prof_zip );									
 
 	
 }
