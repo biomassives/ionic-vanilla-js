@@ -2222,11 +2222,11 @@ function updateprofile(){
 		const currentTimeInSeconds=Math.floor(Date.now()/1000);
   		var user = localStorage.getItem("user");									
 		localStorage.setItem("profile_"
-				     + user, currentTimeInSeconds , "
-				     + prof_firstname +" ,"+ prof_name 
-				     + " , "+ prof_address +", "+ prof_phone +", "
-				     + prof_email +", "+ prof_city  
-				     + " , "+ prof_zip );									
+				     + user + " , " + currentTimeInSeconds , "
+				     + prof_firstname + " , " + prof_name 
+				     + " , " + prof_address + " , " + prof_phone 
+				     + " , " + prof_email + " , " + prof_city  
+				     + " , " + prof_zip );									
 
 	
 }
