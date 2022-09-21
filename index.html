@@ -1354,26 +1354,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 	      
 	      
 	      
-	      
-	      <div style="display:none;" id="settings"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_carb"> 
-		      <span  id="prof_title">Settings</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_homee"></h1>
-		      
-		      
-		      <p>
-		      Welcome, Your profile, activity timeline, and privacy settings are managed here.
-		      </p>
-		      <p>
-		      Default language and options settings
-		      </p>
-		      <p>
-			<img src="/peerverified.svg" title="peer verified"> 		      
-		 	<img src="/carbon_credits.svg" title="carbon credits"> 
-			<img src="/vested_interest.svg" title="vested interest">
-		      </p>
-		      
-		      
-		      
-		      </div>		    
+	    
 	      
 	      	      	      		      
 	      	      	      
@@ -1507,11 +1488,11 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 		<div class="checkbox-group">
 			<input id="prof_is_farmer" type="checkbox">
-			<label for="prof_is_farmer">regenerative farming</label>
+			<label for="prof_is_regenerative_farming">regenerative farming</label>
 		</div>
 		 			
 		<div class="checkbox-group">
-			<input id="prof_is_footsoldier" type="checkbox">
+			<input id="prof_is_footsolier" type="checkbox">
 			<label for="prof_is_footsoldier">promoting a project</label>
 		</div>
 	
@@ -1520,6 +1501,14 @@ document.addEventListener("DOMContentLoaded", App.init)
 			<label for="prof_wish_ecoclub">eco club network</label>
 		</div>
   
+	</div>
+	<div class="checkboxes">	
+		
+		<div class="checkbox-group">
+			<input id="prof_is_wildlife_interface" type="checkbox">
+			<label for="prof_is_wildlife_interface">human-wildlife interface</label>
+		</div>
+		
 	</div>
 	
 	
@@ -1662,7 +1651,7 @@ function sheng(){
 
  document.getElementById("prof_name").innerHTML="Jina";	
  document.getElementById("prof_firstname").innerHTML="Jina la kwanza";	
- document.getElementById("prof_firstname").innerHTML="Barua pepe";	
+ document.getElementById("prof_email").innerHTML="Barua pepe";	
  document.getElementById("prof_phone").innerHTML="Simu";	
  document.getElementById("bio").innerHTML="Wasifu";	
  document.getElementById("prof_address").innerHTML="Nyongeza";	
@@ -2106,8 +2095,6 @@ function updateprofile(){
 	        event.preventDefault()
 		var prof_name = document.getElementById('prof_name').value;
 
-		alert("hey there i love you");	
-		alert(	prof_name );
 	
 		var prof_name = document.querySelector('#prof_name').value;
 		var prof_firstname = document.querySelector('#prof_firstname').value;
@@ -2117,6 +2104,8 @@ function updateprofile(){
 		var prof_city = document.querySelector('#prof_city').value;
 		var bio = document.querySelector('#bio').value;
 		var prof_zip = document.querySelector('#prof_zip').value;
+		var prof_regenerative_farming = document.querySelector('#prof_regenerative_farming').value;
+		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').value;
 		//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
 		const currentTimeInSeconds=Math.floor(Date.now()/1000);
   		var user = localStorage.getItem("user");									
@@ -2126,6 +2115,13 @@ function updateprofile(){
 				     + " , " + prof_address + " , " + prof_phone 
 				     + " , " + prof_email + " , " + prof_city  
 				     + " , " + prof_zip );									
+
+		alert("profile_"
+				     + user , currentTimeInSeconds + " , "
+				     + prof_firstname + " , " + prof_name 
+				     + " , " + prof_address + " , " + prof_phone 
+				     + " , " + prof_email + " , " + prof_city  
+				     + " , " + prof_zip );
 
 	
 }
