@@ -1,6 +1,63 @@
 .leaflet-control-locate a{cursor:pointer}.leaflet-control-locate a .leaflet-control-locate-location-arrow{display:inline-block;width:16px;height:16px;margin:7px;background-color:#000;-webkit-mask-image:url("/src/icons/location-arrow-solid.svg");mask-image:url("../icons/location-arrow-solid.svg");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}.leaflet-control-locate a .leaflet-control-locate-spinner{display:inline-block;width:16px;height:16px;margin:7px;background-color:#000;-webkit-mask-image:url("../icons/spinner-solid.svg");mask-image:url("../icons/spinner-solid.svg");-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;animation:leaflet-control-locate-spin 2s linear infinite}.leaflet-control-locate.active a .leaflet-control-locate-location-arrow{background-color:#2074b6}.leaflet-control-locate.following a .leaflet-control-locate-location-arrow{background-color:#fc8428}.leaflet-touch .leaflet-bar .leaflet-locate-text-active{width:100%;max-width:200px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;padding:0 10px}.leaflet-touch .leaflet-bar .leaflet-locate-text-active .leaflet-locate-icon{padding:0 5px 0 0}.leaflet-control-locate-location circle{animation:leaflet-control-locate-throb 4s ease infinite}@keyframes leaflet-control-locate-throb{0%{stroke-width:1}50%{stroke-width:3;transform:scale(0.8, 0.8)}100%{stroke-width:1}}@keyframes leaflet-control-locate-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 /* # sourceMappingURL=L.Control.Locate.min.css.map */
 
+  
+.ibuttons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.square {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 2.2em;
+  width: 2.2em;
+  height: 2.2em;
+  transition: all 0.65s cubic-bezier(0.51, 0.04, 0.63, 1.4);
+  cursor: pointer;
+}
+.square i {
+  transition: all 0.65s cubic-bezier(0.68, -0.12, 0.78, 1.6);
+}
+.square:hover {
+  transform: rotate(-90deg);
+  border-radius: 100%;
+  box-shadow: 0 0 15px 0px #333;
+}
+.square:hover i {
+  transform: rotate(90deg);
+}
+.square.blue {
+  background: #495b92;
+}
+.square.blue:hover {
+  background: #3f5cb5;
+}
+.square.red {
+  background: #924949;
+}
+.square.red:hover {
+  background: #b53f3f;
+}
+.square.green {
+  background: #499249;
+}
+.square.green:hover {
+  background: #3fb53f;
+}
+h1 { 
+  font-size:40px!important;
+}		
+#avatar { 
+  width: 48px;
+  height: 48px;
+  background: url(/icons/profile.svg);	
+}
 * {
   box-sizing: border-box;
 }
