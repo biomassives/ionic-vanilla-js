@@ -1301,13 +1301,13 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 	      <div class="grid">
 			<div class="form-group a">
-				<label for="prof_name">Nom</label>
-				<input id="prof_name" type="text">
+				<label id="sett_name_label" for="sett_name">Nom</label>
+				<input id="sett_name" type="text">
 			</div>
 	
 			<div class="form-group b">
-				<label for="prof_firstname">Prénom</label>
-				<input id="prof_firstname" type="text">
+				<label id="sett_firstname_label" for="sett_firstname">Prénom</label>
+				<input id="sett_firstname" type="text">
 			</div>	
 	      </div>
 			   </form>  
@@ -1326,42 +1326,42 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 		<div class="grid">
 			<div class="form-group a">
-				<label for="prof_name">Nom</label>
+				<label id="prof_name_label" for="prof_name">Nom</label>
 				<input id="prof_name" type="text">
 			</div>
 	
 			<div class="form-group b">
-				<label for="prof_firstname">Prénom</label>
+				<label id="prof_firstname_label" for="prof_firstname">Prénom</label>
 				<input id="prof_firstname" type="text">
 			</div>
 
 		<div class="form-group email-group">
-			<label for="prof_email">Email</label>
+			<label id="prof_email_label" for="prof_email">Email</label>
 			<input id="prof_email" type="text">
 		</div>
 
 		<div class="form-group phone-group">
-			<label for="prof_phone">Téléphone (mobile)</label>
+			<label id="prof_phone_label" for="prof_phone">Téléphone (mobile)</label>
 			<input id="prof_phone" type="text">
 		</div>
 
 		<div class="textarea-group">
-			<label for="bio">Bio</label>
+			<label id="prof_bio_label" for="bio">Bio</label>
 			<textarea id="bio"></textarea>
 		</div>
 
 		<div class="form-group">
-			<label for="prof_address">Adresse</label>
+			<label id="prof_address_label" for="prof_address">Adresse</label>
 			<input id="prof_address" type="text">
 		</div>
 
 		<div class="form-group">
-			<label for="prof_city">Ville</label>
+			<label id="prof_city_label" for="prof_city">Ville</label>
 			<input id="prof_city" type="text">
 		</div>
 
 		<div class="form-group">
-			<label for="prof_zip">Code postal</label>
+			<label id="prof_zip_label" for="prof_zip">Code postal</label>
 			<input id="prof_zip" type="text">
 		</div>
 	</div>
@@ -1369,13 +1369,14 @@ document.addEventListener("DOMContentLoaded", App.init)
 	<div class="checkboxes" style="display:none;">
 
 		<div class="checkbox-group">
+			<label id="prof_newsletter_label" for="newsletter">Je souhaite recevoir la newsletter</label>
 			<input id="newsletter" type="checkbox">
-			<label for="newsletter">Je souhaite recevoir la newsletter</label>
+
 		</div>
 
 		<div class="checkbox-group">
+			<label id="prof_partnernews_label" for="newsletter-partners">Je souhaite recevoir la newsletter des partenaires</label>
 			<input id="newsletter-partners" type="checkbox">
-			<label for="newsletter-partners">Je souhaite recevoir la newsletter des partenaires</label>
 		</div>
 
 	</div>
@@ -1390,11 +1391,11 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 		<div class="checkbox-group">
 			<input id="prof_shop_for_carboncredit" type="checkbox">
-			<label for="prof_shop_for_carboncredit">shopping for carbon credits</label>
+			<label id="prof_shop_for_carboncredit_label" for="prof_shop_for_carboncredit">shopping for carbon credits</label>
 		</div>
 		<div class="checkbox-group">
 			<input id="prof_sell_carboncredit" type="checkbox">
-			<label for="prof_sell_carboncredit">learning to sell carbon credits / biodiversity credits</label>
+			<label id="prof_sell_carboncredit_label" for="prof_sell_carboncredit">learning to sell carbon credits / biodiversity credits</label>
 		</div>		
 		
 	</div>	
@@ -1402,19 +1403,19 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 		<div class="checkbox-group">
 			<input id="prof_is_artist" type="checkbox">
-			<label for="prof_is_artist">an artist</label>
+			<label id="prof_is_artist_label" for="prof_is_artist">an artist</label>
 		</div>
 		<div class="checkbox-group">
 			<input id="prof_is_student" type="checkbox">
-			<label for="prof_is_student">enrolled student</label>
+			<label id="prof_is_student_label" for="prof_is_student">enrolled student</label>
 		</div>
 		<div class="checkbox-group">
 			<input id="prof_is_businessperson" type="checkbox">
-			<label for="prof_is_businessperson">a business</label>
+			<label id="prof_is_businessperson_label" for="prof_is_businessperson">a business</label>
 		</div>
 		<div class="checkbox-group">
 			<input id="prof_is_orgrep" type="checkbox">
-			<label for="prof_is_orgrep">org representative</label>
+			<label id="prof_is_orgrep_label" for="prof_is_orgrep">org representative</label>
 		</div>
 		
 	</div>
@@ -1427,16 +1428,16 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 		<div class="checkbox-group">
 			<input id="prof_may_be_a_teacher" type="checkbox">
-			<label for="prof_may_be_a_teacher">teaching or future teacher</label>
+			<label id="prof_may_be_a_teacher_label" for="prof_may_be_a_teacher">teaching or future teacher</label>
 		</div>		
 		<div class="checkbox-group">
 			<input id="prof_int_mentor_prog" type="checkbox">
-			<label for="prof_int_mentor_prog">mentor program</label>
+			<label id="prof_int_mentor_prog_label" for="prof_int_mentor_prog">mentor program</label>
 		</div>		
 
 		<div class="checkbox-group">
 			<input id="prof_aspiring_broker" type="checkbox">
-			<label for="prof_aspiring_broker">materials brokering</label>
+			<label id="prof_aspiring_broker_label" for="prof_aspiring_broker">materials brokering</label>
 		</div>
 	</div>
 	<div class="checkboxes">	
@@ -1444,17 +1445,17 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 		<div class="checkbox-group">
 			<input id="prof_regenerative_farming" type="checkbox">
-			<label for="prof_regenerative_farming">regenerative farming</label>
+			<label id="prof_regerative_farming_label" for="prof_regenerative_farming">regenerative farming</label>
 		</div>
 		 			
 		<div class="checkbox-group">
 			<input id="prof_is_footsoldier" type="checkbox">
-			<label for="prof_is_footsoldier">promoting a project</label>
+			<label id="prof_is_footsoldier_label" for="prof_is_footsoldier">promoting a project</label>
 		</div>
 	
 		<div class="checkbox-group">
 			<input id="prof_wish_ecoclub" type="checkbox">
-			<label for="prof_wish_ecoclub">eco club network</label>
+			<label id="prof_wish_ecoclub_label" for="prof_wish_ecoclub">eco club network</label>
 		</div>
   
 	</div>
@@ -1462,7 +1463,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 		<div class="checkbox-group">
 			<input id="prof_wildlife_interface" type="checkbox">
-			<label for="prof_wildlife_interface">human-wildlife interface</label>
+			<label id="prof_wildlife_interface_label" for="prof_wildlife_interface">human-wildlife interface</label>
 		</div>
 		
 	</div>
@@ -1470,7 +1471,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 	
 	<div class="form-group">
 			
-  			  <input type="submit" class="mobutton" name="submit" value="Enregister les modifications" style="background:#879af8;" onsubmit="updateprofile()">
+  			  <input id="prof_submit_label" type="submit" class="mobutton" name="submit" value="Enregister les modifications" style="background:#879af8;" onsubmit="updateprofile()">
 			  
 			  
 		
@@ -1605,27 +1606,28 @@ function sheng(){
  document.getElementById("menu_header").style.background="url(/ecoops_transp_header.png) #efefef";	
  document.getElementById("0pakuayako").innerHTML=document.getElementById("pakuayako_title").innerHTML="Pakua data na maripoti yako";
 
- document.getElementById("prof_name").innerHTML="Jina";	
- document.getElementById("prof_firstname").innerHTML="Jina la kwanza";	
- document.getElementById("prof_email").innerHTML="Barua pepe";	
- document.getElementById("prof_phone").innerHTML="Simu";	
- document.getElementById("bio").innerHTML="Wasifu";	
- document.getElementById("prof_address").innerHTML="Nyongeza";	
- document.getElementById("prof_city").innerHTML="Mji";	
- document.getElementById("prof_zip").innerHTML="Msimbo";	
- document.getElementById("prof_shop_for_carboncredit").innerHTML="Nia ya kununua Mikopo ya Kaboni";
- document.getElementById("prof_sell_carboncredit").innerHTML="Kujifunza kuuza mikopo ya kaboni / mikopo ya viumbe hai";
- document.getElementById("prof_is_artist").innerHTML="Mimi ni msanii";
- document.getElementById("prof_is_student").innerHTML="mwanafunzi aliyeandikishwa";	
- document.getElementById("prof_is_businessperson").innerHTML="Mfanyabiashara";	
- document.getElementById("prof_may_be_a_teacher").innerHTML="Mwalimu";	
- document.getElementById("prof_int_mentor_prog").innerHTML="Programu ya mshauri";	
- document.getElementById("prof_aspiring_broker").innerHTML="Udalali wa vifaa";	
- document.getElementById("prof_regenerative_farming").innerHTML="Mkulima";	
- document.getElementById("prof_is_footsoldier").innerHTML="Promota";
- document.getElementById("prof_wish_ecoclub").innerHTML="klabu ya eco";	
- document.getElementById("prof_i_am").innerHTML="Mimi ni";	
- document.getElementById("prof_interests").innerHTML="Maslahi";	
+ document.getElementById("prof_name_label").innerHTML="Jina";	
+ document.getElementById("prof_firstname_label").innerHTML="Jina la kwanza";	
+ document.getElementById("prof_email_label").innerHTML="Barua pepe";	
+ document.getElementById("prof_phone_label").innerHTML="Simu";	
+ document.getElementById("prof_bio_label").innerHTML="Wasifu";	
+ document.getElementById("prof_address_label").innerHTML="Nyongeza";	
+ document.getElementById("prof_city_label").innerHTML="Mji";	
+ document.getElementById("prof_zip_label").innerHTML="Msimbo";	
+ document.getElementById("prof_shop_for_carboncredit_label").innerHTML="Nia ya kununua Mikopo ya Kaboni";
+ document.getElementById("prof_sell_carboncredit_label").innerHTML="Kujifunza kuuza mikopo ya kaboni / mikopo ya viumbe hai";
+ document.getElementById("prof_is_artist_label").innerHTML="Mimi ni msanii";
+ document.getElementById("prof_is_student_label").innerHTML="mwanafunzi aliyeandikishwa";	
+ document.getElementById("prof_is_businessperson_label").innerHTML="Mfanyabiashara";	
+ document.getElementById("prof_may_be_a_teacher_label").innerHTML="Mwalimu";	
+ document.getElementById("prof_int_mentor_prog_label").innerHTML="Programu ya mshauri";	
+ document.getElementById("prof_aspiring_broker_label").innerHTML="Udalali wa vifaa";	
+ document.getElementById("prof_regenerative_farming_label").innerHTML="Mkulima";	
+ document.getElementById("prof_is_footsoldier_label").innerHTML="Promota";
+ document.getElementById("prof_wish_ecoclub_label").innerHTML="klabu ya eco";	
+ document.getElementById("prof_i_am_label").innerHTML="Mimi ni";	
+ document.getElementById("prof_interests_label").innerHTML="Maslahi";	
+ document.getElementById("prof_submit_label").innerHTML="hifadhi wasifu";	
 
 	
 }
@@ -1654,6 +1656,28 @@ function eng(){
  document.getElementById("menu_header").style.background="url(/ecoops_transp_header.png) #fdb120";
  document.getElementById("0pakuayako").innerHTML=document.getElementById("pakuayako_title").innerHTML="Your data & reports";
 
+ document.getElementById("prof_name_label").innerHTML="Name";	
+ document.getElementById("prof_firstname_label").innerHTML="First Name";	
+ document.getElementById("prof_email_label").innerHTML="Email";	
+ document.getElementById("prof_phone_label").innerHTML="Phone";	
+ document.getElementById("prof_bio_label").innerHTML="Bio";	
+ document.getElementById("prof_address_label").innerHTML="Address";	
+ document.getElementById("prof_city_label").innerHTML="City";	
+ document.getElementById("prof_zip_label").innerHTML="Postal Code";	
+ document.getElementById("prof_shop_for_carboncredit_label").innerHTML="Shopping for Carbon Credits";
+ document.getElementById("prof_sell_carboncredit_label").innerHTML="Learning to sell carbon credits / biodiversity credits";
+ document.getElementById("prof_is_artist_label").innerHTML="an artist";
+ document.getElementById("prof_is_student_label").innerHTML="a student";	
+ document.getElementById("prof_is_businessperson_label").innerHTML="Representing a business";	
+ document.getElementById("prof_may_be_a_teacher_label").innerHTML="teaching or future teacher";	
+ document.getElementById("prof_int_mentor_prog_label").innerHTML="mentor program";	
+ document.getElementById("prof_aspiring_broker_label").innerHTML="materials brokering";	
+ document.getElementById("prof_regenerative_farming_label").innerHTML="regenerative farming";	
+ document.getElementById("prof_is_footsoldier_label").innerHTML="promoting a project";
+ document.getElementById("prof_wish_ecoclub_label").innerHTML="eco club network";	
+ document.getElementById("prof_i_am_label").innerHTML="I am";	
+ document.getElementById("prof_interests_label").innerHTML="Interests";	
+ document.getElementById("prof_submit_label").innerHTML="Save these changes";	
 	
 }
 function spanish(){
