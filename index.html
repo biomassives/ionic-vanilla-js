@@ -1301,7 +1301,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 	  
  
 
-		      <form id="profile_update" onsubmit="updateprofile()">
+		      <form id="settings_update" onsubmit="updatesettings()">
 
 	      <div class="grid">
 			<div class="form-group a">
@@ -2428,9 +2428,21 @@ function updateprofile(){
 		var prof_phone = document.querySelector('#prof_phone').value;
 		var prof_email = document.querySelector('#prof_email').value;
 		var prof_city = document.querySelector('#prof_city').value;
-		var bio = document.querySelector('#bio').value;
+		var prof_bio = document.querySelector('#prof_bio').value;
 		var prof_zip = document.querySelector('#prof_zip').value;
+		var prof_shop_for_carboncredit = document.querySelector('#prof_shop_for_carboncredit').value;
+		var prof_sell_carboncredit = document.querySelector('#prof_sell_carboncredit').value;
+		var prof_is_artist = document.querySelector('#prof_is_artist').value;
+		var prof_is_student = document.querySelector('#prof_is_student').value;
+		var prof_is_businessperson = document.querySelector('#prof_is_businessperson').value;
+		var prof_may_be_a_teacher = document.querySelector('#prof_may_be_a_teacher').value;
+		var prof_int_mentor_prog = document.querySelector('#prof_int_mentor_prog').value;
+		var prof_aspiring_broker = document.querySelector('#prof_aspiring_broker').value;
+		var prof_is_businessperson = document.querySelector('#prof_is_student').value;
 		var prof_regenerative_farming = document.querySelector('#prof_regenerative_farming').value;
+		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').value;
+		var prof_wish_ecoclub = document.querySelector('#prof_wish_ecoclubr').value;
+		var prof_is_footsoldier = document.querySelector('#prof_is_footsoldier').value;
 		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').value;
 		//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
 		const currentTimeInSeconds=Math.floor(Date.now()/1000);
@@ -2440,19 +2452,33 @@ function updateprofile(){
 				     + prof_firstname + " , " + prof_name 
 				     + " , " + prof_address + " , " + prof_phone 
 				     + " , " + prof_email + " , " + prof_city  
-				     + " , " + prof_zip );									
+				     + " , " + prof_zip + " , " + prof_shop_for_carboncredit								
+			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist
+				     + " , " + prof_is_student + " , " + prof_is_businessperson  
+				     + " , " + prof_may_be_a_teacher + " , " + prof_int_mentor_prog   
+				     + " , " + prof_aspiring_broker + " , " + prof_is_businessperson  
+				     + " , " + prof_regenerative_farming + " , " + prof_wildlife_interface  
+				     + " , " + prof_wish_ecoclub + " , " + prof_is_footsoldier  
+				     + " , " + prof_wildlife_interface + " , " + prof_city  										
+			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
 
-		alert("profile_"
+		alert( "profile_"
 				     + user , currentTimeInSeconds + " , "
 				     + prof_firstname + " , " + prof_name 
 				     + " , " + prof_address + " , " + prof_phone 
 				     + " , " + prof_email + " , " + prof_city  
-				     + " , " + prof_zip );
-
+				     + " , " + prof_zip + " , " + prof_shop_for_carboncredit								
+			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist
+				     + " , " + prof_is_student + " , " + prof_is_businessperson  
+				     + " , " + prof_may_be_a_teacher + " , " + prof_int_mentor_prog   
+				     + " , " + prof_aspiring_broker + " , " + prof_is_businessperson  
+				     + " , " + prof_regenerative_farming + " , " + prof_wildlife_interface  
+				     + " , " + prof_wish_ecoclub + " , " + prof_is_footsoldier  
+				     + " , " + prof_wildlife_interface + " , " + prof_city  										
+			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
+}	  	
+			
 	
-}
-	
- 
 //  eco ops app - leafet map item submission	
 function furbur() { 
 		var density_element = document.getElementById('density');
