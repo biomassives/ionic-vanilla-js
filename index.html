@@ -857,6 +857,44 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 	      <div id=footsoldiers style="display:none;"><h1 > <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_mabr"> 
 		      <span id="mafo_title">footsoldiers</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_boilerpusha"></h1>
 
+
+		<form>
+		<p>
+			      materials inquiry: <textarea id="footsoldiers_inquiry" name="footsoldiers_inquiry"></textarea>
+		</p>
+				<p>
+			      source of material: <textarea id="footsoldiers_source" name="footsoldiers_source"></textarea>
+		</p>
+				<p>
+			      purchase price/ free: <input type="text" id="footsoldiers_source_price" name="chipping_bathc">
+		</p>
+		<p>
+			      desciption name of materials: <input type="text" id="footsoldiers_source_material" name="chipping_bathc">
+		</p>
+		<p>
+			      anticipated upcycling use case(s): <textarea id="footsoldiers_upcycling" name="footsoldiers_upcycling"></textarea>
+		</p>
+		
+			      <input type="submit" value="Generate Document" name="submit">
+		
+		
+	</form>
+		    <script>
+		      function mySave() {
+			var footsoldiers_inquiry = document.getElementById("footsoldiers_inquiry").value;
+			var footsoldiers_source = document.getElementById("footsoldiers_source").value;
+			var footsoldiers_source_material = document.getElementById("footsoldiers_source_material").value;
+			var footsoldiers_upcycling = document.getElementById("footsoldiers_upcycling").value;
+			var footsoldiers_upcycling = document.getElementById("footsoldiers_upcycling").value;
+			var myContent = document.getElementById("footsoldiers_inquiry").value;
+			localStorage.setItem("myContent", myContent);
+		      }
+		      function myLoad() {
+			var myContent = localStorage.getItem("myContent");
+			document.getElementById("myTextarea").value = myContent;
+		      }
+		    </script>
+		      
 		      
 		      <div id="container">
    <div class="holder">
