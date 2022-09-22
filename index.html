@@ -2416,8 +2416,8 @@ function indomalay(){
 	
 // load profile data into form
 var user = localStorage.getItem("user");									
-var profiledata = datalocalStorage.setItem("profile_" + user);	
-const profArr = profildata.split(',');
+var pd = localStorage.getItem("profile_" + user);	
+const profArr = pd.split(',');
 	
  document.getElementById("prof_name").innerHTML=profArr[1];	
  document.getElementById("prof_firstname").innerHTML=profArr[2];	
