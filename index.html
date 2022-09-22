@@ -2414,7 +2414,46 @@ function indomalay(){
 	
 }	
 	
-
+// load profile data into form
+var user = localStorage.getItem("user");									
+var profiledata = datalocalStorage.setItem("profile_" + user);	
+const profArr = profildata.split(',');
+	
+ document.getElementById("prof_name").innerHTML=profArr[1];	
+ document.getElementById("prof_firstname").innerHTML=profArr[2];	
+ document.getElementById("prof_email").innerHTML=profArr[3];	
+ document.getElementById("prof_phone").innerHTML=profArr[4];	
+ document.getElementById("prof_bio").innerHTML=profArr[5];	
+ document.getElementById("prof_address").innerHTML=profArr[6];	
+ document.getElementById("prof_city").innerHTML=profArr[7];	
+ document.getElementById("prof_zip").innerHTML=profArr[8];	
+ document.getElementById("prof_shop_for_carboncredit").innerHTML=profArr[9];
+ document.getElementById("prof_sell_carboncredit").innerHTML=profArr[10];
+ document.getElementById("prof_is_artist").innerHTML=profArr[11];
+ document.getElementById("prof_is_student").innerHTML=profArr[12];	
+ document.getElementById("prof_is_businessperson").innerHTML=profArr[13];	
+ document.getElementById("prof_may_be_a_teacher").innerHTML=profArr[14];	
+ document.getElementById("prof_int_mentor_prog").innerHTML=profArr[15];	
+ document.getElementById("prof_aspiring_broker").innerHTML=profArr[16];
+ document.getElementById("prof_regenerative_farming").innerHTML=profArr[17];	
+ document.getElementById("prof_is_footsoldier").innerHTML=profArr[18];
+ document.getElementById("prof_wish_ecoclub").innerHTML=profArr[19];	
+ document.getElementById("prof_wildlife_interface").innerHTML=profArr[20];	
+	
+// currentTimeInSeconds + " , "
+	
+				     + prof_firstname + " , " + prof_name 
+				     + " , " + prof_address + " , " + prof_phone 
+				     + " , " + prof_email + " , " + prof_city  
+				     + " , " + prof_zip + " , " + prof_shop_for_carboncredit								
+			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist
+				     + " , " + prof_is_student + " , " + prof_is_businessperson  
+				     + " , " + prof_may_be_a_teacher + " , " + prof_int_mentor_prog   
+				     + " , " + prof_aspiring_broker + " , " + prof_is_businessperson  
+				     + " , " + prof_regenerative_farming + " , " + prof_wildlife_interface  
+				     + " , " + prof_wish_ecoclub + " , " + prof_is_footsoldier  
+				     + " , " + prof_wildlife_interface + " , " + prof_city  										
+			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
 	
 
 function updateprofile(){	  
@@ -2462,20 +2501,6 @@ function updateprofile(){
 				     + " , " + prof_wildlife_interface + " , " + prof_city  										
 			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
 
-		alert( "profile_"
-				     + user , currentTimeInSeconds + " , "
-				     + prof_firstname + " , " + prof_name 
-				     + " , " + prof_address + " , " + prof_phone 
-				     + " , " + prof_email + " , " + prof_city  
-				     + " , " + prof_zip + " , " + prof_shop_for_carboncredit								
-			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist
-				     + " , " + prof_is_student + " , " + prof_is_businessperson  
-				     + " , " + prof_may_be_a_teacher + " , " + prof_int_mentor_prog   
-				     + " , " + prof_aspiring_broker + " , " + prof_is_businessperson  
-				     + " , " + prof_regenerative_farming + " , " + prof_wildlife_interface  
-				     + " , " + prof_wish_ecoclub + " , " + prof_is_footsoldier  
-				     + " , " + prof_wildlife_interface + " , " + prof_city  										
-			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
 }	  	
 			
 	
