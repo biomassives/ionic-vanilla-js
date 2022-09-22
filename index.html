@@ -2445,9 +2445,6 @@ const profArr = pd.split(',');
 
 function updateprofile(){	  
 	        event.preventDefault()
-		var prof_name = document.getElementById('prof_name').value;
-
-	
 		var prof_name = document.querySelector('#prof_name').value;
 		var prof_firstname = document.querySelector('#prof_firstname').value;
 		var prof_address = document.querySelector('#prof_address').value;
@@ -2488,6 +2485,15 @@ function updateprofile(){
 				     + " , " + prof_wildlife_interface + " , " + prof_city  										
 			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
 
+				vt.error("Profile Updated", {
+				    title: "Thanks",
+				    position: "top-left",
+				    callback: function () {
+					vt.success()
+				    }
+				})	
+	
+	
 }	  	
 			
 	
