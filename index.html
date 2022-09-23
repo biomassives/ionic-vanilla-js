@@ -400,6 +400,11 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                           })
                         ]
                       }),
+                     new docx.Paragraph({
+                        children: [ 
+ 			  new docx.TextRun("")
+                        ]
+                      }),			    
 		      new docx.Paragraph({
                         children: [
                           new docx.TextRun("Eco Ops Project Participant Report\n\n\r\r Hello new line?"),
