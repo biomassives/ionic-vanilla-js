@@ -280,10 +280,21 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 	      </div>	      
 	      <div id="pakuayako" style="display:none;">
 		      
-		      <h1 id="pakuayako_title">Your reports</h1> 
 
 		      <p id="pakuayako_info" style="display:none;"> 
-			<table><tr><Td>
+
+		      </p>	
+	      
+	            <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
+		    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+
+
+                     <h1 id="pakuayako_title">Your reports</h1>
+
+                     <button type="button" onclick="generatedoc1()">test report 1</button>
+                     <button type="button" onclick="generatedoc2()">test report 2</button>
+		      
+		    	<table><tr><Td>
 			      <ul>
 				<li>Timesheets & hours worked/volunteered</li>
 				<li>In-kind contributions</li>
@@ -298,23 +309,9 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 				<li>Certifications</li>
 	      		      </ul>
 			</td></tr></table>
-		      </p>	
-	      
-	            <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
-		    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 
-
-                     <h1>DOCX Word document</h1>
-
-                     <button type="button" onclick="generatedoc1()">Click to generate your report</button>
-                     <button type="button" onclick="generatedoc2()">Report</button>
-
-
-
-            <script>  
-		  
-		    
-		    
+            <script>  		  
+		    		    
 	function generatedoc2() {
 	      var referrer = localStorage.getItem("user");
 		try {
@@ -334,7 +331,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		    },
 		    footers: {
 			default: new Footer({
-			    children: [new Paragraph("Eco Ops App supports transparent community level project verification.")],
+			    children: [new Paragraph("Eco Ops App supports\r transparent community level project verification.")],
 			}),
 		    },
                     properties: {},
@@ -388,7 +385,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                     children: [
                       new docx.Paragraph({
                         children: [
-                          new docx.TextRun("Eco Ops Project Participant Report"),
+                          new docx.TextRun("Eco Ops Project Participant Report\n\n\r\r Hello new line?"),
                           new docx.TextRun({
                             text: referrer,
                             bold: true
