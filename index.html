@@ -765,7 +765,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 					 }, false;
 					 
 					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
-					 const witnessArr = witnessIndex.split(',');
+					 witnessArr = witnessIndex.split(',');
 					 witnessArr.forEach(element => {
 						    const splitArr = element.split('_');
          					    select = document.getElementById('ldwitness');
@@ -1100,7 +1100,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 					 }, false;
 					 
 					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
-					 const witnessArr = witnessIndex.split(',');
+					 witnessArr = witnessIndex.split(',');
 					 witnessArr.forEach(element => {
 						    const splitArr = element.split('_');
          					    select = document.getElementById('maintwitness');
