@@ -38,20 +38,11 @@
   <!--  https://cdnjs.cloudflare.com/ajax/libs/Turf.js/0.0.124/turf.min.js   -->
   <!---	<script src="src/components/MapPolylineIntersections.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/src/L.Control.Locate.js"></script>
-  
   <script src="https://unpkg.com/@supabase/supabase-js"></script>	
   <link rel="stylesheet" href="https://ecoops.vercel.app/css/style.css" />
-
-
 </head>
 <body>
-	
-	
-	
-	
-	
-	
-	
+		
   <ion-app>
     <ion-menu content-id="main-content">
       <ion-header>
@@ -63,15 +54,12 @@
       <ion-content>
         <ion-list>
          <ion-list-header id="menu_header" style="background:url(/icons/header.png);"><div id="0greeting" style="width:100%;height:100%;"><span id="switch_to_homee">👌🏅🕯</span></div></ion-list-header>
-
-
-
-		
+	
 		<button onclick="amharic()">ምናሌ</button>
 		<button onclick="arabic()">عربي</button>
 		<button onclick="bengali()">B</button>
 		<button onclick="chinese()">中文</button>
-		<button onclick="eng()">E</button>
+		<button onclick="eng()">En</button>
 		<button onclick="hawaiian()">Ōlelo</button>
 		<button onclick="french()">F</button>
 		<button onclick="russian()">R</button>
@@ -619,6 +607,32 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 				      
 			      <b>Witness: <a href="/js/">(+)</a></b>
 			      <br>
+			      <select id="ldcompostablewitness">
+				 <script>	
+ 					 Element.prototype.appendAfter = function(element) {
+					   element.parentNode.insertBefore(this, element.nextSibling);
+					 }, false;
+					 
+					 function onlyUnique(value, index, self) {
+						  return self.indexOf(value) === index;
+						}
+											 					 
+					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
+					 const witnessArr = witnessIndex.split(',');
+					 witnessArr = witnessArr.filter(onlyUnique);
+					 
+					 witnessArr.forEach(element => {
+						    const splitArr = element.split('_');
+         					    select = document.getElementById('ldcompostablewitness');
+						    var opt = document.createElement('option');
+						    opt.value = splitArr[1];
+						    opt.innerHTML = splitArr[1];
+						    select.appendChild(opt);
+					 });
+					 					 					 					 
+			         </script>
+			      </select>
+			      <br>
 				      	<input type=text name="ld-witness" id="ldcompostablewitness">
 			      <br>	      
 			      
@@ -1078,7 +1092,27 @@ document.addEventListener("DOMContentLoaded", App.init)
 			      <input type=text name="maint-provider" id="maintprovider">  <div id="overlay"><b>±</b></div> 
   			      <br>
 				      
-			  <b>Witness:</b>
+			  <b>Witness: <a href="/js/">(+)</a></b>
+			      <br>
+			      <select id="maintwitness">
+				 <script>	
+ 					 Element.prototype.appendAfter = function(element) {
+					   element.parentNode.insertBefore(this, element.nextSibling);
+					 }, false;
+					 
+					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
+					 const witnessArr = witnessIndex.split(',');
+					 witnessArr.forEach(element => {
+						    const splitArr = element.split('_');
+         					    select = document.getElementById('maintwitness');
+						    var opt = document.createElement('option');
+						    opt.value = splitArr[1];
+						    opt.innerHTML = splitArr[1];
+						    select.appendChild(opt);
+					 });
+					 					 					 					 
+			         </script>
+			      </select>    
 			      <br>
 				      	<input type=text name="maint-witness" id="maintwitness">
 			      <br>	      
