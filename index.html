@@ -619,7 +619,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 						}
 											 					 
 					 var witnessIndex = localStorage.getItem("ecoopswitnessIndex");
-					 const witnessArr = witnessIndex.split(',');
+					 var witnessArr = witnessIndex.split(',');
 					 witnessArr = witnessArr.filter(onlyUnique);
 					 
 					 witnessArr.forEach(element => {
