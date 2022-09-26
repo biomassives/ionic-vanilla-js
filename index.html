@@ -2615,27 +2615,27 @@ var user = localStorage.getItem("user");
 var pd = localStorage.getItem("profile_" + user);	
 const profArr = pd.split(',');
 	
- document.getElementById("prof_name").value=profArr[1];	
- document.getElementById("prof_firstname").value=profArr[2];	
- document.getElementById("prof_email").value=profArr[3];	
- document.getElementById("prof_phone").value=profArr[4];	
- document.getElementById("prof_bio").value=profArr[5];	
- document.getElementById("prof_address").value=profArr[6];	
- document.getElementById("prof_city").value=profArr[7];	
- document.getElementById("prof_zip").value=profArr[8];	
- document.getElementById("prof_shop_for_carboncredit").checked=profArr[9];
- document.getElementById("prof_sell_carboncredit").checked=profArr[10];
- document.getElementById("prof_is_artist").checked=profArr[11];
- document.getElementById("prof_is_student").checked=profArr[12];	
- document.getElementById("prof_is_businessperson").checked=profArr[13];	
- document.getElementById("prof_may_be_a_teacher").checked=profArr[14];	
- document.getElementById("prof_int_mentor_prog").checked=profArr[15];	
- document.getElementById("prof_aspiring_broker").checked=profArr[16];
- document.getElementById("prof_regenerative_farming").checked=profArr[17];	
- document.getElementById("prof_is_footsoldier").checked=profArr[18];
- document.getElementById("prof_wish_ecoclub").checked=profArr[19];	
- document.getElementById("prof_wildlife_interface").checked=profArr[20];	
- document.getElementById("prof_is_orgrep").checked=profArr[21];	
+ document.getElementById("prof_name").value=profArr[2];	
+ document.getElementById("prof_firstname").value=profArr[3];	
+ document.getElementById("prof_email").value=profArr[4];	
+ document.getElementById("prof_phone").value=profArr[5];	
+ document.getElementById("prof_bio").value=profArr[6];	
+ document.getElementById("prof_address").value=profArr[7];	
+ document.getElementById("prof_city").value=profArr[8];	
+ document.getElementById("prof_zip").value=profArr[9];	
+ document.getElementById("prof_shop_for_carboncredit").checked=profArr[10];
+ document.getElementById("prof_sell_carboncredit").checked=profArr[11];
+ document.getElementById("prof_is_artist").checked=profArr[12];
+ document.getElementById("prof_is_student").checked=profArr[13];	
+ document.getElementById("prof_is_businessperson").checked=profArr[14];	
+ document.getElementById("prof_may_be_a_teacher").checked=profArr[15];	
+ document.getElementById("prof_int_mentor_prog").checked=profArr[16];	
+ document.getElementById("prof_aspiring_broker").checked=profArr[17];
+ document.getElementById("prof_regenerative_farming").checked=profArr[18];	
+ document.getElementById("prof_is_footsoldier").checked=profArr[19];
+ document.getElementById("prof_wish_ecoclub").checked=profArr[20];	
+ document.getElementById("prof_wildlife_interface").checked=profArr[21];	
+ document.getElementById("prof_is_orgrep").checked=profArr[22];	
 	
  
 	
@@ -2670,18 +2670,17 @@ function updateprofile(){
   		var user = localStorage.getItem("user");									
 		localStorage.setItem("profile_"
 				     + user , currentTimeInSeconds + " , "
-				     + prof_firstname + " , " + prof_name 
-				     + " , " + prof_address + " , " + prof_phone 
-				     + " , " + prof_email + " , " + prof_city  
+				     + prof_name + " , " + prof_firstname 
+				     + " , " + prof_email + " , " + prof_phone + " , " + prof_bio 
+				     + " , " + prof_address + " , " + prof_city  
 				     + " , " + prof_zip + " , " + prof_shop_for_carboncredit								
 			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist
 				     + " , " + prof_is_student + " , " + prof_is_businessperson  
 				     + " , " + prof_may_be_a_teacher + " , " + prof_int_mentor_prog   
-				     + " , " + prof_aspiring_broker + " , " + prof_is_businessperson  
-				     + " , " + prof_regenerative_farming + " , " + prof_wildlife_interface  
-				     + " , " + prof_wish_ecoclub + " , " + prof_is_footsoldier  
-				     + " , " + prof_wildlife_interface + " , " + prof_city  										
-			             + " , " + prof_sell_carboncredit + " , " + prof_is_artist );
+				     + " , " + prof_aspiring_broker
+				     + " , " + prof_regenerative_farming + " , " +  prof_is_footsoldier  
+				     + " , " + prof_wish_ecoclub + " , " + prof_wildlife_interface
+				     + " , " + prof_is_orgrep );
 
 				vt.error("Profile Updated", {
 				    title: "Thanks",
