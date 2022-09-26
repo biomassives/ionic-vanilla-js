@@ -2638,6 +2638,12 @@ const profArr = pd.split(',');
  document.getElementById("prof_is_orgrep").checked=profArr[21];	
 	
  
+	// Check
+document.getElementById("checkbox").checked = true;
+
+// Uncheck
+document.getElementById("checkbox").checked = false;
+	
 	
 
 function updateprofile(){	  
@@ -2650,9 +2656,9 @@ function updateprofile(){
 		var prof_city = document.querySelector('#prof_city').value;
 		var prof_bio = document.querySelector('#prof_bio').value;
 		var prof_zip = document.querySelector('#prof_zip').value;
-		var prof_shop_for_carboncredit = document.querySelector('#prof_shop_for_carboncredit').checked;
-		var prof_sell_carboncredit = document.querySelector('#prof_sell_carboncredit').checked;
-		var prof_is_artist = document.querySelector('#prof_is_artist').checked;
+		var prof_shop_for_carboncredit = document.querySelector('#prof_shop_for_carboncredit').value;
+		var prof_sell_carboncredit = document.querySelector('#prof_sell_carboncredit').value;
+		var prof_is_artist = document.querySelector('#prof_is_artist').value;
 		var prof_is_student = document.querySelector('#prof_is_student').checked;
 		var prof_is_businessperson = document.querySelector('#prof_is_businessperson').checked;
 		var prof_may_be_a_teacher = document.querySelector('#prof_may_be_a_teacher').checked;
