@@ -1681,8 +1681,11 @@ document.addEventListener("DOMContentLoaded", App.init)
 				 document.getElementById('prof_address').value=profArr[6];	
 				 document.getElementById('prof_city').value=profArr[7];	
 				 document.getElementById('prof_zip').value=profArr[8];	
-				 document.getElementById("prof_shop_for_carboncredit").checked = profArr[9];   
-				 console.log(profArr[9]);
+				 //document.getElementById("prof_shop_for_carboncredit").checked = profArr[9];   
+				 if (console.log(profArr[9]) == "true") { document.getElementById('prof_shop_for_carboncredit').setAttribute('checked', 'checked'); }
+				 if (console.log(profArr[9]) == "false") { document.getElementById('prof_shop_for_carboncredit').removeAttribute('checked'); }
+					 
+					 
 				 document.getElementById("prof_sell_carboncredit").checked = profArr[10];
 				 console.log(profArr[10]);
 				 document.getElementById('prof_is_artist').checked = profArr[11];
