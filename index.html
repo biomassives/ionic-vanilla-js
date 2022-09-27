@@ -1683,10 +1683,12 @@ document.addEventListener("DOMContentLoaded", App.init)
 				 document.getElementById('prof_zip').value=profArr[8];	
 				 //document.getElementById("prof_shop_for_carboncredit").checked = profArr[9];   
 				 if (console.log(profArr[9]) == "true") { document.getElementById('prof_shop_for_carboncredit').setAttribute('checked', 'checked'); }
-				 if (console.log(profArr[9]) == "false") { document.getElementById('prof_shop_for_carboncredit').removeAttribute('checked'); }
-					 
+				 if (console.log(profArr[9]) == "false") { document.getElementById('prof_shop_for_carboncredit').removeAttribute('checked'); }					 
 					 
 				 document.getElementById("prof_sell_carboncredit").checked = profArr[10];
+				 if (console.log(profArr[10]) == "true") { document.getElementById('prof_sell_carboncredit').setAttribute('checked', 'checked'); }
+				 if (console.log(profArr[10]) == "false") { document.getElementById('prof_sell_carboncredit').removeAttribute('checked'); }					 
+
 				 console.log(profArr[10]);
 				 document.getElementById('prof_is_artist').checked = profArr[11];
 				 console.log(profArr[11]);
