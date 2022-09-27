@@ -1604,11 +1604,11 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 
 		<div class="checkbox-group">
-			<input id="prof_shop_for_carboncredit" type="checkbox">
+			<input id="prof_shop_for_carboncredit" name="prof_shop_for_carboncredit" value="y" type="checkbox">
 			<label id="prof_shop_for_carboncredit_label" for="prof_shop_for_carboncredit">shopping for carbon credits</label>
 		</div>
 		<div class="checkbox-group">
-			<input id="prof_sell_carboncredit" type="checkbox">
+			<input id="prof_sell_carboncredit" name="prof_sell_carboncredit" value="y" type="checkbox">
 			<label id="prof_sell_carboncredit_label" for="prof_sell_carboncredit">learning to sell carbon credits / biodiversity credits</label>
 		</div>		
 		
@@ -1616,19 +1616,19 @@ document.addEventListener("DOMContentLoaded", App.init)
 	<div class="checkboxes" id="checkboxes3">
 		
 		<div class="checkbox-group">
-			<input id="prof_is_artist" type="checkbox">
+			<input id="prof_is_artist" name="prof_is_artist" value="y" type="checkbox">
 			<label id="prof_is_artist_label" for="prof_is_artist">an artist</label>
 		</div>
 		<div class="checkbox-group">
-			<input id="prof_is_student" type="checkbox">
+			<input id="prof_is_student" name="prof_is_student" value="y" type="checkbox">
 			<label id="prof_is_student_label" for="prof_is_student">enrolled student</label>
 		</div>
 		<div class="checkbox-group">
-			<input id="prof_is_businessperson" type="checkbox">
+			<input id="prof_is_businessperson" name="prof_is_businessperson" value="y" type="checkbox">
 			<label id="prof_is_businessperson_label" for="prof_is_businessperson">a business</label>
 		</div>
 		<div class="checkbox-group">
-			<input id="prof_is_orgrep" type="checkbox">
+			<input id="prof_is_orgrep" name="prof_is_orgrep" value="y" type="checkbox">
 			<label id="prof_is_orgrep_label" for="prof_is_orgrep">org representative</label>
 		</div>
 		
@@ -1641,16 +1641,16 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 
 		<div class="checkbox-group">
-			<input id="prof_may_be_a_teacher" type="checkbox">
+			<input id="prof_may_be_a_teacher" name="prof_may_be_a_teacher" value="y" type="checkbox">
 			<label id="prof_may_be_a_teacher_label" for="prof_may_be_a_teacher">teaching or future teacher</label>
 		</div>		
 		<div class="checkbox-group">
-			<input id="prof_int_mentor_prog" type="checkbox">
+			<input id="prof_int_mentor_prog" name="prof_int_mentor_prog" value="y" type="checkbox">
 			<label id="prof_int_mentor_prog_label" for="prof_int_mentor_prog">mentor program</label>
 		</div>		
 
 		<div class="checkbox-group">
-			<input id="prof_aspiring_broker" type="checkbox">
+			<input id="prof_aspiring_broker" name="prof_aspiring_broker" value="y" type="checkbox">
 			<label id="prof_aspiring_broker_label" for="prof_aspiring_broker">materials brokering</label>
 		</div>
 	</div>
@@ -1658,17 +1658,17 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 		
 		<div class="checkbox-group">
-			<input id="prof_regenerative_farming" type="checkbox">
+			<input id="prof_regenerative_farming" name="prof_regenerative_farming" value="y" type="checkbox">
 			<label id="prof_regenerative_farming_label" for="prof_regenerative_farming">regenerative farming</label>
 		</div>
 		 			
 		<div class="checkbox-group">
-			<input id="prof_is_footsoldier" type="checkbox">
+			<input id="prof_is_footsoldier" name="prof_is_footsoldier" value="y" type="checkbox" >
 			<label id="prof_is_footsoldier_label" for="prof_is_footsoldier">promoting a project</label>
 		</div>
 	
 		<div class="checkbox-group">
-			<input id="prof_wish_ecoclub" type="checkbox">
+			<input id="prof_wish_ecoclub" type="checkbox" name="prof_wish_ecoclub" value="y">
 			<label id="prof_wish_ecoclub_label" for="prof_wish_ecoclub">eco club network</label>
 		</div>
   
@@ -1676,7 +1676,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 	<div class="checkboxes">	
 		
 		<div class="checkbox-group">
-			<input id="prof_wildlife_interface" type="checkbox">
+			<input id="prof_wildlife_interface" type="checkbox" name="prof_wildlife_interface" value="y">
 			<label id="prof_wildlife_interface_label" for="prof_wildlife_interface">human-wildlife interface</label>
 		</div>
 		
@@ -2654,21 +2654,21 @@ function updateprofile(){
 		var prof_city = document.querySelector('#prof_city').value;
 		var prof_bio = document.querySelector('#prof_bio').value;
 		var prof_zip = document.querySelector('#prof_zip').value;
-		var prof_shop_for_carboncredit = document.querySelector('#prof_shop_for_carboncredit').checked;
-		var prof_sell_carboncredit = document.querySelector('#prof_sell_carboncredit').checked;
-		var prof_is_artist = document.querySelector('#prof_is_artist').checked;
-		var prof_is_student = document.querySelector('#prof_is_student').checked;
-		var prof_is_businessperson = document.querySelector('#prof_is_businessperson').checked;
-		var prof_may_be_a_teacher = document.querySelector('#prof_may_be_a_teacher').checked;
-		var prof_int_mentor_prog = document.querySelector('#prof_int_mentor_prog').checked;
-		var prof_aspiring_broker = document.querySelector('#prof_aspiring_broker').checked;
-		var prof_is_businessperson = document.querySelector('#prof_is_student').checked;
-		var prof_regenerative_farming = document.querySelector('#prof_regenerative_farming').checked;
-		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').checked;
-		var prof_wish_ecoclub = document.querySelector('#prof_wish_ecoclub').checked;
-		var prof_is_footsoldier = document.querySelector('#prof_is_footsoldier').checked;
-		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').checked;
-	        var prof_is_orgrep = document.querySelector('#prof_is_orgrep').checked;
+		var prof_shop_for_carboncredit = document.querySelector('#prof_shop_for_carboncredit').value;
+		var prof_sell_carboncredit = document.querySelector('#prof_sell_carboncredit').value;
+		var prof_is_artist = document.querySelector('#prof_is_artist').value;
+		var prof_is_student = document.querySelector('#prof_is_student').value;
+		var prof_is_businessperson = document.querySelector('#prof_is_businessperson').value;
+		var prof_may_be_a_teacher = document.querySelector('#prof_may_be_a_teacher').value;
+		var prof_int_mentor_prog = document.querySelector('#prof_int_mentor_prog').value;
+		var prof_aspiring_broker = document.querySelector('#prof_aspiring_broker').value;
+		var prof_is_businessperson = document.querySelector('#prof_is_student').value;
+		var prof_regenerative_farming = document.querySelector('#prof_regenerative_farming').value;
+		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').value;
+		var prof_wish_ecoclub = document.querySelector('#prof_wish_ecoclub').value;
+		var prof_is_footsoldier = document.querySelector('#prof_is_footsoldier').value;
+		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').value;
+	        var prof_is_orgrep = document.querySelector('#prof_is_orgrep').value;
 		//privacy.resistFingerprinting.reduceTimerPrecision.microseconds =111;
 		const currentTimeInSeconds=Math.floor(Date.now()/1000);
   		var user = localStorage.getItem("user");									
