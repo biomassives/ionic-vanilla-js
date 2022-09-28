@@ -1571,37 +1571,29 @@ document.addEventListener("DOMContentLoaded", App.init)
 	
 
 						<h1 class="title" id="prof_i_am_label">I am</h1>
-
-				
 	<div class="checkboxes" id="checkboxes2">
 
 
-		<div class="checkbox-group">
-			<input id="prof_shop_for_carboncredit" name="prof_shop_for_carboncredit" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb1">
 			<label id="prof_shop_for_carboncredit_label" for="prof_shop_for_carboncredit">shopping for carbon credits</label>
 		</div>
-		<div class="checkbox-group">
-			<input id="prof_sell_carboncredit" name="prof_sell_carboncredit" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb2">
 			<label id="prof_sell_carboncredit_label" for="prof_sell_carboncredit">learning to sell carbon credits / biodiversity credits</label>
 		</div>		
 		
 	</div>	
 	<div class="checkboxes" id="checkboxes3">
 		
-		<div class="checkbox-group">
-			<input id="prof_is_artist" name="prof_is_artist" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb3">
 			<label id="prof_is_artist_label" for="prof_is_artist">an artist</label>
 		</div>
-		<div class="checkbox-group">
-			<input id="prof_is_student" name="prof_is_student" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb4">
 			<label id="prof_is_student_label" for="prof_is_student">enrolled student</label>
 		</div>
-		<div class="checkbox-group">
-			<input id="prof_is_businessperson" name="prof_is_businessperson" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb5">
 			<label id="prof_is_businessperson_label" for="prof_is_businessperson">a business</label>
 		</div>
-		<div class="checkbox-group">
-			<input id="prof_is_orgrep" name="prof_is_orgrep" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb6">
 			<label id="prof_is_orgrep_label" for="prof_is_orgrep">org representative</label>
 		</div>
 		
@@ -1613,47 +1605,47 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 		
 
-		<div class="checkbox-group">
-			<input id="prof_may_be_a_teacher" name="prof_may_be_a_teacher" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb7">
 			<label id="prof_may_be_a_teacher_label" for="prof_may_be_a_teacher">teaching or future teacher</label>
 		</div>		
-		<div class="checkbox-group">
-			<input id="prof_int_mentor_prog" name="prof_int_mentor_prog" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb8">
 			<label id="prof_int_mentor_prog_label" for="prof_int_mentor_prog">mentor program</label>
 		</div>		
 
-		<div class="checkbox-group">
-			<input id="prof_aspiring_broker" name="prof_aspiring_broker" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb9">
 			<label id="prof_aspiring_broker_label" for="prof_aspiring_broker">materials brokering</label>
 		</div>
 	</div>
 	<div class="checkboxes">	
 
 		
-		<div class="checkbox-group">
-			<input id="prof_regenerative_farming" name="prof_regenerative_farming" value="y" type="checkbox">
+		<div class="checkbox-group" id="prof_cb10">
 			<label id="prof_regenerative_farming_label" for="prof_regenerative_farming">regenerative farming</label>
 		</div>
 		 			
-		<div class="checkbox-group">
-			<input id="prof_is_footsoldier" name="prof_is_footsoldier" value="y" type="checkbox" >
+		<div class="checkbox-group" id="prof_cb11">
 			<label id="prof_is_footsoldier_label" for="prof_is_footsoldier">promoting a project</label>
 		</div>
 	
-		<div class="checkbox-group">
-			<input id="prof_wish_ecoclub" type="checkbox" name="prof_wish_ecoclub" value="y">
+		<div class="checkbox-group" id="prof_cb12">
 			<label id="prof_wish_ecoclub_label" for="prof_wish_ecoclub">eco club network</label>
 		</div>
   
 	</div>
 	<div class="checkboxes">	
 		
-		<div class="checkbox-group">
-			<input id="prof_wildlife_interface" type="checkbox" name="prof_wildlife_interface" value="y">
+		<div class="checkbox-group" id="prof_cb13">
 			<label id="prof_wildlife_interface_label" for="prof_wildlife_interface">human-wildlife interface</label>
 		</div>
 		
 	</div>
+	
+	 
+			
+  			  
+
+
+
 	
 	
 	<div class="form-group">
@@ -1712,7 +1704,71 @@ document.addEventListener("DOMContentLoaded", App.init)
 				 console.log(profArr[20]);
 				 document.querySelector('#prof_is_orgrep').checked = profArr[21];	
 				 console.log(profArr[21]);
-			  </script>		
+			 
+				     <script>
+
+
+
+                var user = localStorage.getItem("user");									
+				var checkValues = localStorage.getItem("profile_" + user);	
+			//	const profArr = pd.split(',');
+
+
+       // var checkValues = "false,false,true";
+        const vals2 = checkValues.split(",");
+        const vals = vals2.slice(-13);
+        
+
+        console.log(vals[0]);
+        console.log(vals[1]);
+        console.log(vals[2]);
+
+        //const colors = ["Red","Green","Blue"];
+
+        const colors = ["prof_shop_for_carboncredit","prof_sell_carboncredit","prof_is_artist",
+        "prof_is_student","prof_is_businessperson","prof_may_be_a_teacher","prof_int_mentor_prog",
+        "prof_aspiring_broker","prof_regenerative_farming","prof_is_footsoldier","prof_wish_ecoclub",
+        "prof_wildlife_interface","prof_is_orgrep"];
+
+        let loopnum = 0;
+        colors.forEach((color)=>{
+
+            //  generate id
+            const id = `color-${color}`;
+
+            // create a label
+            const label = document.createElement('label');
+            label.setAttribute("for", id);
+           
+            // create a checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = "checkbox";
+            checkbox.name = "color";
+            checkbox.value = color;
+            checkbox.checked = true;
+            var val = (vals[loopnum] === "true");
+
+            checkbox.checked = val;
+            checkbox.id = id;
+
+
+            console.log(vals[loopnum]);
+
+
+            // place the checkbox inside a label
+            label.appendChild(checkbox);
+            // create text node
+            label.appendChild(document.createTextNode(color));
+            loopnum++;
+
+            // add the label to the root
+            const idnum = "#prof_cb"+loopnum;
+            document.querySelector(idnum).appendChild(label);
+
+        });
+    </script>
+				 
+				 
 					
 				
 	       
