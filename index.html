@@ -1705,68 +1705,68 @@ document.addEventListener("DOMContentLoaded", App.init)
 				 document.querySelector('#prof_is_orgrep').checked = profArr[21];	
 				 console.log(profArr[21]);
 			 
-				     <script>
+				     
 
 
 
-                var user = localStorage.getItem("user");									
-				var checkValues = localStorage.getItem("profile_" + user);	
-			//	const profArr = pd.split(',');
+				var user = localStorage.getItem("user");									
+						var checkValues = localStorage.getItem("profile_" + user);	
+					//	const profArr = pd.split(',');
 
 
-       // var checkValues = "false,false,true";
-        const vals2 = checkValues.split(",");
-        const vals = vals2.slice(-13);
-        
-
-        console.log(vals[0]);
-        console.log(vals[1]);
-        console.log(vals[2]);
-
-        //const colors = ["Red","Green","Blue"];
-
-        const colors = ["prof_shop_for_carboncredit","prof_sell_carboncredit","prof_is_artist",
-        "prof_is_student","prof_is_businessperson","prof_may_be_a_teacher","prof_int_mentor_prog",
-        "prof_aspiring_broker","prof_regenerative_farming","prof_is_footsoldier","prof_wish_ecoclub",
-        "prof_wildlife_interface","prof_is_orgrep"];
-
-        let loopnum = 0;
-        colors.forEach((color)=>{
-
-            //  generate id
-            const id = `color-${color}`;
-
-            // create a label
-            const label = document.createElement('label');
-            label.setAttribute("for", id);
-           
-            // create a checkbox
-            const checkbox = document.createElement('input');
-            checkbox.type = "checkbox";
-            checkbox.name = "color";
-            checkbox.value = color;
-            checkbox.checked = true;
-            var val = (vals[loopnum] === "true");
-
-            checkbox.checked = val;
-            checkbox.id = id;
+			       // var checkValues = "false,false,true";
+				const vals2 = checkValues.split(",");
+				const vals = vals2.slice(-13);
 
 
-            console.log(vals[loopnum]);
+				console.log(vals[0]);
+				console.log(vals[1]);
+				console.log(vals[2]);
+
+				//const colors = ["Red","Green","Blue"];
+
+				const colors = ["prof_shop_for_carboncredit","prof_sell_carboncredit","prof_is_artist",
+				"prof_is_student","prof_is_businessperson","prof_may_be_a_teacher","prof_int_mentor_prog",
+				"prof_aspiring_broker","prof_regenerative_farming","prof_is_footsoldier","prof_wish_ecoclub",
+				"prof_wildlife_interface","prof_is_orgrep"];
+
+				let loopnum = 0;
+				colors.forEach((color)=>{
+
+				    //  generate id
+				    const id = `color-${color}`;
+
+				    // create a label
+				    const label = document.createElement('label');
+				    label.setAttribute("for", id);
+
+				    // create a checkbox
+				    const checkbox = document.createElement('input');
+				    checkbox.type = "checkbox";
+				    checkbox.name = "color";
+				    checkbox.value = color;
+				    checkbox.checked = true;
+				    var val = (vals[loopnum] === "true");
+
+				    checkbox.checked = val;
+				    checkbox.id = id;
 
 
-            // place the checkbox inside a label
-            label.appendChild(checkbox);
-            // create text node
-            label.appendChild(document.createTextNode(color));
-            loopnum++;
+				    console.log(vals[loopnum]);
 
-            // add the label to the root
-            const idnum = "#prof_cb"+loopnum;
-            document.querySelector(idnum).appendChild(label);
 
-        });
-    </script>
+				    // place the checkbox inside a label
+				    label.appendChild(checkbox);
+				    // create text node
+				    label.appendChild(document.createTextNode(color));
+				    loopnum++;
+
+				    // add the label to the root
+				    const idnum = "#prof_cb"+loopnum;
+				    document.querySelector(idnum).appendChild(label);
+
+				});
+			    </script>
 				 
 				 
 					
