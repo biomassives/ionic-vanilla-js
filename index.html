@@ -1705,8 +1705,8 @@ document.addEventListener("DOMContentLoaded", App.init)
 				    const id = `${color}`;
 
 				    // create a label
-				    const label = document.createElement('label');
-				    label.setAttribute("for", id);
+				  //  const label = document.createElement('label');
+				   // label.setAttribute("for", id);
 
 				    // create a checkbox
 				    const checkbox = document.createElement('input');
@@ -1724,14 +1724,14 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 
 				    // place the checkbox inside a label
-				    label.appendChild(checkbox);
+				    //label.appendChild(checkbox);
 				    // create text node
-				    label.appendChild(document.createTextNode(color));
+				    //label.appendChild(document.createTextNode(color));
 				    loopnum++;
 
 				    // add the label to the root
 				    const idnum = "#prof_cb"+loopnum;
-				    document.querySelector(idnum).appendChild(label);
+				    document.querySelector(idnum).appendChild(checkbox);
 
 				});
 			    </script>
