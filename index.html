@@ -1679,15 +1679,11 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 				var user = localStorage.getItem("user");									
 						var checkValues = localStorage.getItem("profile_" + user);	
-					//	const profArr = pd.split(',');
 
 
 			       // var checkValues = "false,false,true";
 				const vals2 = checkValues.split(",");
 				const vals = vals2.slice(-13);
-
-
-				//const colors = ["Red","Green","Blue"];
 
 				const colors = ["prof_shop_for_carboncredit","prof_sell_carboncredit","prof_is_artist",
 				"prof_is_student","prof_is_businessperson","prof_is_orgrep","prof_may_be_a_teacher","prof_int_mentor_prog",
@@ -1700,9 +1696,6 @@ document.addEventListener("DOMContentLoaded", App.init)
 				    //  generate id
 				    const id = `${color}`;
 
-				    // create a label
-				  //  const label = document.createElement('label');
-				   // label.setAttribute("for", id);
 
 				    // create a checkbox
 				    const checkbox1 = document.createElement('input');
@@ -1720,49 +1713,26 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 
 				    // place the checkbox inside a label
-				    //label.appendChild(checkbox);
-				    // create text node
-				    //label.appendChild(document.createTextNode(color));
 				    loopnum++;
 
 				    // add the label to the root
 				    const idnum = "prof_cb"+loopnum;
 				    var color2 = color+"_label";	
-				    //document.querySelector(idnum).appendChild(checkbox);
-
-
 
 					var checkboxCont = document.getElementById(idnum);
-					var checkboxCont2 = document.getElementById(color2);
+					var checkboxCont2 = document.getElementById(color2);					
+  				 	// ref: https://jsfiddle.net/mdehghani/4fog9emv/
 					checkboxCont.insertBefore(checkbox1,checkboxCont2);
 					console.log("1111");
 					console.log(checkboxCont);
 					console.log(checkbox1);
 					console.log(checkboxCont2);
-
-										   
-				  // ref: https://jsfiddle.net/mdehghani/4fog9emv/
-					
-				  //  document.getElementById(idnum).insertAdjacentHTML('beforebegin', checkbox);
 					
 				});
 			    </script>
 				 
-				 
-					
-				
-	       
-
-		      
-		      
-		      
-		      
-		    
-	      </div>
-	      
-	    	    
+	      </div>	      	    	    
       </ion-content>
-
     </ion-page>
   </ion-app>
 
@@ -1810,43 +1780,13 @@ document.addEventListener("DOMContentLoaded", App.init)
 						console.log("Issues with Parsing URL Parameter's - " + err);
 					}
 		
-			/*
-	Eco Ops  .. form processing :)  https://ecoops.vercel.app/?page=orodha
-		        */
+
 	
 	
 var userhash = localStorage.getItem("userhash");
 		
-function checkin(){
-
-		event.preventDefault();
-		console.log("hello"); // The event details
-		console.log(event); // The event details
-		console.log(event.target); // The clicked element
-	  				 localStorage.setItem("CheckinItem", "{ \"data\": [ ["+
-					 temp +"] ], \"weight\":[\""+
-					 popupSplits[4]+"\"],\"material\":[\""+
-					 popupSplits[5]+"\"],\"checkinperson\":[\""+
-					 popupSplits[6]+"\"],\"provider\":[\""+
-					 featureid+"\"],\"datetime\":[\""+
-					 featureid+"\"],\"wallett\":[\""+
-					 featureid+"\"],\"wallet2\":[\""+
-					 featureid+"\"],\"wallet3\":[\""+
-					 featureid+"\"],\"wallet4\":[\""+
-					 featureid+"\"],\"wallet5\":[\""+
-					 featureid+"\"],\"wallet6\":[\""+
-					 featureid+"\"],\"wallet7\":[\""+
-					 featureid+"\"],\"wallet8\":[\""+
-					 featureid+"\"],\"wallet9\":[\""+
-					 featureid+"\"],\"wallet10\":[\""+			     
-					 featureid+"\"],\"tweet\":[\""+
-					 featureid+"\"],\"contract\":[\""+
-					 featureid+"\"],\"photo\":[\""+
-					 featureid+"\"],\"assetreward\":[\""+
-					 featureid+"\"],\"featuretype\":[\"rectangle\"] }");
-}
 		
-// menu layers	
+// menu language translation layers	
 	
 function sheng(){
  document.getElementById("0maxchange").innerHTML=document.getElementById("maxc_title").innerHTML=" -- Ma Xchange";
@@ -2716,7 +2656,6 @@ function updateprofile(){
 		var prof_may_be_a_teacher = document.querySelector('#prof_may_be_a_teacher').checked;
 		var prof_int_mentor_prog = document.querySelector('#prof_int_mentor_prog').checked;
 		var prof_aspiring_broker = document.querySelector('#prof_aspiring_broker').checked;
-		var prof_is_businessperson = document.querySelector('#prof_is_student').checked;
 		var prof_regenerative_farming = document.querySelector('#prof_regenerative_farming').checked;
 		var prof_wildlife_interface = document.querySelector('#prof_wildlife_interface').checked;
 		var prof_wish_ecoclub = document.querySelector('#prof_wish_ecoclub').checked;
