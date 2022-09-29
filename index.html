@@ -1705,15 +1705,15 @@ document.addEventListener("DOMContentLoaded", App.init)
 				   // label.setAttribute("for", id);
 
 				    // create a checkbox
-				    const checkbox = document.createElement('input');
-				    checkbox.type = "checkbox";
-				    checkbox.name = "color";
-				    checkbox.value = color;
-				    checkbox.checked = true;
+				    const checkbox1 = document.createElement('input');
+				    checkbox1.type = "checkbox";
+				    checkbox1.name = "color";
+				    checkbox1.value = color;
+				    checkbox1.checked = true;
 				    var val = (vals[loopnum] === "true");
 
-				    checkbox.checked = val;
-				    checkbox.id = id;
+				    checkbox1.checked = val;
+				    checkbox1.id = id;
 
 
 				    console.log(vals[loopnum]);
@@ -1734,7 +1734,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 
 					var checkboxCont = document.getElementById(idnum);
 					var checkboxCont2 = document.getElementById(color2);
-					checkboxCont.insertBefore(checkboxCont2, checkbox);
+					checkboxCont.insertBefore(checkbox1,checkboxCont2);
 
 										   
 				  // ref: https://jsfiddle.net/mdehghani/4fog9emv/
