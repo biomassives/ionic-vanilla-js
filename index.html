@@ -1726,13 +1726,23 @@ document.addEventListener("DOMContentLoaded", App.init)
 				    loopnum++;
 
 				    // add the label to the root
-//				    const idnum = "#prof_cb"+loopnum;
-				    const idnum	= "#"+color+"_label";	
+				    const idnum = "prof_cb"+loopnum;
+				    const idnum2 = "#"+color+"_label";	
 				    document.querySelector(idnum).appendChild(checkbox);
 
+
+
+					bmcontainer.setAttribute("id", "zero");
+					bmcontainer.innerHTML = "0";
+
+					var checkboxCont = document.getElementById(idnum);
+					var checkboxCont2 = document.getElementById(idnum2);
+					checkboxCont.insertBefore(checkbox, checkboxCont2);
+
+										   
+				  // ref: https://jsfiddle.net/mdehghani/4fog9emv/
 					
 				  //  document.getElementById(idnum).insertAdjacentHTML('beforebegin', checkbox);
-
 					
 				});
 			    </script>
