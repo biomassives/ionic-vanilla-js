@@ -1493,24 +1493,15 @@ document.addEventListener("DOMContentLoaded", App.init)
 		      Eco Ops is designed as a decentralized network.
 		   
 		      
-	      </div>
-			   </form>  
-	      
+	      	      </div>
+		      </form>  
 	      </div>      	      		      
 	      	      	      
 	      	    
 	      <div id=profile style="display:none;"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_mafo2"> 
 		      <span id="prof_title">Profile</span>  <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_moo"></h1>
 
-		      
-		     
-		      
-		      
-		      
- 
-
 		      <form id="profile_update" onsubmit="updateprofile()">
-
 		<div class="grid">
 			<div class="form-group a">
 				<label id="prof_name_label" for="prof_name">Nom</label>
@@ -1599,12 +1590,10 @@ document.addEventListener("DOMContentLoaded", App.init)
 		
 	</div>
 		
-								<h1 class="title" id="prof_interests_label">Interests</h1>
+	<h1 class="title" id="prof_interests_label">Interests</h1>
 
 	<div class="checkboxes">	
 		
-		
-
 		<div class="checkbox-group" id="prof_cb7">
 			<label id="prof_may_be_a_teacher_label" for="prof_may_be_a_teacher">teaching or future teacher</label>
 		</div>		
@@ -2631,11 +2620,7 @@ function indomalay(){
  document.getElementById("prof_submit_label").value="Simpan perubahan ini";		
  document.getElementById("prof_wildlife_interface_label").innerHTML="Antara muka manusia-hidupan liar";		
  document.getElementById("prof_is_orgrep_label").innerHTML="wakil organisasi";
-	
 }	
-	
-
-	
 	
 
 function updateprofile(){	  
@@ -2667,17 +2652,17 @@ function updateprofile(){
   		var user = localStorage.getItem("user");									
 		localStorage.setItem("profile_"
 				     + user , currentTimeInSeconds + ","
-				     + prof_name + "," + prof_firstname 
-				     + "," + prof_email + "," + prof_phone + "," + prof_bio 
-				     + "," + prof_address + "," + prof_city  
-				     + "," + prof_zip + "," + prof_shop_for_carboncredit								
+				     + prof_name + "," + prof_firstname
+				     + "," + prof_email + "," + prof_phone + "," + prof_bio
+				     + "," + prof_address + "," + prof_city
+				     + "," + prof_zip + "," + prof_shop_for_carboncredit
 			             + "," + prof_sell_carboncredit + "," + prof_is_artist
-				     + "," + prof_is_student + "," + prof_is_businessperson  
-				     + "," + prof_may_be_a_teacher + "," + prof_int_mentor_prog   
+				     + "," + prof_is_student + "," + prof_is_businessperson
+				     + "," + prof_is_orgrep
+				     + "," + prof_may_be_a_teacher + "," + prof_int_mentor_prog
 				     + "," + prof_aspiring_broker
-				     + "," + prof_regenerative_farming + "," +  prof_is_footsoldier  
-				     + "," + prof_wish_ecoclub + "," + prof_wildlife_interface
-				     + "," + prof_is_orgrep );
+				     + "," + prof_regenerative_farming + "," +  prof_is_footsoldier
+				     + "," + prof_wish_ecoclub + "," + prof_wildlife_interface );
 
 				/*
 				vt.error("&#x1F44D;", {
