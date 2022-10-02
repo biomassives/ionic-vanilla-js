@@ -1676,7 +1676,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 				 document.getElementById('prof_zip').value=profArr[8];	
  				     
 
-
+           
 
 				var user = localStorage.getItem("user");									
 						var checkValues = localStorage.getItem("profile_" + user);	
@@ -1697,7 +1697,6 @@ document.addEventListener("DOMContentLoaded", App.init)
 				    //  generate id
 				    const id = `${color}`;
 
-
 				    // create a checkbox
 				    const checkbox1 = document.createElement('input');
 				    checkbox1.type = "checkbox";
@@ -1709,10 +1708,6 @@ document.addEventListener("DOMContentLoaded", App.init)
 				    checkbox1.checked = val;
 				    checkbox1.id = id;
 
-
-				    console.log(vals[loopnum]);
-
-
 				    // place the checkbox inside a label
 				    loopnum++;
 
@@ -1723,12 +1718,7 @@ document.addEventListener("DOMContentLoaded", App.init)
 					var checkboxCont = document.getElementById(idnum);
 					var checkboxCont2 = document.getElementById(color2);					
   				 	// ref: https://jsfiddle.net/mdehghani/4fog9emv/
-					checkboxCont.insertBefore(checkbox1,checkboxCont2);
-					console.log("1111");
-					console.log(checkboxCont);
-					console.log(checkbox1);
-					console.log(checkboxCont2);
-					
+					checkboxCont.insertBefore(checkbox1,checkboxCont2);					
 				});
 			    </script>
 				 
@@ -2686,8 +2676,8 @@ function updateprofile(){
 				})
 				*/
 					
-	
-	
+	// udpated response
+	document.querySelector('#prof_submit_label').css('background', green').innerHTML = "Profile updated.";;
 }	  	
 			
 	
