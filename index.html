@@ -1387,6 +1387,282 @@ document.addEventListener("DOMContentLoaded", App.init)
 			      Eco Ops App addresses the two primary concerns. 'Double reporting' , 'project longevity 8', 'biodiversity benefit'.
 		      </p>
 		      <p>
+			      
+			      
+    <style>
+@font-face {
+    font-family: 'BPdotsUnicase';
+    src: url('./font/BPdotsUnicase-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'BPdotsUnicase';
+    color: #fff;
+    text-transform: uppercase;
+}
+
+body {
+    background: #333;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 600px;
+    height: 700px;
+    box-shadow: 0 0 25px #111;
+    background: #333;
+    border: 3px solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1; */
+    border-image: linear-gradient(45deg,#333, dodgerblue, #333, dodgerblue) 1;
+}
+
+#avatarContainer {
+    width: 95%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(56, 56, 56);
+    box-shadow: 0 0 15px #111;
+    border-radius: 12% 12% 38% 38%;
+}
+#avatar {
+    width: 190px;
+    height: 190px;
+    border: 4px solid #333;
+    border-radius: 100%;
+    box-shadow: 0 0 15px #111, inset 0 0 8px #333;
+    background: #444;
+}
+
+span {
+    color: #999;
+    font-size: 19.5px;
+}
+
+#content {
+    width: 95%;
+    height: 280px;
+    background: rgb(56, 56, 56);
+    box-shadow: 0 0 15px #111;
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8% 8% 0 0;
+}
+
+#btnBack {
+    padding: 16px 24px 20px 24px;
+    border-radius: 100% 100% 0% 100%;
+}
+
+#btnForward {
+    padding: 16px 24px 20px 24px;
+    border-radius: 100% 100% 100% 0%;
+}
+
+#btnBack, #btnForward {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: dodgerblue;
+    background: #333;
+    box-shadow: 0 0 15px #111;
+    margin-bottom: 20px;
+}
+
+#btnBack:hover, #btnForward:hover {
+    background: rgb(56, 56, 56);
+    text-shadow: 0 0 5px dodgerblue;
+    transition: 0.3s;
+}
+
+
+#btnBack:not(:hover), #btnForward:not(:hover) {
+    transition: 0.3s;
+}
+
+
+@media screen and (max-width: 550px){
+    #content {
+        height: 310px;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    #avatar {
+        width: 175px;
+        height: 175px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    #btnBack, #btnForward {
+        padding: 12px 20px 16px 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2 id="headline">User</h2>
+        <div id="avatarContainer">
+            <button id="btnBack"><<</button>
+            <div id="avatar"></div>
+            <button id="btnForward">>></button>
+        </div>
+        <h3 id="aboutLine">Name</h3>
+        <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio quae error nemo optio, architecto amet similique saepe laboriosam quis quibusdam consequatur reprehenderit id sit! Recusandae ullam beatae nobis assumenda.
+        Repellendus cum illo doloremque sit laborum, quos culpa ipsa cumque adipisci quibusdam. Ducimus officiis facere totam, vero iste, aut blanditiis quis excepturi explicabo amet molestias, inventore enim impedit. Id, nostrum?</div>
+    </div>
+
+
+  <script>  
+    const userObject = [
+    {
+        id: 1,
+        name: 'Farming Carbon Credits',
+        job: 'biodiversity, ecosystems, hydrology & human',
+        experience: 'First season',
+        description: 'Carbon and biodiversity credits have allowed polluters to expand while performing poorly in carbon sequestration, biodiversity, watershed & human rights.',
+        goal: 'Onboard 20 small holder farms before Nov 21 2022',
+        images: "1"
+    },
+    {
+        id: 2,
+        name: 'Jane Doe',
+        job: 'Suppotying your business process',
+        experience: '7 years',
+        description: "forms can exported and saved be printed any time. ...",
+        goal: 'Maintaining a profile',
+        images: "2"
+    },
+    {
+        id: 3,
+        name: 'Eco Ops makes it a little easier',
+        job: 'Creating a paper trail',
+        experience: '18 years',
+        description: '',
+        goal: 'Signing as a witness for a transaction.',
+        images: "3"
+    },
+    {
+        id: 4,
+        name: 'Richard Roe',
+        job: 'Student',
+        experience: '6 months',
+        description: 'checking in and weighing plastics, compostables, other materials.',
+        goal: 'increasing the wage of worker ',
+        images: "4"
+    },
+    {
+      id: 5,
+      name: 'Informing eco ops',
+      job: 'Student',
+      experience: 'mylunch.link:4567',
+      description: 'yep thats our link right now. try it!.',
+      goal: 'useful information from the forum ',
+      images: "5"
+  },
+
+];
+
+const image = ['1','2','3','4'];
+
+const avatar = document.getElementById('avatar');
+const btnForward = document.getElementById('btnForward');
+const btnBack = document.getElementById('btnBack');
+
+const headline = document.getElementById('headline');
+const aboutLine = document.getElementById('aboutLine');
+const content = document.getElementById('content');
+
+
+let ajaxIndex = 0;
+
+window.addEventListener('load', loadID(image[ajaxIndex]));
+
+
+function loadID(image){
+    avatar.style.backgroundImage = `url('images/${image}.jpg')`;
+    avatar.style.transition = '1s';
+    avatar.style.opacity = 0.8;
+
+    headline.innerHTML = `<h1>` + userObject[ajaxIndex].name + `</h1>`;
+    aboutLine.innerHTML = `<h2>` + userObject[ajaxIndex].job + `</h2>`;
+
+    content.innerHTML = `<h3>`+ '<span>experience: </span><br>' + userObject[ajaxIndex].experience + `</h3><br>`;
+    content.innerHTML += `<h3>` + '<span>description: </span><br>' + userObject[ajaxIndex].description + `</h3><br>`;
+    content.innerHTML += `<h3>`+ '<span>goal: </span><br>' + userObject[ajaxIndex].goal + `</h3>`;
+}
+
+
+btnForward.addEventListener('click', nextID);
+btnBack.addEventListener('click', prevID);
+
+// Previous id
+function prevID() {
+    ajaxIndex--;  console.log(ajaxIndex);
+  
+    if (ajaxIndex < 0) {
+      ajaxIndex = userObject.length - 1;
+    }
+   
+    loadID(image[ajaxIndex]);
+  }
+  
+  // Next id
+  function nextID() {
+    ajaxIndex++;  console.log(ajaxIndex);
+  
+    if (ajaxIndex > userObject.length - 1) {
+      ajaxIndex = 0;
+    }
+  
+    loadID(image[ajaxIndex]);
+  }
+
+</script>
+			      
+			      
 			   	
 		      </p>
 	   </div>
