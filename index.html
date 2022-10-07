@@ -280,7 +280,9 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 
                      <h1 id="pakuayako_title">Your reports</h1>
 
-                     <button type="button" onclick="generatedoc1()">Compost & Plastics Diversion Report</button>
+		      <p>
+                     <button id="compost_report" type="button" onclick="generatedoc1()">Compost & Plastics Diversion Report</button>
+		      </p>
                      <button type="button" onclick="generatedoc2()">Nursery management report</button>
 		      
 		    	<table><tr><Td>
@@ -311,6 +313,39 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		console.log("no user/ referrer");
 	      	
 		}
+		
+
+		var placheckins = localStorage.getItem("plasticsCheckinIndex");
+		try {
+	      		console.log("plasticsCheckinIndex :" + placheckins );
+	      	}
+		      	catch(err) {
+		console.log("no data/ plastsics");
+	      	
+		}
+
+		
+		
+		var compocheckins = localStorage.getItem("compostableCheckinIndex");
+		try {
+	      		console.log("compostablesCheckinIndex :" + compocheckins );
+	      	}
+		      	catch(err) {
+		console.log("no data/ compostables");
+	      	
+		}
+
+		var witne = localStorage.getItem("ecoopswitnessIndex");
+		try {
+	      		console.log("compostablesCheckinIndex :" + witne );
+	      	}
+		      	catch(err) {
+		console.log("no data/ svg witness signatures");
+	      	
+		}
+		
+		
+		
               const doc = new docx.Document({
                 sections: [
                   {
@@ -337,6 +372,14 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                             text: " ~ plastics diversion, composting and organics, plant nurseries, climate reslilient food systems, tree planting and tree care, wildlife-human interface mitigation toward mutual benefit..",
                             bold: false
                           }),
+			  new docx.TextRun({
+                            text: referrer,
+                            bold: true
+                          }),	
+			  new docx.TextRun({
+                            text: placheckins + " ~ plastics diversion ",
+                            bold: false
+                          }),					
                           new docx.TextRun({
                             text: "\tEco Ops Report 2022",
                             bold: true
