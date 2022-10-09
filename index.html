@@ -862,7 +862,20 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		      
 	      <br>		      
 	      </div>
-			      
+
+	      
+	      <div id=chaimocha style="display:none;"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orod"> <span id="sele_title">Tests</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_kusafisha"></h1>		      
+	      
+	        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.3/chai.min.js"></script>
+
+		      
+	        
+		      
+ 	      </div>
+	      
+	      
+	      
 	      <div id=selecta style="display:none;"><img src="/peerverified.svg" width="360" height="360" align="left"><h1><img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_orod"> <span id="sele_title">Selecta</span> <img src="/theme/mupy1/pleasepointing.svg" width=60 height=60 id="switch_to_kusafisha"></h1>		      
 		      		      
 
@@ -1800,6 +1813,11 @@ document.addEventListener("DOMContentLoaded", App.init)
 						var url = new URL(url_string);
 						var page = url.searchParams.get("page");
 							console.log(page);
+						if (page === "tests") {
+							        document.getElementById("greeting").style.display = "none";						
+							        document.getElementById("chaimocha").style.display = "block";						
+						                console.log(page);
+						} 
 						if (page === "orodha") {
 							        document.getElementById("greeting").style.display = "none";						
 							        document.getElementById("orodha").style.display = "block";						
