@@ -870,11 +870,16 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.3/chai.min.js"></script>
 
 		<script>
-			var expect = require('chai').expect;
-			var foo = “bar”;
-
-			//expect(foo).to.be.a('string');
-			//expect(foo).to.equal('bar');
+						
+			var foo = 'bar';
+			assert(foo == 'bar', "expected foo to equal `bar`");
+			err(function () {
+			  assert(foo == 'baz', "expected foo to equal `bar`");
+			}, "expected foo to equal `bar`");
+			err(function () {
+			  assert(foo == 'baz', function() { return "expected foo to equal `bar`"; });
+			}, "expected foo to equal `bar`");			
+			 
 		</script>
 		      
  	      </div>
