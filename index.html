@@ -870,15 +870,23 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.3/chai.min.js"></script>
 
 		<script>
-						
-			var foo = 'bar';
-			assert(foo == 'bar', "expected foo to equal `bar`");
-			err(function () {
-			  assert(foo == 'baz', "expected foo to equal `bar`");
-			}, "expected foo to equal `bar`");
-			err(function () {
-			  assert(foo == 'baz', function() { return "expected foo to equal `bar`"; });
-			}, "expected foo to equal `bar`");			
+													
+			describe('Tests', function() {
+			    it('Simple Query', function(done) {
+
+				// assert.equal(2,3); //returns false
+				    
+				controller1.simpleQuery(true, 4, "hello", null, function(error, response, context) {
+
+				    assert.equal(2,3); //returns true
+				    done();
+
+				});
+
+			    });
+			});
+			
+			 			
 			 
 		</script>
 		      
