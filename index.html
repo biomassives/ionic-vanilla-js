@@ -288,17 +288,13 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		    	<table><tr><Td>
 			      <ul>
 				<li>Timesheets, hours worked/volunteered</li>
-				<li>In-kind contributions & donations</li>
-			      	<li>Investments</li>
-			      	<li>Quarterlies</li>
-			      	<li>Balance sheets</li>
+				<li>Contributions report</li>
+			      	<li>Balance sheet</li>
 			      </ul>
 		        </td><td>
 			      <ul>
 				<li>Training sessions</li>		      
-				<li>Sweat equity</li>		      
 				<li>Certifications</li>
-				<li>ss Statements</li>
 	      		      </ul>
 			</td></tr></table>
 
@@ -403,14 +399,34 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 		    
 		    
               function generatedoc1() {
-	      var referrer = localStorage.getItem("user");
+	        var referrer = localStorage.getItem("user");
 		try {
 	      		console.log("user/ referrer :" + referrer );
 	      	}
 		      	catch(err) {
-		console.log("no user/ referrer");
-	      	
+		console.log("no user/ referrer");	      	
 		}
+		      
+		var placheckins = localStorage.getItem("plasticsCheckinIndex");
+		try {
+	      		console.log("plasticsCheckinIndex :" + placheckins );
+	      	}
+		      	catch(err) {
+		console.log("no data/ plastsics");	      	
+		placheckins = "no plastsics data available"				
+		}
+				
+		var compocheckins = localStorage.getItem("compostableCheckinIndex");
+		try {
+	      		console.log("compostablesCheckinIndex :" + compocheckins );
+	      	}
+		      	catch(err) {
+		compocheckins = "no data/ compostables"
+		console.log("no compostables data available");
+		}		      
+		      
+		      
+		      
               const doc = new docx.Document({
                 sections: [
                   {
@@ -440,7 +456,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                       }),			    
 		      new docx.Paragraph({
                         children: [
-                          new docx.TextRun("Eco Ops Project Participant Report\n\n\r\r Hello new line?"),
+                          new docx.TextRun( compocheckins ),
                           new docx.TextRun({
                             text: referrer,
                             bold: true
@@ -450,7 +466,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                             bold: false
                           }),
                           new docx.TextRun({
-                            text: "\tEco Ops Report 2022",
+                            text: placheckins,
                             bold: true
                           })
                         ]
