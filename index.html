@@ -380,13 +380,15 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                           new docx.TextRun({
                             text: "\tEco Ops Report 2022",
                             bold: true
-                          })
+		          })
                         ]
                       })
 		    ]
-                  }
+		  }
                 ]
               });
+
+		    
 
               docx.Packer.toBlob(doc).then((blob) => {
                 console.log(blob);
@@ -477,6 +479,10 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                 ]
               });
 
+		      
+		      
+		      
+		      
               docx.Packer.toBlob(doc).then((blob) => {
                 console.log(blob);
                 saveAs(blob, "ecoops_report_2022.docx");
