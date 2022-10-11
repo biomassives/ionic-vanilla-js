@@ -316,8 +316,9 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 	      		console.log("plasticsCheckinIndex :" + placheckins );
 	      	}
 		      	catch(err) {
-		console.log("no data/ plastsics");
-	      	
+				var placheckins = "no data/ plastsic"
+				console.log( placheckins );
+
 		}
 
 		
@@ -327,7 +328,8 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 	      		console.log("compostablesCheckinIndex :" + compocheckins );
 	      	}
 		      	catch(err) {
-		console.log("no data/ compostables");
+				var compocheckins = "no data/ compostables"
+				console.log( compocheckins );
 	      	
 		}
 
@@ -336,25 +338,24 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
 	      		console.log("compostablesCheckinIndex :" + witne );
 	      	}
 		      	catch(err) {
-		console.log("no data/ svg witness signatures");
-	      	
+				var witne = "no witness data" 	      	
+				console.log( witne );
+
 		}
+		
+		 var witnessArr = witne.split(',');
+		 //witnessArr = witnessArr.filter(onlyUnique);
+		 var witnessString = ""
+		 witnessArr.forEach(element => {
+			    const splitArr = element.split('_');
+			    witnessString = splitArr[1] + witnessString;
+		 });
+
 		
 		
 		
               const doc = new docx.Document({
                 sections: [
-                  {
-		   headers: {
-			default: new Header({
-			    children: [new Paragraph("Eco Ops App 2022 v1")],
-			}),
-		    },
-		    footers: {
-			default: new Footer({
-			    children: [new Paragraph("Eco Ops App supports\r transparent community level project verification.")],
-			}),
-		    },
                     properties: {},
                     children: [
                       new docx.Paragraph({
@@ -381,8 +382,15 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                             bold: true
                           })
                         ]
-                      })
-                    ]
+                      }),
+		      new docx.Paragraph({
+                          children: [
+			 	  new docx.TextRun({
+                                    text: witnessString,
+        	                    bold: true
+                          })
+                        ]
+		     })
                   }
                 ]
               });
